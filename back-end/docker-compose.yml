@@ -1,0 +1,50 @@
+version: "3"
+
+services:
+  nodejs:
+    build:
+      context: .
+      target: debug
+    command: npm start
+    ports:
+      - "3000:3000"
+      - 9229:9229
+    volumes:
+      - .:/app/programacao-web
+    depends_on:
+      - postgresdb
+    networks:
+      - programacao-web-network
+    links:
+      - postgresdb
+
+  postgresdb:
+    container_name: pg_container
+    image: postgres:15.3
+    environment:
+      POSTGRES_PASSWORD: "programacao-web123"
+      POSTGRES_USER: root
+      POSTGRES_DB: programacao-web
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    networks:
+      - programacao-web-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "programacao-web@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "123"
+    ports:
+      - "5433:80"
+    depends_on:
+      - postgresdb
+    networks:
+      - programacao-web-network
+    links:
+      - postgresdb
+networks:
+  programacao-web-network:
+    driver: bridge

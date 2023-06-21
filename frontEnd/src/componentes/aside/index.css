@@ -1,0 +1,23 @@
+@import "../../variaveis.css";
+
+aside{
+  background-color: white;
+  width: 50%;
+  height: 70px;
+}
+
+.material-symbols-outlined{
+  color: var(--green-medium--);
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20
+
+}
+
+span .p-menuitem-text{
+  color: var(--black-light--);
+}
+
+

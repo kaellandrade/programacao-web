@@ -1,0 +1,41 @@
+@import "../../variaveis.css";
+
+header{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: var(--green-medium--);
+  padding: 10px;
+  position: relative;
+  top: 0; 
+  left: 0;
+}
+
+
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end ;
+  width: 100vh;
+}
+
+.nav-list{
+  list-style: none;
+  display: flex;
+}
+
+a{
+  color: var(--green-medium--);
+}
+
+.nav-list a{
+  margin-left: 20px;
+}
+
+.nav-list a:hover{
+  transform: scale(1.04);
+}
+

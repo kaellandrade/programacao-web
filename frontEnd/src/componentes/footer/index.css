@@ -1,0 +1,16 @@
+@import "../../variaveis.css";
+
+footer{
+  width: 100%;
+  background-color: var(--green-medium--);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+p{
+  font-size: 14px;
+  color: var(--white-medium--);
+  padding: 5px;
+  font-weight: medium;
+}

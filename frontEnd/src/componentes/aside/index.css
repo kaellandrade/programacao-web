@@ -20,7 +20,7 @@ aside h3{
 
 hr{
   width: 100%;
-  border-color: var(--white-medium--);
+  border: 1px solid  rgb(240, 240, 240);
 }
 
 aside a{

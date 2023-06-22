@@ -3,26 +3,35 @@ import './index.css';
 import { TieredMenu } from 'primereact/tieredmenu';
 
 function Aside() {
-	const items = [
-		{
-			label: 'Cédulas e Moedas',
-			icon: <span className="material-symbols-outlined">paid</span>,
-		},
-    {
-			label: 'Somente cédulas',
-			icon: <span className="material-symbols-outlined">payments</span>,
-		},
-    {
-			label: 'Somente moedas',
-			icon: <span className="material-symbols-outlined">savings</span>,
-		},
-    {
-			label: 'Evolução temporal',
-			icon: <span className="material-symbols-outlined">timeline</span>,
-		},
-	];
-
-	return <TieredMenu model={items} />;
+	return(
+		<aside>
+			<h3>Consultas</h3><hr/>
+			<a href="#">
+				<button>
+					<span className="material-symbols-outlined">paid</span>
+					Cédulas e moedas	
+				</button>
+			</a>
+			<a href="#">
+				<button>
+					<span className="material-symbols-outlined">payments</span>
+					Somente cédulas
+				</button>
+			</a>
+			<a href="#">
+				<button>
+					<span className="material-symbols-outlined">savings</span>
+					Somente moedas
+				</button>
+			</a>
+			<a href="#">
+				<button>
+					<span className="material-symbols-outlined">timeline</span>
+					Evolução temporal
+				</button>
+			</a>
+		</aside>
+	); 
 }
 
 export default Aside;

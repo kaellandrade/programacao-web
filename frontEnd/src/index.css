@@ -9,6 +9,9 @@
   box-sizing: border-box;
 }
 
+html{
+  height: 100vh;
+}
 
 body{
   font-family: 'Roboto', sans-serif;

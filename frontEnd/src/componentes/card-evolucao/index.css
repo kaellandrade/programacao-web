@@ -33,6 +33,7 @@ input[type="submit"]{
   border: none;
   background-color: var(--green-medium--);
   color: var(--white-medium--);
+  transition: 0.2s;
   font-weight: bold;
 }
 

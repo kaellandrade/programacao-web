@@ -1,0 +1,1796 @@
+[
+  {
+    "ano": 1994,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 53606226142
+  },
+  {
+    "ano": 1994,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 148753135308
+  },
+  {
+    "ano": 1995,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 205662829391
+  },
+  {
+    "ano": 1995,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 842750925954
+  },
+  {
+    "ano": 1996,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 244780471688
+  },
+  {
+    "ano": 1996,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1016844391027
+  },
+  {
+    "ano": 1997,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 292023409857
+  },
+  {
+    "ano": 1997,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1187671163922
+  },
+  {
+    "ano": 1998,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 318542674333
+  },
+  {
+    "ano": 1998,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1324775734744
+  },
+  {
+    "ano": 1998,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 20213565218
+  },
+  {
+    "ano": 1999,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 355958880408
+  },
+  {
+    "ano": 1999,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1413274662356
+  },
+  {
+    "ano": 1999,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 98671196731
+  },
+  {
+    "ano": 2000,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 409468334904
+  },
+  {
+    "ano": 2000,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 5064610871
+  },
+  {
+    "ano": 2000,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1458102992719
+  },
+  {
+    "ano": 2000,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 184791492746
+  },
+  {
+    "ano": 2001,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 440731066340
+  },
+  {
+    "ano": 2001,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 32926795635
+  },
+  {
+    "ano": 2001,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1458493293999
+  },
+  {
+    "ano": 2001,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 262321757190
+  },
+  {
+    "ano": 2002,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 533800370754
+  },
+  {
+    "ano": 2002,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 52017651126
+  },
+  {
+    "ano": 2002,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1475447776321
+  },
+  {
+    "ano": 2002,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 444804760129
+  },
+  {
+    "ano": 2003,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 572496944968
+  },
+  {
+    "ano": 2003,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 42778593565
+  },
+  {
+    "ano": 2003,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1472377512706
+  },
+  {
+    "ano": 2003,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 648406060900
+  },
+  {
+    "ano": 2004,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 642160166661
+  },
+  {
+    "ano": 2004,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 36222979597
+  },
+  {
+    "ano": 2004,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1429833130158
+  },
+  {
+    "ano": 2004,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 910069948224
+  },
+  {
+    "ano": 2005,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 705868813592
+  },
+  {
+    "ano": 2005,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 24335076342
+  },
+  {
+    "ano": 2005,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1417446280438
+  },
+  {
+    "ano": 2005,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 1163189690447
+  },
+  {
+    "ano": 2006,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 773864065056
+  },
+  {
+    "ano": 2006,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 19123051123
+  },
+  {
+    "ano": 2006,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1405955725155
+  },
+  {
+    "ano": 2006,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 1403233219927
+  },
+  {
+    "ano": 2007,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 855209253517
+  },
+  {
+    "ano": 2007,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 9351016294
+  },
+  {
+    "ano": 2007,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1413482207387
+  },
+  {
+    "ano": 2007,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 1669872657628
+  },
+  {
+    "ano": 2008,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 932066100358
+  },
+  {
+    "ano": 2008,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 4230590315
+  },
+  {
+    "ano": 2008,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1436192622488
+  },
+  {
+    "ano": 2008,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 1986974814799
+  },
+  {
+    "ano": 2009,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 949885748742
+  },
+  {
+    "ano": 2009,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 2038368527
+  },
+  {
+    "ano": 2009,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1413576437804
+  },
+  {
+    "ano": 2009,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 2273238304478
+  },
+  {
+    "ano": 2010,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 1051393549579
+  },
+  {
+    "ano": 2010,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 198427538
+  },
+  {
+    "ano": 2010,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 1561824323
+  },
+  {
+    "ano": 2010,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1419220222779
+  },
+  {
+    "ano": 2010,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 2671959613384
+  },
+  {
+    "ano": 2011,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 1073797702138
+  },
+  {
+    "ano": 2011,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 40802321313
+  },
+  {
+    "ano": 2011,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 1268422594
+  },
+  {
+    "ano": 2011,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1419218828715
+  },
+  {
+    "ano": 2011,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 3063779358840
+  },
+  {
+    "ano": 2012,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 977468447320
+  },
+  {
+    "ano": 2012,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 221214048657
+  },
+  {
+    "ano": 2012,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 1102505326
+  },
+  {
+    "ano": 2012,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1419213898195
+  },
+  {
+    "ano": 2012,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 3490844243319
+  },
+  {
+    "ano": 2012,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 138105922
+  },
+  {
+    "ano": 2013,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 809959734770
+  },
+  {
+    "ano": 2013,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 504713213598
+  },
+  {
+    "ano": 2013,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 1020725220
+  },
+  {
+    "ano": 2013,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1430519837758
+  },
+  {
+    "ano": 2013,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 3907083227955
+  },
+  {
+    "ano": 2013,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 466908571
+  },
+  {
+    "ano": 2014,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 545601859767
+  },
+  {
+    "ano": 2014,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 873584768979
+  },
+  {
+    "ano": 2014,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 974123651
+  },
+  {
+    "ano": 2014,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1430516659438
+  },
+  {
+    "ano": 2014,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 4301333237614
+  },
+  {
+    "ano": 2014,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo",
+    "quantidade_total": 128006677
+  },
+  {
+    "ano": 2014,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 489861341
+  },
+  {
+    "ano": 2014,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Golfe",
+    "quantidade_total": 120575441
+  },
+  {
+    "ano": 2014,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação",
+    "quantidade_total": 126888402
+  },
+  {
+    "ano": 2014,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paratriatlo",
+    "quantidade_total": 125328942
+  },
+  {
+    "ano": 2015,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 389986876859
+  },
+  {
+    "ano": 2015,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 1046232833427
+  },
+  {
+    "ano": 2015,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 927059782
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1413549876512
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 4420266243509
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo",
+    "quantidade_total": 4141301329
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo Paralímpico",
+    "quantidade_total": 604605771
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 492929800
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Basquete",
+    "quantidade_total": 1420780519
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - BC 50 anos",
+    "quantidade_total": 3912044411
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Futebol",
+    "quantidade_total": 777716180
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Golfe",
+    "quantidade_total": 4092059110
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Judô",
+    "quantidade_total": 707420343
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação",
+    "quantidade_total": 4130040280
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paracanoagem",
+    "quantidade_total": 1489387479
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paratriatlo",
+    "quantidade_total": 4081613510
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Rugbi",
+    "quantidade_total": 1593431109
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Vela",
+    "quantidade_total": 1583323689
+  },
+  {
+    "ano": 2015,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Voleibol",
+    "quantidade_total": 652662930
+  },
+  {
+    "ano": 2016,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 292776152027
+  },
+  {
+    "ano": 2016,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 1156672654456
+  },
+  {
+    "ano": 2016,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 909702234
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1419194440135
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 4557527439451
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo",
+    "quantidade_total": 4749587403
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo Paralímpico",
+    "quantidade_total": 4505937213
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 500920700
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Basquete",
+    "quantidade_total": 4418893605
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - BC 50 anos",
+    "quantidade_total": 8654343860
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Boxe",
+    "quantidade_total": 2539081790
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Futebol",
+    "quantidade_total": 4447085907
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Golfe",
+    "quantidade_total": 4755552503
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Judô",
+    "quantidade_total": 4347737767
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Olímpica",
+    "quantidade_total": 2499533170
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Paralímpica",
+    "quantidade_total": 2515483830
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação",
+    "quantidade_total": 4775519863
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação Paralímpica",
+    "quantidade_total": 2572494458
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paracanoagem",
+    "quantidade_total": 4394667673
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paratriatlo",
+    "quantidade_total": 4763079793
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Rugbi",
+    "quantidade_total": 4469028715
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Vela",
+    "quantidade_total": 4519405721
+  },
+  {
+    "ano": 2016,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Voleibol",
+    "quantidade_total": 4367258267
+  },
+  {
+    "ano": 2017,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 239350019429
+  },
+  {
+    "ano": 2017,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 1260109372453
+  },
+  {
+    "ano": 2017,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 892328508
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1407880076367
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 4723119319854
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo",
+    "quantidade_total": 4975020000
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo Paralímpico",
+    "quantidade_total": 4976638500
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 496929300
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Basquete",
+    "quantidade_total": 4975020000
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - BC 50 anos",
+    "quantidade_total": 12136668770
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Boxe",
+    "quantidade_total": 4976638500
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Futebol",
+    "quantidade_total": 4976638500
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Golfe",
+    "quantidade_total": 4975020000
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Judô",
+    "quantidade_total": 4976638500
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Olímpica",
+    "quantidade_total": 4976140500
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Paralímpica",
+    "quantidade_total": 4976140500
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação",
+    "quantidade_total": 4975020000
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação Paralímpica",
+    "quantidade_total": 4976638500
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paracanoagem",
+    "quantidade_total": 4975468200
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paratriatlo",
+    "quantidade_total": 4975020000
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Rugbi",
+    "quantidade_total": 4975020000
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Vela",
+    "quantidade_total": 4975020000
+  },
+  {
+    "ano": 2017,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Voleibol",
+    "quantidade_total": 4976638500
+  },
+  {
+    "ano": 2018,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 197971478235
+  },
+  {
+    "ano": 2018,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 1344054092864
+  },
+  {
+    "ano": 2018,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 889052394
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1413530915930
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 4942470848226
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo",
+    "quantidade_total": 4995000000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo Paralímpico",
+    "quantidade_total": 4996625000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 498925000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Basquete",
+    "quantidade_total": 4995000000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - BC 50 anos",
+    "quantidade_total": 12405893060
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Boxe",
+    "quantidade_total": 4996625000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Futebol",
+    "quantidade_total": 4996625000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Golfe",
+    "quantidade_total": 4995000000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Judô",
+    "quantidade_total": 4996625000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Olímpica",
+    "quantidade_total": 4996125000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Paralímpica",
+    "quantidade_total": 4996125000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação",
+    "quantidade_total": 4995000000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação Paralímpica",
+    "quantidade_total": 4996625000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paracanoagem",
+    "quantidade_total": 4995450000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paratriatlo",
+    "quantidade_total": 4995000000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Rugbi",
+    "quantidade_total": 4995000000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Vela",
+    "quantidade_total": 4995000000
+  },
+  {
+    "ano": 2018,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Voleibol",
+    "quantidade_total": 4996625000
+  },
+  {
+    "ano": 2019,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 167677233850
+  },
+  {
+    "ano": 2019,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 1432411229558
+  },
+  {
+    "ano": 2019,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 890221634
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1430489042217
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 5195554911390
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - (A)",
+    "quantidade_total": 791750100
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo",
+    "quantidade_total": 5054940000
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo Paralímpico",
+    "quantidade_total": 5056584500
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 504912100
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Basquete",
+    "quantidade_total": 5054940000
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - BC 50 anos",
+    "quantidade_total": 12643412000
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Boxe",
+    "quantidade_total": 5056584500
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Futebol",
+    "quantidade_total": 5056584500
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Golfe",
+    "quantidade_total": 5054940000
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Judô",
+    "quantidade_total": 5056584500
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Olímpica",
+    "quantidade_total": 5056078500
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Paralímpica",
+    "quantidade_total": 5056078500
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação",
+    "quantidade_total": 5054940000
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação Paralímpica",
+    "quantidade_total": 5056584500
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paracanoagem",
+    "quantidade_total": 5055395400
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paratriatlo",
+    "quantidade_total": 5054940000
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - REAL 25 anos",
+    "quantidade_total": 1278435965
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Rugbi",
+    "quantidade_total": 5054940000
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Vela",
+    "quantidade_total": 5054940000
+  },
+  {
+    "ano": 2019,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Voleibol",
+    "quantidade_total": 5056584500
+  },
+  {
+    "ano": 2020,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 142826036196
+  },
+  {
+    "ano": 2020,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 1805356259422
+  },
+  {
+    "ano": 2020,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 877290608
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1419178335909
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 5323758578004
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - (A)",
+    "quantidade_total": 30881519900
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo Paralímpico",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 500920700
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Basquete",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - BC 50 anos",
+    "quantidade_total": 12550000000
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Boxe",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Futebol",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Golfe",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Judô",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Olímpica",
+    "quantidade_total": 5016109500
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Paralímpica",
+    "quantidade_total": 5016109500
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação Paralímpica",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paracanoagem",
+    "quantidade_total": 5015431800
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paratriatlo",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - REAL 25 anos",
+    "quantidade_total": 5908641580
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Rugbi",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Vela",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2020,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Voleibol",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2021,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 131105357275
+  },
+  {
+    "ano": 2021,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 1836484128620
+  },
+  {
+    "ano": 2021,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 874152960
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1419178216988
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 5534725718657
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - (A)",
+    "quantidade_total": 35967704800
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo Paralímpico",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 500920700
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Basquete",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - BC 50 anos",
+    "quantidade_total": 12550000000
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Boxe",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Futebol",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Golfe",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Judô",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Olímpica",
+    "quantidade_total": 5016109500
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Paralímpica",
+    "quantidade_total": 5016109500
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação Paralímpica",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paracanoagem",
+    "quantidade_total": 5015431800
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paratriatlo",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - REAL 25 anos",
+    "quantidade_total": 6256280120
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Rugbi",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Vela",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2021,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Voleibol",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2022,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 121890178225
+  },
+  {
+    "ano": 2022,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 1734194442847
+  },
+  {
+    "ano": 2022,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 873642696
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 1419176201946
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 5730304375398
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - (A)",
+    "quantidade_total": 36270129200
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo Paralímpico",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 500920700
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Basquete",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - BC 50 anos",
+    "quantidade_total": 12550000000
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Boxe",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Futebol",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Golfe",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Judô",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Olímpica",
+    "quantidade_total": 5016109500
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Paralímpica",
+    "quantidade_total": 5016109500
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação Paralímpica",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paracanoagem",
+    "quantidade_total": 5015431800
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paratriatlo",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - REAL 25 anos",
+    "quantidade_total": 6273971250
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Rugbi",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Vela",
+    "quantidade_total": 5014980000
+  },
+  {
+    "ano": 2022,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Voleibol",
+    "quantidade_total": 5016611500
+  },
+  {
+    "ano": 2023,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 1a. família",
+    "quantidade_total": 50199843885
+  },
+  {
+    "ano": 2023,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - 2a. família",
+    "quantidade_total": 761448203782
+  },
+  {
+    "ano": 2023,
+    "especie": "Cédulas",
+    "categoria": "Cédulas - em polímero",
+    "quantidade_total": 375408569
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 1a. Família (inox)",
+    "quantidade_total": 610639770511
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família",
+    "quantidade_total": 2535144183551
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - (A)",
+    "quantidade_total": 15609502200
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo",
+    "quantidade_total": 2157840000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Atletismo Paralímpico",
+    "quantidade_total": 2158542000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Bandeira Olímpica",
+    "quantidade_total": 215535600
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Basquete",
+    "quantidade_total": 2157840000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - BC 50 anos",
+    "quantidade_total": 5400000000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Boxe",
+    "quantidade_total": 2158542000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Futebol",
+    "quantidade_total": 2158542000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Golfe",
+    "quantidade_total": 2157840000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Judô",
+    "quantidade_total": 2158542000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Olímpica",
+    "quantidade_total": 2158326000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Mascote Paralímpica",
+    "quantidade_total": 2158326000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação",
+    "quantidade_total": 2157840000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Natação Paralímpica",
+    "quantidade_total": 2158542000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paracanoagem",
+    "quantidade_total": 2158034400
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Paratriatlo",
+    "quantidade_total": 2157840000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - REAL 25 anos",
+    "quantidade_total": 2699568000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Rugbi",
+    "quantidade_total": 2157840000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Vela",
+    "quantidade_total": 2157840000
+  },
+  {
+    "ano": 2023,
+    "especie": "Moedas",
+    "categoria": "Moedas - 2a. Família - Voleibol",
+    "quantidade_total": 2158542000
+  }
+]

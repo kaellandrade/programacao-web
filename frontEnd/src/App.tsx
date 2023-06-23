@@ -1,11 +1,10 @@
 import MainRouter from "./MainRouter";
-import './App.css';
-import Cedulas_Moedas from "./pages/cedulas-moedas/index";
+import Valores from "./pages/valores/index";
 
 
 function App() {
 	return (
-		< Cedulas_Moedas />
+		< Valores />
 	);
 }
 

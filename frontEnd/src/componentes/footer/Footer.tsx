@@ -4,7 +4,7 @@ import "./index.css"
 function Footer() {
   return (
     <footer>
-      <p>Todos os dados aqui mostrados são fornecidos pelo Banco Central do Brasil</p>
+      <p><i>Todos os dados foram extraídos do Banco Central do Brasil</i></p>
     </footer>
   );
 }

@@ -9,8 +9,9 @@ footer{
 }
 
 p{
-  font-size: 14px;
+  font-size: 12px;
   color: var(--white-medium--);
   padding: 5px;
   font-weight: medium;
+  text-align: center;
 }

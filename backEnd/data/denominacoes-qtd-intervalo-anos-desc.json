@@ -1,0 +1,54 @@
+[
+  {
+    "denominacao": 0.1,
+    "quantidade_total": 28916972133401
+  },
+  {
+    "denominacao": 0.05,
+    "quantidade_total": 27142646978561
+  },
+  {
+    "denominacao": 0.01,
+    "quantidade_total": 20118032036763
+  },
+  {
+    "denominacao": 1,
+    "quantidade_total": 14201155708764
+  },
+  {
+    "denominacao": 0.25,
+    "quantidade_total": 12128794765428
+  },
+  {
+    "denominacao": 0.5,
+    "quantidade_total": 11589477459521
+  },
+  {
+    "denominacao": 50,
+    "quantidade_total": 8492749990855
+  },
+  {
+    "denominacao": 2,
+    "quantidade_total": 4602622133933
+  },
+  {
+    "denominacao": 10,
+    "quantidade_total": 4244698655940
+  },
+  {
+    "denominacao": 100,
+    "quantidade_total": 3417572377728
+  },
+  {
+    "denominacao": 20,
+    "quantidade_total": 2858375103060
+  },
+  {
+    "denominacao": 5,
+    "quantidade_total": 2660336819944
+  },
+  {
+    "denominacao": 200,
+    "quantidade_total": 60027249670
+  }
+]

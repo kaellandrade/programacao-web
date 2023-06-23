@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "extenso": "^2.0.1"
   },
   "devDependencies": {
     "eslint": "^8.14.0",

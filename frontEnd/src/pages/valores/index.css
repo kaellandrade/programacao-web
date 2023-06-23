@@ -45,14 +45,13 @@ h4{
   justify-content: space-between;
   background-color: var(--white-medium--);
   margin: 2px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .form.date{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
 }
 
 form label{
@@ -79,4 +78,10 @@ input[type="submit"]:hover{
   font-size: 20px;
   color: var(--green-medium--);
   text-align: center;
+}
+
+.content p{
+  font-size: 12px;
+  text-align: center;
+  color: var(--black-light--);
 }

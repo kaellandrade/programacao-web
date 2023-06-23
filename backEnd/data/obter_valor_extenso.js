@@ -4,4 +4,3 @@ var extenso = require('extenso');
 export const valorExtenso = extenso(valor, { number: { decimalSeparator: 'dot' }, mode: 'currency' } );
 
 
-

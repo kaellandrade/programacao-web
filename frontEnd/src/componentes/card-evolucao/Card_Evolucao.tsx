@@ -101,7 +101,6 @@ function Card_Valores(props: {pergunta: string}) {
       {field: 'categoria', header: 'Categoria'},
       {field: 'Quantidade total', header: 'Quantidade total'}
   ];
-
   
   const exportCSV = (selectionOnly: boolean) => {
     dt.current.exportCSV({ selectionOnly });

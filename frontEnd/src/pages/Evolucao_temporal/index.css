@@ -33,6 +33,10 @@ section h2{
   margin-right: 4px;
 }
 
+.p-datatable-header{
+  font-size: 12px;
+}
+
 .p-datatable.p-component.p-datatable-responsive-scroll{
   width: 100%;
   height: 85%;

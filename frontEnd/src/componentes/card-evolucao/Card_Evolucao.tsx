@@ -3,104 +3,19 @@ import "./index.css"
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 
-function Card_Valores(props: {pergunta: string}) {
+function Card_Valores(props: {pergunta: string, data: any, colunas: any}) {
 
   const [dados, setDados] = useState([]);
-  const dt = useRef(null);
+  const dt = useRef<HTMLTableElement>(null);
   const [showAdditionalButtons, setShowAdditionalButtons] = useState(false);
 
-  var data = [
-    {
-      "ano": 1994,
-      "especie": "Cédulas",
-      "categoria": "Cédulas - 1a. família",
-      "quantidade_total": 53606226142
-    },
-    {
-      "ano": 1994,
-      "especie": "Moedas",
-      "categoria": "Moedas - 1a. Família (inox)",
-      "quantidade_total": 148753135308
-    },
-    {
-      "ano": 1995,
-      "especie": "Cédulas",
-      "categoria": "Cédulas - 1a. família",
-      "quantidade_total": 205662829391
-    },
-    {
-      "ano": 1995,
-      "especie": "Moedas",
-      "categoria": "Moedas - 1a. Família (inox)",
-      "quantidade_total": 842750925954
-    },
-    {
-      "ano": 1996,
-      "especie": "Cédulas",
-      "categoria": "Cédulas - 1a. família",
-      "quantidade_total": 244780471688
-    },
-    {
-      "ano": 1996,
-      "especie": "Moedas",
-      "categoria": "Moedas - 1a. Família (inox)",
-      "quantidade_total": 1016844391027
-    },
-    {
-      "ano": 1997,
-      "especie": "Cédulas",
-      "categoria": "Cédulas - 1a. família",
-      "quantidade_total": 292023409857
-    },
-    {
-      "ano": 1997,
-      "especie": "Moedas",
-      "categoria": "Moedas - 1a. Família (inox)",
-      "quantidade_total": 1187671163922
-    },
-    {
-      "ano": 1998,
-      "especie": "Cédulas",
-      "categoria": "Cédulas - 1a. família",
-      "quantidade_total": 318542674333
-    },
-    {
-      "ano": 1998,
-      "especie": "Moedas",
-      "categoria": "Moedas - 1a. Família (inox)",
-      "quantidade_total": 1324775734744
-    },
-    {
-      "ano": 1998,
-      "especie": "Moedas",
-      "categoria": "Moedas - 2a. Família",
-      "quantidade_total": 20213565218
-    },
-    {
-      "ano": 1999,
-      "especie": "Cédulas",
-      "categoria": "Cédulas - 1a. família",
-      "quantidade_total": 355958880408
-    },
-    {
-      "ano": 1999,
-      "especie": "Moedas",
-      "categoria": "Moedas - 1a. Família (inox)",
-      "quantidade_total": 1413274662356
-    }];
+  
 
-  var dataFormatada = data.map(item => {
+  var dataFormatada = props.data.map( (item: any) => {
     var quantidadeFormatada = item.quantidade_total.toLocaleString();
     return { ...item, quantidade_total: quantidadeFormatada };
   });
 
-  
-  const colunas = [
-      {field: 'ano', header: 'Ano'},
-      {field: 'especie', header: 'Espécie'},
-      {field: 'categoria', header: 'Categoria'},
-      {field: 'Quantidade total', header: 'Quantidade total'}
-  ];
   
   const exportCSV = (selectionOnly: boolean) => {
     dt.current.exportCSV({ selectionOnly });
@@ -120,21 +35,18 @@ function Card_Valores(props: {pergunta: string}) {
     setShowAdditionalButtons(!showAdditionalButtons);
   };
 
-
   useEffect(() => {
     setDados(dataFormatada);
   }, []);
-  
   
   return (
     <div className="content table-evolucao">
       <h4>{props.pergunta}</h4>
       <br />
-      <DataTable ref={dt} value={dados} size='small' scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
-          <Column field="ano" header="Ano" sortable style={{ width: '10%' }}></Column>
-          <Column field="especie" header="Espécie" sortable style={{ width: '10%' }}></Column>
-          <Column field="categoria" header="Categoria" sortable style={{ width: '10%' }}></Column>
-          <Column field="quantidade_total" header="Quantidade total" sortable style={{ width: '10%' }}></Column>
+      <DataTable ref={dt} size="small" value={dados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
+          {props.colunas.map((col: any) => (
+              <Column key={col.field} field={col.field} header={col.header} sortable style={{ width: '10%' }} />
+          ))}
       </DataTable>
       <div className='buttons-export'>
         <button className='button export main' onClick={ () => handleButtonClick()}>

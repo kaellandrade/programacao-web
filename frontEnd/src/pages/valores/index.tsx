@@ -3,7 +3,7 @@ import './index.css';
 import Header from '../../componentes/header/Header';
 import Footer from '../../componentes/footer/Footer';
 import Aside from '../../componentes/aside/Aside';
-import Card_Valores from '../../componentes/card-valores/Card_Valores';
+import CardValores from '../../componentes/card-valores/Card_Valores';
 
 function Main() {
 	const pergunta1 =
@@ -34,27 +34,34 @@ function Main() {
 			<h2>Pagina de valores</h2>
 			<div className="container valores">
 				<div className="column valores">
-					<Card_Valores
+					<CardValores
 						pergunta={pergunta1}
 						valor_moeda_data={valor_moeda_data}
 						valor_extenso={extenso1}
+						possuiIntervalo={false}
 					/>
-					<Card_Valores
+					<CardValores
 						pergunta={pergunta2}
 						valor_moeda_data={valor_moeda_ano}
 						valor_extenso={extenso2}
+						possuiIntervalo
+
 					/>
 				</div>
 				<div className="column valores">
-					<Card_Valores
+					<CardValores
 						pergunta={pergunta3}
 						valor_moeda_data={valor_cedula_data}
 						valor_extenso={extenso3}
+						possuiIntervalo={false}
+
 					/>
-					<Card_Valores
+					<CardValores
 						pergunta={pergunta4}
 						valor_moeda_data={valor_cedula_ano}
 						valor_extenso={extenso4}
+						possuiIntervalo
+
 					/>
 				</div>
 			</div>

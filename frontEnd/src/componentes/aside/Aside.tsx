@@ -1,37 +1,29 @@
+import { NavLink } from 'react-router-dom';
 import './index.css';
-import { Link } from 'react-router-dom';
 
 function Aside() {
 	return (
 		<aside>
 			<h3>Consultas</h3>
 			<hr />
-			<Link to={'evolucao'}>
-				<button>
-					<span className="material-symbols-outlined">timeline</span>
-					Evolução temporal
-				</button>
-			</Link>
+			<NavLink to={'evolucao'}>
+				<span className="material-symbols-outlined">timeline</span>
+				Evolução temporal
+			</NavLink>
 			<a href="#">
-				<button>
-					<span className="material-symbols-outlined">
-						format_list_numbered_rtl
-					</span>
-					Quantidade
-				</button>
+				<span className="material-symbols-outlined">
+					format_list_numbered_rtl
+				</span>
+				Quantidade
 			</a>
 			<a href="#">
-				<button>
-					<span className="material-symbols-outlined">star_rate</span>
-					Ranking
-				</button>
+				<span className="material-symbols-outlined">star_rate</span>
+				Ranking
 			</a>
-			<Link to={'valores'}>
-				<button>
-					<span className="material-symbols-outlined">paid</span>
-					Valores
-				</button>
-			</Link>
+			<NavLink to={'valores'}>
+				<span className="material-symbols-outlined">paid</span>
+				Valores
+			</NavLink>
 		</aside>
 	);
 }

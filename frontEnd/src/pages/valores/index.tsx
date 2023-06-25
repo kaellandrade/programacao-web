@@ -30,7 +30,7 @@ function Main() {
 		'Quarenta e nove bilhões e duzentos e três milhões e trezentos e trinta e três e duzentos e vinte e trrês reais e cinco centavos';
 
 	return (
-		<section>
+		<>
 			<h2>Pagina de valores</h2>
 			<div className="container valores">
 				<div className="column valores">
@@ -58,7 +58,7 @@ function Main() {
 					/>
 				</div>
 			</div>
-		</section>
+		</>
 	);
 }
 

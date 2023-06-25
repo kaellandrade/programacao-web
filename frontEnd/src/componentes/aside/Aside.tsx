@@ -1,20 +1,22 @@
-import React from 'react';
 import './index.css';
-import { TieredMenu } from 'primereact/tieredmenu';
+import { Link } from 'react-router-dom';
 
 function Aside() {
-	return(
+	return (
 		<aside>
-			<h3>Consultas</h3><hr/>
-			<a href="#">
+			<h3>Consultas</h3>
+			<hr />
+			<Link to={'evolucao'}>
 				<button>
 					<span className="material-symbols-outlined">timeline</span>
-					Evolução temporal	
+					Evolução temporal
 				</button>
-			</a>
+			</Link>
 			<a href="#">
 				<button>
-					<span className="material-symbols-outlined">format_list_numbered_rtl</span>
+					<span className="material-symbols-outlined">
+						format_list_numbered_rtl
+					</span>
 					Quantidade
 				</button>
 			</a>
@@ -24,14 +26,14 @@ function Aside() {
 					Ranking
 				</button>
 			</a>
-			<a href="#">
+			<Link to={'valores'}>
 				<button>
 					<span className="material-symbols-outlined">paid</span>
 					Valores
 				</button>
-			</a>
+			</Link>
 		</aside>
-	); 
+	);
 }
 
 export default Aside;

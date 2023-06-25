@@ -1,37 +1,31 @@
-import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './index.css';
-import { TieredMenu } from 'primereact/tieredmenu';
 
 function Aside() {
-	return(
+	return (
 		<aside>
-			<h3>Consultas</h3><hr/>
+			<h3>Consultas</h3>
+			<hr />
+			<NavLink to={'evolucao'}>
+				<span className="material-symbols-outlined">timeline</span>
+				Evolução temporal
+			</NavLink>
 			<a href="#">
-				<button>
-					<span className="material-symbols-outlined">timeline</span>
-					Evolução temporal	
-				</button>
+				<span className="material-symbols-outlined">
+					format_list_numbered_rtl
+				</span>
+				Quantidade
 			</a>
 			<a href="#">
-				<button>
-					<span className="material-symbols-outlined">format_list_numbered_rtl</span>
-					Quantidade
-				</button>
+				<span className="material-symbols-outlined">star_rate</span>
+				Ranking
 			</a>
-			<a href="#">
-				<button>
-					<span className="material-symbols-outlined">star_rate</span>
-					Ranking
-				</button>
-			</a>
-			<a href="#">
-				<button>
-					<span className="material-symbols-outlined">paid</span>
-					Valores
-				</button>
-			</a>
+			<NavLink to={'valores'}>
+				<span className="material-symbols-outlined">paid</span>
+				Valores
+			</NavLink>
 		</aside>
-	); 
+	);
 }
 
 export default Aside;

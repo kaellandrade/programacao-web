@@ -30,7 +30,7 @@ section h2{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 4px;
+  margin-right: 4px; 
 }
 
 .p-datatable-header{
@@ -39,7 +39,7 @@ section h2{
 
 .p-datatable.p-component.p-datatable-responsive-scroll{
   width: 100%;
-  height: 85%;
+  height: 70%;
   font-size: 14px;
 }
 

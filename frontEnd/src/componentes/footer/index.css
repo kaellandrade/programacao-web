@@ -3,7 +3,7 @@
 footer{
   width: 100%;
   background-color: var(--green-medium--);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
 }

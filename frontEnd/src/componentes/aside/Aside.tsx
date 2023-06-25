@@ -10,16 +10,16 @@ function Aside() {
 				<span className="material-symbols-outlined">timeline</span>
 				Evolução temporal
 			</NavLink>
-			<a href="#">
+			<NavLink to={'quantidade'}>
 				<span className="material-symbols-outlined">
 					format_list_numbered_rtl
 				</span>
 				Quantidade
-			</a>
-			<a href="#">
+			</NavLink>
+			<NavLink to={'ranking'}>
 				<span className="material-symbols-outlined">star_rate</span>
 				Ranking
-			</a>
+			</NavLink>
 			<NavLink to={'valores'}>
 				<span className="material-symbols-outlined">paid</span>
 				Valores

@@ -1,27 +1,37 @@
 import {
     createBrowserRouter,
 } from 'react-router-dom';
-import EvolucaoTemporal from './pages/evolucaoTemporal';
-import Root from './pages/pageRoot';
-
-import Valores from './pages/valores';
-
+import PaginaTemporal from './pages/evolucaoTemporal';
+import PaginaRoot from './pages/pageRoot';
+import PaginaValores from './pages/valores';
 import Pagina404 from './pages/page404';
+import PaginaRaking from './pages/pageRanking';
+import PaginaQuantidade from './pages/pageQuantidade';
+
+
 
 const router = createBrowserRouter([
 	{
 	  path: '/',
-	  element: 	< Root/>,
+	  element: 	< PaginaRoot/>,
 	  errorElement: <Pagina404 />,
 	  children:[
 
 			{
 			  path: 'valores',
-			  element: <Valores/>,
+			  element: <PaginaValores/>,
 			},
 			{
 				path: 'evolucao',
-				element: <EvolucaoTemporal/>,
+				element: <PaginaTemporal/>,
+			},
+			{
+				path: 'ranking',
+				element: <PaginaRaking/>,
+			},
+			{
+				path: 'quantidade',
+				element: <PaginaQuantidade/>,
 			}
 	  ]
 	},

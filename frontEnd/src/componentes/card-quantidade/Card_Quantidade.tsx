@@ -3,7 +3,8 @@ import "./index.css"
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 
-function Card_Valores(props: {pergunta: string, data: any, colunas: any}) {
+
+function Card_Quantidade(props: {pergunta: string, data: any, colunas: any}) {
 
   const [dados, setDados] = useState([]);
   const dt = useRef<HTMLTableElement>(null);
@@ -13,8 +14,14 @@ function Card_Valores(props: {pergunta: string, data: any, colunas: any}) {
 
   var dataFormatada = props.data.map( (item: any) => {
     var quantidadeFormatada = item.quantidade_total.toLocaleString();
-    if (item.hasOwnProperty('denominacao'))
-      return { ...item, denominacao: item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}), quantidade_total: quantidadeFormatada };
+    if (item.hasOwnProperty('denominacao') && item.hasOwnProperty('diferenca_percentual')){
+      var denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+      var diferenca_percentualFormatada = 'NULL';
+      if (item.diferenca_percentual != 'NULL')
+        diferenca_percentualFormatada = (item.diferenca_percentual * 1).toFixed(2) + '%';
+      return { ...item, denominacao: denominacaoFormartada, 
+        quantidade_total: quantidadeFormatada, diferenca_percentual: diferenca_percentualFormatada};
+    }
     return { ...item, quantidade_total: quantidadeFormatada };
   });
 
@@ -40,7 +47,7 @@ function Card_Valores(props: {pergunta: string, data: any, colunas: any}) {
   useEffect(() => {
     setDados(dataFormatada);
   }, []);
-  
+
   return (
     <div className="content table-evolucao">
       <h4>{props.pergunta}</h4>
@@ -73,4 +80,4 @@ function Card_Valores(props: {pergunta: string, data: any, colunas: any}) {
   );
 }
 
-export default Card_Valores;
+export default Card_Quantidade;

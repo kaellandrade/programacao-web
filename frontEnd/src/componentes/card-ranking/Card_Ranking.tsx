@@ -2,15 +2,38 @@ import React, { useState, useEffect, useRef } from 'react';
 import "./index.css"
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import { Dropdown } from 'primereact/dropdown';
+        
 
-function Card_Valores(props: {pergunta: string, data: any, colunas: any}) {
+function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
 
   const [dados, setDados] = useState([]);
   const dt = useRef<HTMLTableElement>(null);
   const [showAdditionalButtons, setShowAdditionalButtons] = useState(false);
+  const [selectedYearStart, setSelectedYearStart] = useState<{ year: number }>({ year: 0 });
+  const [selectedYearEnd, setSelectedYearEnd] = useState<{ year: number }>({ year: 1994 });
+  const [yearsStart, setYearsStart] = useState<Array<{ year: number }>>([]);
+  const [yearsEnd, setYearsEnd] = useState<Array<{ year: number }>>([]);
 
+
+  const gerarAnosInicio = () => {
+    let yearStart = [];
+    for (let i = 1994; i <= 2023; i++) {
+      yearStart.push({ year: i });
+    }
+    setYearsStart(yearStart);
+  };
+
+  const gerarAnosFim = () => {
+    let yearStart = selectedYearStart.year === 0 ? 1994 : selectedYearStart.year;
+    let yearsEnd = [];
+    for (let i = yearStart; i <= 2023; i++) {
+      yearsEnd.push({ year: i });
+    }
+    setYearsEnd(yearsEnd);
+  };
+ 
   
-
   var dataFormatada = props.data.map( (item: any) => {
     var quantidadeFormatada = item.quantidade_total.toLocaleString();
     if (item.hasOwnProperty('denominacao'))
@@ -20,7 +43,9 @@ function Card_Valores(props: {pergunta: string, data: any, colunas: any}) {
 
   
   const exportCSV = (selectionOnly: boolean) => {
-    dt.current.exportCSV({ selectionOnly });
+    if (dt.current !== null) {
+      dt.current.exportCSV({ selectionOnly });
+    }
     setShowAdditionalButtons(false);
   };
 
@@ -39,11 +64,27 @@ function Card_Valores(props: {pergunta: string, data: any, colunas: any}) {
 
   useEffect(() => {
     setDados(dataFormatada);
+    gerarAnosInicio();
+    gerarAnosFim();
   }, []);
-  
+
+  useEffect(() => {
+    setSelectedYearEnd({});
+    gerarAnosFim();
+  }, [selectedYearStart]);
+
   return (
-    <div className="content table-evolucao">
+    <div className="content">
       <h4>{props.pergunta}</h4>
+      <form action="" className="form date">
+        <div>
+          <Dropdown value={selectedYearStart} onChange={(e) => setSelectedYearStart(e.value)} options={yearsStart} optionLabel="year" 
+            placeholder="Ano início" className="dropdown years" required />
+          <Dropdown value={selectedYearEnd} onChange={(e) => setSelectedYearEnd(e.value)} options={yearsEnd} optionLabel="year" 
+            placeholder="Ano fim" className="dropdown years" required />
+        </div>
+        <input type="submit" value="Aplicar"></input>
+      </form>
       <br />
       <DataTable ref={dt} size="small" value={dados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
           {props.colunas.map((col: any) => (
@@ -68,9 +109,8 @@ function Card_Valores(props: {pergunta: string, data: any, colunas: any}) {
           </div>
         )}
       </div>
-
     </div>
   );
 }
 
-export default Card_Valores;
+export default Card_Ranking;

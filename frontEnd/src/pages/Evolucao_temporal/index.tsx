@@ -116,7 +116,7 @@ function Main() {
 
   const colunas1 = [
     {field: 'ano', header: 'Ano'},
-    {field: 'denominacao', header: 'Denominação (Símbolo)'},
+    {field: 'denominacao', header: 'Denominação'},
     {field: 'quantidade_total', header: 'Quantidade total'}
   ];
 

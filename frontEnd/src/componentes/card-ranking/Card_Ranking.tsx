@@ -74,7 +74,7 @@ function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
   }, [selectedYearStart]);
 
   return (
-    <div className="content">
+    <div className="content ranking">
       <h4>{props.pergunta}</h4>
       <form action="" className="form date">
         <div>

@@ -1,8 +1,8 @@
 import MainRouter from './MainRouter';
-import Valores from './pages/Valores/index';
-import Evolucao_temporal from './pages/Evolucao_temporal/index';
-import Ranking from './pages/Ranking/index';
-import Quantidade from './pages/Quantidade/index';
+import Valores from './pages/pageValores/index';
+import Evolucao_temporal from './pages/pageEvolucaoTemporal/index';
+import Ranking from './pages/pageRanking/index';
+import Quantidade from './pages/pageQuantidade/index';
 
 function App() {
 	return (

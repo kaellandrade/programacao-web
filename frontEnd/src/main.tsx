@@ -17,40 +17,24 @@ const router = createBrowserRouter([
 	  path: '/',
 	  element: 	<PageRoot />,
 	  errorElement: <Page404 />,
-	//   children:[
-	// 		{
-	// 		  path: 'valores',
-	// 		  element: <PageValores />,
-	// 		},
-	// 		{
-	// 			path: 'evolucao',
-	// 			element: <PageEvoucaoTemporal />,
-	// 		},
-	// 		{
-	// 			path: 'ranking',
-	// 			element: <PageRanking />,
-	// 		},
-	// 		{
-	// 			path: 'quantidade',
-	// 			element: <PageQuantidade />,
-	// 		}
-	//   ]
-	},
-	{
-		path: '/valores',
-		element: <PageValores />,
-	},
-	{
-		path: '/evolucao',
-		element: <PageEvoucaoTemporal />,
-	},
-	{
-		path: '/ranking',
-		element: <PageRanking />,
-	},
-	{
-		path: '/quantidade',
-		element: <PageQuantidade />,
+	  children:[
+			{
+			  path: 'valores',
+			  element: <PageValores />,
+			},
+			{
+				path: 'evolucao',
+				element: <PageEvoucaoTemporal />,
+			},
+			{
+				path: 'ranking',
+				element: <PageRanking />,
+			},
+			{
+				path: 'quantidade',
+				element: <PageQuantidade />,
+			}
+	  ]
 	}
   ]);
 

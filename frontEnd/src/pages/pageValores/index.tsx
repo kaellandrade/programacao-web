@@ -25,24 +25,17 @@ function Main() {
 
   return (
     <>
-      <Header />
-      <main>
-        <Aside />
-        <section>
-          <h2>Pagina de valores</h2>
-          <div className="container valores">
-            <div className="column valores">
-              <Card_Valores pergunta={pergunta1} valor_moeda_data={valor_moeda_data} valor_extenso={extenso1} possuiIntervalo={false} />
-              <Card_Valores pergunta={pergunta2} valor_moeda_data={valor_moeda_ano} valor_extenso={extenso2} possuiIntervalo={true} />
-            </div>
-            <div className="column valores">
-              <Card_Valores pergunta={pergunta3} valor_moeda_data={valor_cedula_data} valor_extenso={extenso3} possuiIntervalo={false} />
-              <Card_Valores pergunta={pergunta4} valor_moeda_data={valor_cedula_ano} valor_extenso={extenso4} possuiIntervalo={true} />
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
+      <h2>Pagina de valores</h2>
+      <div className="container valores">
+        <div className="column valores">
+          <Card_Valores pergunta={pergunta1} valor_moeda_data={valor_moeda_data} valor_extenso={extenso1} possuiIntervalo={false} />
+          <Card_Valores pergunta={pergunta2} valor_moeda_data={valor_moeda_ano} valor_extenso={extenso2} possuiIntervalo={true} />
+        </div>
+        <div className="column valores">
+          <Card_Valores pergunta={pergunta3} valor_moeda_data={valor_cedula_data} valor_extenso={extenso3} possuiIntervalo={false} />
+          <Card_Valores pergunta={pergunta4} valor_moeda_data={valor_cedula_ano} valor_extenso={extenso4} possuiIntervalo={true} />
+        </div>
+      </div>
     </>
   );
 }

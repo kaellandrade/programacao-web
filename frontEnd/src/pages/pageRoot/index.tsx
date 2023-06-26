@@ -4,6 +4,7 @@ import Header from '../../componentes/header/Header';
 import Footer from '../../componentes/footer/Footer';
 import Aside from '../../componentes/aside/Aside';
 import Card_Valores from '../../componentes/card-valores/Card_Valores';
+import { Outlet } from 'react-router-dom';
 
 function Main() {
 
@@ -13,15 +14,7 @@ function Main() {
       <main>
         <Aside />
         <section>
-          <h2>Home</h2>
-          <div className="container valores">
-            <div className="column valores">
-              
-            </div>
-            <div className="column valores">
-              
-            </div>
-          </div>
+          <Outlet />
         </section>
       </main>
       <Footer />

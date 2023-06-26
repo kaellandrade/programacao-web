@@ -210,22 +210,15 @@ function Main() {
 
   return (
     <>
-      <Header />
-      <main>
-        <Aside />
-        <section>
-          <h2>Pagina de Evolução Temporal</h2>
-          <div className="container valores">
-            <div className="column valores">
-              <Card_Evolucao pergunta={pergunta1} data={data1} colunas={colunas1} />
-            </div>
-            <div className="column valores">
-              <Card_Evolucao pergunta={pergunta2} data={data2} colunas={colunas2} />
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
+      <h2>Pagina de Evolução Temporal</h2>
+      <div className="container valores">
+        <div className="column valores">
+          <Card_Evolucao pergunta={pergunta1} data={data1} colunas={colunas1} />
+        </div>
+        <div className="column valores">
+          <Card_Evolucao pergunta={pergunta2} data={data2} colunas={colunas2} />
+        </div>
+      </div>
     </>
   );
 }

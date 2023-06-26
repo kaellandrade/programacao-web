@@ -1,4 +1,3 @@
-import React from 'react';
 import './index.css';
 import { Outlet } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import "./index.css"
+import { useState, useEffect } from 'react';
+import './index.css';
 import { Dropdown } from 'primereact/dropdown';
 
 
@@ -12,7 +12,7 @@ function Card_Valores(props: { valor_moeda_data: number, valor_extenso: string, 
 
 
   const gerarAnosInicio = () => {
-    let yearStart = [];
+    const yearStart = [];
     for (let i = 1994; i <= 2023; i++) {
       yearStart.push({ year: i });
     }
@@ -20,8 +20,8 @@ function Card_Valores(props: { valor_moeda_data: number, valor_extenso: string, 
   };
 
   const gerarAnosFim = () => {
-    let yearStart = selectedYearStart.year === 0 ? 1994 : selectedYearStart.year;
-    let yearsEnd = [];
+    const yearStart = selectedYearStart.year === 0 ? 1994 : selectedYearStart.year;
+    const yearsEnd = [];
     for (let i = yearStart; i <= 2023; i++) {
       yearsEnd.push({ year: i });
     }

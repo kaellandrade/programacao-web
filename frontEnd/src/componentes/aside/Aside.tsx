@@ -1,6 +1,4 @@
-import React from 'react';
 import './index.css';
-import { TieredMenu } from 'primereact/tieredmenu';
 
 function Aside() {
 	return(

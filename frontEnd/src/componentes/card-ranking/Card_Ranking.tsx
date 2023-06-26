@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import "./index.css"
+import './index.css';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Dropdown } from 'primereact/dropdown';
@@ -17,7 +17,7 @@ function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
 
 
   const gerarAnosInicio = () => {
-    let yearStart = [];
+    const yearStart = [];
     for (let i = 1994; i <= 2023; i++) {
       yearStart.push({ year: i });
     }
@@ -25,8 +25,8 @@ function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
   };
 
   const gerarAnosFim = () => {
-    let yearStart = selectedYearStart.year === 0 ? 1994 : selectedYearStart.year;
-    let yearsEnd = [];
+    const yearStart = selectedYearStart.year === 0 ? 1994 : selectedYearStart.year;
+    const yearsEnd = [];
     for (let i = yearStart; i <= 2023; i++) {
       yearsEnd.push({ year: i });
     }
@@ -34,8 +34,8 @@ function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
   };
  
   
-  var dataFormatada = props.data.map( (item: any) => {
-    var quantidadeFormatada = item.quantidade_total.toLocaleString();
+  const dataFormatada = props.data.map( (item: any) => {
+    const quantidadeFormatada = item.quantidade_total.toLocaleString();
     if (item.hasOwnProperty('denominacao'))
       return { ...item, denominacao: item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}), quantidade_total: quantidadeFormatada };
     return { ...item, quantidade_total: quantidadeFormatada };

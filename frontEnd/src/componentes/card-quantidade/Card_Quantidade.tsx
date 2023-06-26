@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import "./index.css"
+import './index.css';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 
@@ -12,11 +12,11 @@ function Card_Quantidade(props: {pergunta: string, data: any, colunas: any}) {
 
   
 
-  var dataFormatada = props.data.map( (item: any) => {
-    var quantidadeFormatada = item.quantidade_total.toLocaleString();
+  const dataFormatada = props.data.map( (item: any) => {
+    const quantidadeFormatada = item.quantidade_total.toLocaleString();
     if (item.hasOwnProperty('denominacao') && item.hasOwnProperty('diferenca_percentual')){
-      var denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-      var diferenca_percentualFormatada = 'NULL';
+      const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+      let diferenca_percentualFormatada = 'NULL';
       if (item.diferenca_percentual != 'NULL')
         diferenca_percentualFormatada = (item.diferenca_percentual * 1).toFixed(2) + '%';
       return { ...item, denominacao: denominacaoFormartada, 

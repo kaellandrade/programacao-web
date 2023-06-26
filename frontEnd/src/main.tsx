@@ -3,7 +3,6 @@ import 'primereact/resources/primereact.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App.tsx';
 import './index.css';
 import PageRoot from './pages/pageRoot';
 import Page404 from './pages/page404';

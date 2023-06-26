@@ -36,8 +36,10 @@ function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
   
   const dataFormatada = props.data.map( (item: any) => {
     const quantidadeFormatada = item.quantidade_total.toLocaleString();
-    if (item.hasOwnProperty('denominacao'))
-      return { ...item, denominacao: item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}), quantidade_total: quantidadeFormatada };
+    if (item.hasOwnProperty('denominacao')){
+      const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+      return { ...item, denominacao: denominacaoFormartada, quantidade_total: quantidadeFormatada };
+    }
     return { ...item, quantidade_total: quantidadeFormatada };
   });
 
@@ -76,7 +78,7 @@ function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
   return (
     <div className="content ranking">
       <h4>{props.pergunta}</h4>
-      <form action="" className="form date">
+      <form className="form date" action="" method='POST'>
         <div>
           <Dropdown value={selectedYearStart} onChange={(e) => setSelectedYearStart(e.value)} options={yearsStart} optionLabel="year" 
             placeholder="Ano início" className="dropdown years" required />
@@ -85,7 +87,6 @@ function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
         </div>
         <input type="submit" value="Aplicar"></input>
       </form>
-      <br />
       <DataTable ref={dt} size="small" value={dados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
           {props.colunas.map((col: any) => (
               <Column key={col.field} field={col.field} header={col.header} align="center" sortable style={{ width: '10%' }} />

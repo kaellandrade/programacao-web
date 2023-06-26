@@ -52,7 +52,7 @@ aside a:hover{
   color: var(--white-medium--);
 }
 
-.active{
+aside .active{
   background-color: var(--green-medium--);
   color: var(--white-medium--);
 }

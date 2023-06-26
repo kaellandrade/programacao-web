@@ -1,12 +1,13 @@
-import React from "react";
-import "./index.css"
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './index.css';
 
 function Header() {
   return (
     <header>
-      <a href="#">
+      <NavLink to={''}>
         <h1>Circulação de dinheiro no Brasil</h1>
-      </a>
+			</NavLink>
       <nav className="nav">
         <ul className="nav-list">
           <a href="#">

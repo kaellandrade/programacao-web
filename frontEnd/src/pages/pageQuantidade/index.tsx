@@ -3,7 +3,7 @@ import './index.css';
 import Header from '../../componentes/header/Header';
 import Footer from '../../componentes/footer/Footer';
 import Aside from '../../componentes/aside/Aside';
-import Card_Quantidade from '../../componentes/card-quantidade/Card_Quantidade';
+import Card_Quantidade from '../../componentes/cardQuantidade/CardQuantidade';
 
 function Main() {
 

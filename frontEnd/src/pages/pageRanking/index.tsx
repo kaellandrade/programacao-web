@@ -3,7 +3,7 @@ import './index.css';
 import Header from '../../componentes/header/Header';
 import Footer from '../../componentes/footer/Footer';
 import Aside from '../../componentes/aside/Aside';
-import Card_Ranking from '../../componentes/card-ranking/Card_Ranking';
+import Card_Ranking from '../../componentes/cardRanking/CardRanking';
 
 function Main() {
 

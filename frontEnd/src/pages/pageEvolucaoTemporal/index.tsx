@@ -3,7 +3,7 @@ import './index.css';
 import Header from '../../componentes/header/Header';
 import Footer from '../../componentes/footer/Footer';
 import Aside from '../../componentes/aside/Aside';
-import Card_Evolucao from '../../componentes/card-evolucao/Card_Evolucao';
+import Card_Evolucao from '../../componentes/cardEvolucao/CardEvolucao';
 
 
 function Main() {

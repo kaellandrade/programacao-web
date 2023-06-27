@@ -5,7 +5,7 @@ function Aside() {
 	return (
 		<aside>
 			<h3>Consultas</h3>
-			<hr />
+			<hr/>
 			<NavLink to={'evolucao'}>
 				<span className="material-symbols-outlined">timeline</span>
 				Evolução temporal

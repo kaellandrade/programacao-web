@@ -1,27 +1,27 @@
 import React, { useState, useEffect, useRef } from 'react';
-import "./index.css"
+import './index.css';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 
-
-function Card_Quantidade(props: {pergunta: string, data: any, colunas: any}) {
+function CardEvolucao(props: {pergunta: string, data: any, colunas: any}) {
 
   const [dados, setDados] = useState([]);
   const dt = useRef<HTMLTableElement>(null);
   const [showAdditionalButtons, setShowAdditionalButtons] = useState(false);
 
+<<<<<<<< HEAD:frontEnd/src/componentes/cardEvolucao/CardEvolucao.tsx
   
 
-  var dataFormatada = props.data.map( (item: any) => {
-    var quantidadeFormatada = item.quantidade_total.toLocaleString();
-    if (item.hasOwnProperty('denominacao') && item.hasOwnProperty('diferenca_percentual')){
-      var denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-      var diferenca_percentualFormatada = 'NULL';
-      if (item.diferenca_percentual != 'NULL')
-        diferenca_percentualFormatada = (item.diferenca_percentual * 1).toFixed(2) + '%';
-      return { ...item, denominacao: denominacaoFormartada, 
-        quantidade_total: quantidadeFormatada, diferenca_percentual: diferenca_percentualFormatada};
+  const dataFormatada = props.data.map( (item: any) => {
+    const quantidadeFormatada = item.quantidade_total.toLocaleString();
+    if (item.hasOwnProperty('denominacao')){
+      const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+      return { ...item, denominacao: denominacaoFormartada, quantidade_total: quantidadeFormatada };
     }
+========
+  const dataFormatada = props.data.map((item:any) => {
+    const quantidadeFormatada = item.quantidade_total.toLocaleString();
+>>>>>>>> main:frontEnd/src/componentes/card-evolucao/CardEvolucao.tsx
     return { ...item, quantidade_total: quantidadeFormatada };
   });
 
@@ -47,7 +47,7 @@ function Card_Quantidade(props: {pergunta: string, data: any, colunas: any}) {
   useEffect(() => {
     setDados(dataFormatada);
   }, []);
-
+  
   return (
     <div className="content table-evolucao">
       <h4>{props.pergunta}</h4>
@@ -80,4 +80,4 @@ function Card_Quantidade(props: {pergunta: string, data: any, colunas: any}) {
   );
 }
 
-export default Card_Quantidade;
+export default CardEvolucao;

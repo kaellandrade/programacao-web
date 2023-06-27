@@ -1,4 +1,5 @@
 import { useRouteError,isRouteErrorResponse } from 'react-router-dom';
+import './index.css';
 
 export default function Pagina404() {
   const error = useRouteError();

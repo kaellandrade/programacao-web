@@ -52,12 +52,14 @@ aside a:hover{
   color: var(--white-medium--);
 }
 
+<<<<<<< HEAD
 aside .active{
+=======
+.active{
+>>>>>>> main
   background-color: var(--green-medium--);
   color: var(--white-medium--);
 }
-
-
 
 
 

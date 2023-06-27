@@ -1,6 +1,7 @@
+import React from 'react';
 import 'primereact/resources/themes/md-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
-import React from 'react';
+import 'primeflex/primeflex.css';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';

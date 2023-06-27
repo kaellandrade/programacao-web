@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import './index.css';
 
 function Aside() {
-	return(
+	return (
 		<aside>
 			<h3>Consultas</h3>
 			<hr/>
@@ -25,7 +25,7 @@ function Aside() {
 				Valores
 			</NavLink>
 		</aside>
-	); 
+	);
 }
 
 export default Aside;

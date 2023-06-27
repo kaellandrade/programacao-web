@@ -9,7 +9,6 @@ function CardEvolucao(props: {pergunta: string, data: any, colunas: any}) {
   const dt = useRef<HTMLTableElement>(null);
   const [showAdditionalButtons, setShowAdditionalButtons] = useState(false);
 
-<<<<<<<< HEAD:frontEnd/src/componentes/cardEvolucao/CardEvolucao.tsx
   
 
   const dataFormatada = props.data.map( (item: any) => {
@@ -18,10 +17,6 @@ function CardEvolucao(props: {pergunta: string, data: any, colunas: any}) {
       const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
       return { ...item, denominacao: denominacaoFormartada, quantidade_total: quantidadeFormatada };
     }
-========
-  const dataFormatada = props.data.map((item:any) => {
-    const quantidadeFormatada = item.quantidade_total.toLocaleString();
->>>>>>>> main:frontEnd/src/componentes/card-evolucao/CardEvolucao.tsx
     return { ...item, quantidade_total: quantidadeFormatada };
   });
 
@@ -79,5 +74,4 @@ function CardEvolucao(props: {pergunta: string, data: any, colunas: any}) {
     </div>
   );
 }
-
 export default CardEvolucao;

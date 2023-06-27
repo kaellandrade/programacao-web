@@ -3,7 +3,7 @@ import './index.css';
 import Header from '../../componentes/header/Header';
 import Footer from '../../componentes/footer/Footer';
 import Aside from '../../componentes/aside/Aside';
-import Card_Evolucao from '../../componentes/cardEvolucao/CardEvolucao';
+import CardEvolucao from '../../componentes/cardEvolucao/CardEvolucao';
 
 
 function Main() {
@@ -213,10 +213,10 @@ function Main() {
       <h2>Pagina de Evolução Temporal</h2>
       <div className="container valores">
         <div className="column valores">
-          <Card_Evolucao pergunta={pergunta1} data={data1} colunas={colunas1} />
+          <CardEvolucao pergunta={pergunta1} data={data1} colunas={colunas1} />
         </div>
         <div className="column valores">
-          <Card_Evolucao pergunta={pergunta2} data={data2} colunas={colunas2} />
+          <CardEvolucao pergunta={pergunta2} data={data2} colunas={colunas2} />
         </div>
       </div>
     </>

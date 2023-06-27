@@ -1,6 +1,6 @@
 @import "../../variaveis.css";
 
-aside{
+aside {
   background-color: white;
   width: 20%;
   height: 100%;
@@ -11,24 +11,24 @@ aside{
   border-radius: 5px;
 }
 
-aside h3{
+aside h3 {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   color: var(--green-medium--);
 }
 
-hr{
+hr {
   width: 100%;
-  border: 1px solid  rgb(240, 240, 240);
+  border: 1px solid rgb(240, 240, 240);
   margin-bottom: 10px;
 }
 
-aside a{
+aside a {
   width: 100%;
 }
 
-aside a{
+aside a {
   background-color: white;
   border-radius: 4px;
   border: none;
@@ -43,24 +43,16 @@ aside a{
   align-items: center;
 }
 
-aside a .material-symbols-outlined{
+aside a .material-symbols-outlined {
   margin-right: 10px;
 }
 
-aside a:hover{
+aside a:hover {
   background-color: var(--green-medium--);
   color: var(--white-medium--);
 }
 
-<<<<<<< HEAD
-aside .active{
-=======
-.active{
->>>>>>> main
+aside .active {
   background-color: var(--green-medium--);
   color: var(--white-medium--);
 }
-
-
-
-

@@ -1,0 +1,7 @@
+@import "../../variaveis.css";
+  
+p{
+  font-size: 14px;
+  color: var(--gray-medium--);
+}
+

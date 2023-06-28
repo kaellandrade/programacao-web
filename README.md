@@ -2,6 +2,10 @@
 
 Repositório para disciplina de Programação WEB - UFS
 
+<p align="center">
+  <img width='30%' src="./imgs/Logo.png" alt="PetIndica">
+</p>
+
 # [Dinheiro em Circulação](#)
 
 Projeto para matéria de Programação WEB.
@@ -9,9 +13,6 @@ Projeto para matéria de Programação WEB.
 
 -  [Front-end](https://github.com/kaellandrade/programacao-web-frontEnd)
 -  [Back-End](#)
-<p align="center">
-  <img width='30%' src="./imgs/Logo.png" alt="PetIndica">
-</p>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/kaellandrade/naive-bayes-pwa?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/kaellandrade/naive-bayes-pwa?style=for-the-badge)

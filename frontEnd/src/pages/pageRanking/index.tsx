@@ -1,11 +1,5 @@
-import { useEffect } from 'react';
 import './index.css';
-import Header from '../../componentes/header/Header';
-import Footer from '../../componentes/footer/Footer';
-import Aside from '../../componentes/aside/Aside';
 import Card_Ranking from '../../componentes/cardRanking/CardRanking';
-import { getValorExtenso, getValorCirculacaoDataEspecifica, getValorCirculacaoIntervaloAnos } from '../../api/data.ts';
-
 
 function Main() {
 
@@ -21,8 +15,6 @@ function Main() {
     {field: 'categoria', header: 'Categoria'},
     {field: 'quantidade_total', header: 'Quantidade total'}
   ];
-
-
 
   return (
     <>

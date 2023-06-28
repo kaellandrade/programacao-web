@@ -85,3 +85,33 @@ export function getQuantidadeCategoriasIntervaloAnos( anoInicio: { year: number 
 		}
 	});
 }
+
+export function getQuantidadeCirculacaoMesAno(): Promise<string> {
+	// console.log(anoInicio.year, anoFim.year);
+	return new Promise<string>((resolve, reject) => {
+		axios.get(`${urlBackEnd}/quantidadeCirculacaoMesAno`)
+		.then((response) => {
+			// console.log(typeof response.data);	
+			resolve(response.data);
+		})
+		.catch((error) => {
+			console.error(error);
+			reject('Erro ao obter o valor por extenso.');
+		});
+	});
+}
+
+export function getDiferencaPercentualQuantidadeDenominacao(): Promise<string> {
+	// console.log(anoInicio.year, anoFim.year);
+	return new Promise<string>((resolve, reject) => {
+		axios.get(`${urlBackEnd}/diferencaPercentualQuantidadeDenominacao`)
+		.then((response) => {
+			// console.log(typeof response.data);	
+			resolve(response.data);
+		})
+		.catch((error) => {
+			console.error(error);
+			reject('Erro ao obter o valor por extenso.');
+		});
+	});
+}

@@ -16,9 +16,6 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
   const [selectedYearEnd, setSelectedYearEnd] = useState<{ year: number }>({ year: 1994 });
   const [yearsStart, setYearsStart] = useState<Array<{ year: number }>>([]);
   const [yearsEnd, setYearsEnd] = useState<Array<{ year: number }>>([]);
-  const [valor, setValor] = useState(0);
-
-
 
   const gerarAnosInicio = () => {
     const yearStart = [];

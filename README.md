@@ -5,7 +5,10 @@ Repositório para disciplina de Programação WEB - UFS
 # [Dinheiro em Circulação](#)
 
 Projeto para matéria de Programação WEB.
+> Para facilitar o deploy o front-end e o back-end estão em repositórios separados
 
+-  [Front-end](https://github.com/kaellandrade/programacao-web-frontEnd)
+-  [Back-End](#)
 <p align="center">
   <img width='30%' src="./imgs/Logo.png" alt="PetIndica">
 </p>

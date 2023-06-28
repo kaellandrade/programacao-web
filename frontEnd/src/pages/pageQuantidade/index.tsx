@@ -228,7 +228,7 @@ function Main() {
 
   return (
     <>
-      <h2>Pagina de valores</h2>
+      <h2>Pagina de Quantidade</h2>
       <div className="container valores">
         <div className="column valores">
           <Card_Quantidade pergunta={pergunta1} data={data1} colunas={colunas1} />

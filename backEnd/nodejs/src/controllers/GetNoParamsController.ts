@@ -8,12 +8,14 @@ export class GetNoParamsController {
     const result: any[] = await circulacao
       .createQueryBuilder("circulacao")
       .select("DATE_PART('year', circulacao.data)", "ano")
+      .addSelect("especie.nome", "especie")
       .addSelect("categoria.nome", "categoria")
       .addSelect("SUM(circulacao.quantidade)", "quantidade_total")
       .innerJoin("circulacao.dinheiro", "dinheiro")
+      .innerJoin("dinheiro.especie", "especie")
       .innerJoin("dinheiro.categoria", "categoria")
-      .groupBy("DATE_PART('year', circulacao.data), categoria.nome")
-      .orderBy("DATE_PART('year', circulacao.data), categoria.nome")
+      .groupBy("DATE_PART('year', circulacao.data), categoria.nome, especie.nome")
+      .orderBy("DATE_PART('year', circulacao.data), categoria.nome, especie.nome")
       .getRawMany();
 
     return res.json(result);
@@ -31,6 +33,19 @@ export class GetNoParamsController {
       .innerJoin("circulacao.dinheiro", "dinheiro")
       .groupBy("DATE_PART('year', circulacao.data), dinheiro.denominacao")
       .orderBy("DATE_PART('year', circulacao.data), dinheiro.denominacao")
+      .getRawMany();
+
+    return res.json(result);
+  }
+
+  async quantidadeCirculacaoMesAno(req: Request, res: Response){
+    const result: any[] = await circulacao
+      .createQueryBuilder("circulacao")
+      .select("EXTRACT(year FROM circulacao.data)", "ano")
+      .addSelect("EXTRACT(month FROM circulacao.data)", "mes")
+      .addSelect("SUM(circulacao.quantidade)", "quantidade_total")
+      .groupBy("EXTRACT(year FROM circulacao.data), EXTRACT(month FROM circulacao.data)")
+      .orderBy("EXTRACT(year FROM circulacao.data), EXTRACT(month FROM circulacao.data)")
       .getRawMany();
 
     return res.json(result);

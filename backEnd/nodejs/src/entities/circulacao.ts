@@ -1,7 +1,13 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
 import { Dinheiro } from "./dinheiro";
 
-@Entity("movimentacao-dinheiro.circulacao")
+@Entity({ schema: "movimentacao-dinheiro", name: "circulacao" })
 export class Circulacao {
   @PrimaryGeneratedColumn()
   id: number;
@@ -12,7 +18,8 @@ export class Circulacao {
   @Column({ type: "numeric", precision: 20, scale: 2, nullable: false })
   valor: number;
 
-  @ManyToOne(() => Dinheiro, { nullable: false })
+  @ManyToOne(() => Dinheiro, (dinheiro) => dinheiro.circulacoes) // Adicione o relacionamento aqui
+  @JoinColumn({ name: "id_dinheiro" })
   dinheiro: Dinheiro;
 
   @Column({ type: "date", nullable: true })

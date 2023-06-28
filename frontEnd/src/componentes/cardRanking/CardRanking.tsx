@@ -3,9 +3,11 @@ import './index.css';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Dropdown } from 'primereact/dropdown';
+import { getQuantidadeDenominacoesIntervaloAnos, getQuantidadeCategoriasIntervaloAnos } from '../../api/data.ts';
+
         
 
-function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
+function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boolean}) {
 
   const [dados, setDados] = useState([]);
   const dt = useRef<HTMLTableElement>(null);
@@ -14,6 +16,8 @@ function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
   const [selectedYearEnd, setSelectedYearEnd] = useState<{ year: number }>({ year: 1994 });
   const [yearsStart, setYearsStart] = useState<Array<{ year: number }>>([]);
   const [yearsEnd, setYearsEnd] = useState<Array<{ year: number }>>([]);
+  const [valor, setValor] = useState(0);
+
 
 
   const gerarAnosInicio = () => {
@@ -34,14 +38,15 @@ function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
   };
  
   
-  const dataFormatada = props.data.map( (item: any) => {
-    const quantidadeFormatada = item.quantidade_total.toLocaleString();
-    if (item.hasOwnProperty('denominacao')){
-      const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-      return { ...item, denominacao: denominacaoFormartada, quantidade_total: quantidadeFormatada };
-    }
-    return { ...item, quantidade_total: quantidadeFormatada };
-  });
+  // const dataFormatada = dados.map( (item: any) => {
+  //   const quantidadeFormatada = item.quantidade_total.toLocaleString();
+  //   if (item.hasOwnProperty('denominacao')){
+  //     const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+  //     return { ...item, denominacao: denominacaoFormartada, quantidade_total: quantidadeFormatada };
+  //   }
+  //   return { ...item, quantidade_total: quantidadeFormatada };
+  // });
+
 
   
   const exportCSV = (selectionOnly: boolean) => {
@@ -64,11 +69,40 @@ function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
     setShowAdditionalButtons(!showAdditionalButtons);
   };
 
+
+  const getDados = async (isDenominacao: boolean) => {
+    let dados;
+    if (isDenominacao)
+      dados = await getQuantidadeDenominacoesIntervaloAnos(selectedYearStart, selectedYearEnd);
+    else
+      dados = await getQuantidadeCategoriasIntervaloAnos(selectedYearStart, selectedYearEnd);
+
+    console.log(dados);
+
+
+    if (dados != null)
+      setDados(dados);
+    else{
+      setDados([]);
+    }
+  };
+
+  const handleSubmit = async (event: any) => {  
+    event.preventDefault();
+    getDados(props.isDenominacao);
+  };
+
   useEffect(() => {
-    setDados(dataFormatada);
+    // setDados(dataFormatada);
     gerarAnosInicio();
     gerarAnosFim();
   }, []);
+
+  useEffect(() => {
+    // setDados(dataFormatada);
+    gerarAnosInicio();
+    gerarAnosFim();
+  }, [dados]);
 
   useEffect(() => {
     setSelectedYearEnd({});
@@ -78,7 +112,7 @@ function Card_Ranking(props: {pergunta: string, data: any, colunas: any}) {
   return (
     <div className="content ranking">
       <h4>{props.pergunta}</h4>
-      <form className="form date" action="" method='POST'>
+      <form className="form date" onSubmit={handleSubmit}>
         <div>
           <Dropdown value={selectedYearStart} onChange={(e) => setSelectedYearStart(e.value)} options={yearsStart} optionLabel="year" 
             placeholder="Ano início" className="dropdown years" required />

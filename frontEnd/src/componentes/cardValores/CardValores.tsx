@@ -6,13 +6,13 @@ import Calendar from './Calendar.tsx';
 
 function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiIntervalo: boolean, calendarioId: string }) {
 
-  const [selectedYearStart, setSelectedYearStart] = useState<{ year: number }>({ year: 0 });
-  const [selectedYearEnd, setSelectedYearEnd] = useState<{ year: number }>({ year: 1994 });
+  const [selectedYearStart, setSelectedYearStart] = useState<{ year: number }>({ year: -1 });
+  const [selectedYearEnd, setSelectedYearEnd] = useState<{ year: number }>({ year: -1 });
   const [yearsStart, setYearsStart] = useState<Array<{ year: number }>>([]);
   const [yearsEnd, setYearsEnd] = useState<Array<{ year: number }>>([]);
   const [valor, setValor] = useState(0);
   const [valorExtenso, setValorExtenso] = useState('');
-  const [dataSelected, setDataSelected] = useState('');
+  const [dataSelected, setDataSelected] = useState(null);
 
   const gerarAnosInicio = () => {
     const yearStart = [];
@@ -54,7 +54,7 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
     if (valor != null)
       setValor(parseFloat(valor));
     else{
-      setValor(-1);
+      setValor(0);
     }
   };
 

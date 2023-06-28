@@ -64,12 +64,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" title="VsCode"></code>
 <code><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" title="VsCode"></code>
 
-
-## Ajustes e melhorias (Trabalhos futuros)
-
-- Obter dados para classes de animais que não recebem nenhuma recomendação. Isso se deve ao fato de na nossa base não haver dados suficientes para aquelas características em específico. Como por exemplo **PASSÁRO -> GIGANTE -> ADULTO -> A nossa base de dados não tem nenhuma compra com essa categoria. Assim como outras.**
-- No output, mostrar também imagens ilustrativas de cada produto.
-
 ## :closed_book: Referências
 
 ### Base 

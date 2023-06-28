@@ -53,7 +53,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 ## **Linguagens e Ferramentas utilizadas no projeto:**
 
-<code><img height="30" src="https://www.svgrepo.com/download/374144/typescript.svg" title="TYpeScript"></code>
+<code><img height="30" src="https://www.svgrepo.com/download/374144/typescript.svg" title="TypeScript"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" title="HTML"></code>
 <code><img height="30" src="https://th.bing.com/th/id/R.6b2018f5c6532f6c29806ef06ffb158d?rik=iz3jaCtzRF18EQ&pid=ImgRaw&r=0" title="CSS"></code>
 <code><img height="30" src="https://www.postgresql.org/media/img/about/press/elephant.png" title="postgreSQL"></code>
@@ -62,7 +62,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <code><img height="30" src="https://www.python.org/static/img/python-logo.png" title="Python"></code>
 <code><img height="30" src="https://brandslogos.com/wp-content/uploads/images/large/figma-logo.png" title="Figma"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" title="VsCode"></code>
-<code><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" title="VsCode"></code>
+<code><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" title="ReactJS"></code>
 
 ## :closed_book: Referências
 

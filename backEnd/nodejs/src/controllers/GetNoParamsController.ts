@@ -40,20 +40,17 @@ export class GetNoParamsController {
     const dinheiroRepository = dinheiro;
     const circulacaoRepository = circulacao;
 
-    // Obter todas as denominações distintas
     const denominacoes = await dinheiroRepository
       .createQueryBuilder("dinheiro")
       .select("DISTINCT dinheiro.denominacao", "denominacao")
       .getRawMany();
 
-    // Obter os anos distintos presentes na tabela circulacao
     const anos = await circulacaoRepository
       .createQueryBuilder("circulacao")
       .select("DISTINCT DATE_PART('year', circulacao.data)", "ano")
       .orderBy("ano", "ASC")
       .getRawMany();
 
-    // Iterar por cada denominação e ano para calcular a diferença percentual
     for (const denominacao of denominacoes) {
       const { denominacao: valorDenominacao } = denominacao;
 
@@ -61,7 +58,6 @@ export class GetNoParamsController {
         const anoAtual = anos[i].ano;
         const anoAnterior = anos[i - 1].ano;
 
-        // Obter a quantidade de circulação para o ano atual e anterior para a denominação atual
         const quantidadeAtual = await circulacaoRepository
           .createQueryBuilder("circulacao")
           .select("SUM(circulacao.quantidade)", "quantidade")
@@ -82,7 +78,6 @@ export class GetNoParamsController {
           )
           .getRawOne();
 
-        // Calcular a diferença percentual entre os anos
         const diferencaPercentual =
           (((quantidadeAtual.quantidade || 0) -
             (quantidadeAnterior.quantidade || 0)) /

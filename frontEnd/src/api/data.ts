@@ -115,3 +115,33 @@ export function getDiferencaPercentualQuantidadeDenominacao(): Promise<string> {
 		});
 	});
 }
+
+export function getEvolucaoQuantidadeCirculacaoPorCategoria(): Promise<string> {
+	// console.log(anoInicio.year, anoFim.year);
+	return new Promise<string>((resolve, reject) => {
+		axios.get(`${urlBackEnd}/evolucaoQuantidadeCirculacaoPorCategoria`)
+		.then((response) => {
+			// console.log(typeof response.data);	
+			resolve(response.data);
+		})
+		.catch((error) => {
+			console.error(error);
+			reject('Erro ao obter o valor por extenso.');
+		});
+	});
+}
+
+export function getEvolucaoQuantidadeCirculacaoPorDenominacao(): Promise<string> {
+	// console.log(anoInicio.year, anoFim.year);
+	return new Promise<string>((resolve, reject) => {
+		axios.get(`${urlBackEnd}/evolucaoQuantidadeCirculacaoPorDenominacao`)
+		.then((response) => {
+			// console.log(typeof response.data);	
+			resolve(response.data);
+		})
+		.catch((error) => {
+			console.error(error);
+			reject('Erro ao obter o valor por extenso.');
+		});
+	});
+}

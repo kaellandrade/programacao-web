@@ -11,18 +11,6 @@ function CardEvolucao(props: {pergunta: string, colunas: any, isDenominacao: boo
   const dt = useRef<HTMLTableElement>(null);
   const [showAdditionalButtons, setShowAdditionalButtons] = useState(false);
 
-  
-
-  // const dataFormatada = props.data.map( (item: any) => {
-  //   const quantidadeFormatada = item.quantidade_total.toLocaleString();
-  //   if (item.hasOwnProperty('denominacao')){
-  //     const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-  //     return { ...item, denominacao: denominacaoFormartada, quantidade_total: quantidadeFormatada };
-  //   }
-  //   return { ...item, quantidade_total: quantidadeFormatada };
-  // });
-
-  
   const exportCSV = (selectionOnly: boolean) => {
     dt.current.exportCSV({ selectionOnly });
     setShowAdditionalButtons(false);
@@ -47,10 +35,6 @@ function CardEvolucao(props: {pergunta: string, colunas: any, isDenominacao: boo
       dados = await getEvolucaoQuantidadeCirculacaoPorDenominacao();
     else
       dados = await getEvolucaoQuantidadeCirculacaoPorCategoria();
-
-    console.log(dados);
-
-
     if (dados != null)
       setDados(dados);
     else{

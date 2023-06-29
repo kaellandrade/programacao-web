@@ -1,10 +1,10 @@
 import axios from 'axios';
-const urlBackEnd = 'http://localhost:3000';
+const URL_BACK_END = 'http://localhost:3000';
 
 export function getValorExtenso(valor: number): Promise<string> {
 	return new Promise<string>((resolve, reject) => {
 		if (valor != undefined) {
-			axios.get(`${urlBackEnd}/valores/${valor}`)
+			axios.get(`${URL_BACK_END}/valores/${valor}`)
 			.then((response) => {
 				resolve(response.data.valorExtensoMaiuscula);
 			})
@@ -20,7 +20,7 @@ export function getValorCirculacaoDataEspecifica(data: string, especie: string):
 	// console.log(data, especie);
 	return new Promise<string>((resolve, reject) => {
 		if (data != undefined && especie != undefined) {
-			axios.get(`${urlBackEnd}/valorCirculacaoDataEspecifica/${data}/${especie}`)
+			axios.get(`${URL_BACK_END}/valorCirculacaoDataEspecifica/${data}/${especie}`)
 			.then((response) => {
 				// console.log(response.data[0].valor_total);	
 			  resolve(response.data[0].valor_total);
@@ -39,7 +39,7 @@ export function getValorCirculacaoIntervaloAnos(anoInicio: { year: number }, ano
 	console.log(anoInicio.year, anoFim.year, especie);
 	return new Promise<string>((resolve, reject) => {
 		if ( anoInicio.year != 0 && anoFim.year != 0) {
-			axios.get(`${urlBackEnd}/valorCirculacaoIntervaloAnos/${anoInicio.year}/${anoFim.year}/${especie}`)
+			axios.get(`${URL_BACK_END}/valorCirculacaoIntervaloAnos/${anoInicio.year}/${anoFim.year}/${especie}`)
 			.then((response) => {
 			//   console.log(response.data[0].valor_total);	
 				resolve(response.data[0].valor_total);
@@ -56,7 +56,7 @@ export function getQuantidadeDenominacoesIntervaloAnos( anoInicio: { year: numbe
 	// console.log(anoInicio.year, anoFim.year);
 	return new Promise<string>((resolve, reject) => {
 		if ( anoInicio.year != 0 && anoFim.year != 0) {
-			axios.get(`${urlBackEnd}/quantidadeDenominacoesIntervaloAnos/${anoInicio.year}/${anoFim.year}`)
+			axios.get(`${URL_BACK_END}/quantidadeDenominacoesIntervaloAnos/${anoInicio.year}/${anoFim.year}`)
 			.then((response) => {
 			  console.log(typeof response.data);	
 				resolve(response.data);
@@ -73,7 +73,7 @@ export function getQuantidadeCategoriasIntervaloAnos( anoInicio: { year: number 
 	// console.log(anoInicio.year, anoFim.year);
 	return new Promise<string>((resolve, reject) => {
 		if ( anoInicio.year != 0 && anoFim.year != 0) {
-			axios.get(`${urlBackEnd}/quantidadeCategoriasIntervaloAnos/${anoInicio.year}/${anoFim.year}`)
+			axios.get(`${URL_BACK_END}/quantidadeCategoriasIntervaloAnos/${anoInicio.year}/${anoFim.year}`)
 			.then((response) => {
 			  console.log(typeof response.data);	
 				resolve(response.data);
@@ -89,7 +89,7 @@ export function getQuantidadeCategoriasIntervaloAnos( anoInicio: { year: number 
 export function getQuantidadeCirculacaoMesAno(): Promise<string> {
 	// console.log(anoInicio.year, anoFim.year);
 	return new Promise<string>((resolve, reject) => {
-		axios.get(`${urlBackEnd}/quantidadeCirculacaoMesAno`)
+		axios.get(`${URL_BACK_END}/quantidadeCirculacaoMesAno`)
 		.then((response) => {
 			// console.log(typeof response.data);	
 			resolve(response.data);
@@ -104,7 +104,7 @@ export function getQuantidadeCirculacaoMesAno(): Promise<string> {
 export function getDiferencaPercentualQuantidadeDenominacao(): Promise<string> {
 	// console.log(anoInicio.year, anoFim.year);
 	return new Promise<string>((resolve, reject) => {
-		axios.get(`${urlBackEnd}/diferencaPercentualQuantidadeDenominacao`)
+		axios.get(`${URL_BACK_END}/diferencaPercentualQuantidadeDenominacao`)
 		.then((response) => {
 			// console.log(typeof response.data);	
 			resolve(response.data);
@@ -119,7 +119,7 @@ export function getDiferencaPercentualQuantidadeDenominacao(): Promise<string> {
 export function getEvolucaoQuantidadeCirculacaoPorCategoria(): Promise<string> {
 	// console.log(anoInicio.year, anoFim.year);
 	return new Promise<string>((resolve, reject) => {
-		axios.get(`${urlBackEnd}/evolucaoQuantidadeCirculacaoPorCategoria`)
+		axios.get(`${URL_BACK_END}/evolucaoQuantidadeCirculacaoPorCategoria`)
 		.then((response) => {
 			// console.log(typeof response.data);	
 			resolve(response.data);
@@ -134,7 +134,7 @@ export function getEvolucaoQuantidadeCirculacaoPorCategoria(): Promise<string> {
 export function getEvolucaoQuantidadeCirculacaoPorDenominacao(): Promise<string> {
 	// console.log(anoInicio.year, anoFim.year);
 	return new Promise<string>((resolve, reject) => {
-		axios.get(`${urlBackEnd}/evolucaoQuantidadeCirculacaoPorDenominacao`)
+		axios.get(`${URL_BACK_END}/evolucaoQuantidadeCirculacaoPorDenominacao`)
 		.then((response) => {
 			// console.log(typeof response.data);	
 			resolve(response.data);

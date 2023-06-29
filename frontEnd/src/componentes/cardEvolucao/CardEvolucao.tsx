@@ -2,8 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import './index.css';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import { getEvolucaoQuantidadeCirculacaoPorCategoria, getEvolucaoQuantidadeCirculacaoPorDenominacao } from '../../api/data.ts';
 
-function CardEvolucao(props: {pergunta: string, data: any, colunas: any}) {
+
+function CardEvolucao(props: {pergunta: string, colunas: any, isDenominacao: boolean}) {
 
   const [dados, setDados] = useState([]);
   const dt = useRef<HTMLTableElement>(null);
@@ -11,14 +13,14 @@ function CardEvolucao(props: {pergunta: string, data: any, colunas: any}) {
 
   
 
-  const dataFormatada = props.data.map( (item: any) => {
-    const quantidadeFormatada = item.quantidade_total.toLocaleString();
-    if (item.hasOwnProperty('denominacao')){
-      const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-      return { ...item, denominacao: denominacaoFormartada, quantidade_total: quantidadeFormatada };
-    }
-    return { ...item, quantidade_total: quantidadeFormatada };
-  });
+  // const dataFormatada = props.data.map( (item: any) => {
+  //   const quantidadeFormatada = item.quantidade_total.toLocaleString();
+  //   if (item.hasOwnProperty('denominacao')){
+  //     const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+  //     return { ...item, denominacao: denominacaoFormartada, quantidade_total: quantidadeFormatada };
+  //   }
+  //   return { ...item, quantidade_total: quantidadeFormatada };
+  // });
 
   
   const exportCSV = (selectionOnly: boolean) => {
@@ -39,8 +41,25 @@ function CardEvolucao(props: {pergunta: string, data: any, colunas: any}) {
     setShowAdditionalButtons(!showAdditionalButtons);
   };
 
+  const getDados = async (isDenominacao: boolean) => {
+    let dados;
+    if (isDenominacao)
+      dados = await getEvolucaoQuantidadeCirculacaoPorDenominacao();
+    else
+      dados = await getEvolucaoQuantidadeCirculacaoPorCategoria();
+
+    console.log(dados);
+
+
+    if (dados != null)
+      setDados(dados);
+    else{
+      setDados([]);
+    }
+  };
+
   useEffect(() => {
-    setDados(dataFormatada);
+    getDados(props.isDenominacao);
   }, []);
   
   return (

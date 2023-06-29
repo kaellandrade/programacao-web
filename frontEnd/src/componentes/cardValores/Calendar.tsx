@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Calendar, CalendarChangeEvent } from 'primereact/calendar';
+import { Calendar } from 'primereact/calendar';
 import { addLocale } from 'primereact/api';
 
-export default function MinMaxDemo() {
+export default function Calendario(props: { calendarioId: string }) {
 
     const [date, setDate] = useState<string | Date | Date[] | null>(null);
 
@@ -29,14 +29,14 @@ export default function MinMaxDemo() {
         <div className="card flex justify-content-center">
             <Calendar 
             value={date} 
-            onChange={(e: CalendarChangeEvent) => setDate(e.value)} 
+            id={props.calendarioId} 
+            onChange={(e) => setDate(e.value)}
             minDate={minDate} 
             maxDate={maxDate} 
             locale="pt-br"
             placeholder="Selecione uma data"
             showIcon
-            dateFormat="dd/mm/yy"
-            readOnlyInput />
+            dateFormat="dd/mm/yy" />
         </div>
     );
 }

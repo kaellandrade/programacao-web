@@ -10,7 +10,7 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
   const [selectedYearEnd, setSelectedYearEnd] = useState<{ year: number }>({ year: -1 });
   const [yearsStart, setYearsStart] = useState<Array<{ year: number }>>([]);
   const [yearsEnd, setYearsEnd] = useState<Array<{ year: number }>>([]);
-  const [valor, setValor] = useState(0);
+  const [valor, setValor] = useState(-1);
   const [valorExtenso, setValorExtenso] = useState('');
   const [dataSelected, setDataSelected] = useState(null);
 
@@ -39,7 +39,6 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
 
   const getValor = async (isMoeda: boolean, possuiIntervalo: boolean) => {
     let valor;
-    console.log(dataSelected);
     if (isMoeda && !possuiIntervalo)
       valor = await getValorCirculacaoDataEspecifica(converterData(dataSelected), 'Moedas');
     else if (!isMoeda && !possuiIntervalo)
@@ -48,8 +47,6 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
       valor = await getValorCirculacaoIntervaloAnos(selectedYearStart, selectedYearEnd, 'Moedas');
     else if (!isMoeda && possuiIntervalo)
       valor = await getValorCirculacaoIntervaloAnos(selectedYearStart, selectedYearEnd, 'Cédulas');
-
-    console.log(valor);
 
     if (valor != null)
       setValor(parseFloat(valor));
@@ -83,7 +80,9 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
   }, []);
 
   useEffect(() => {
-    getValor(props.isMoeda, props.possuiIntervalo);
+    if (dataSelected !== null) {
+      getValor(props.isMoeda, props.possuiIntervalo);
+    }
   }, [dataSelected]);
 
   useEffect(() => {
@@ -112,8 +111,24 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
         }
         <input type="submit" value="Aplicar"></input>
       </form>
-      <span><strong>R$ {valor.toLocaleString('pt-BR')}</strong></span>
-      <p>{valorExtenso}</p>
+      {
+        valor === 0 ?
+          <span style={{ fontSize: '14px' }} ><strong>Desculpe, nosso banco de dados não possui informações sobre a data escolhida. <br />
+            Tente novamente com outra data. 
+          </strong></span>
+          : valor === -1 ?
+            <span></span>
+          :
+          <span><strong>R$ {valor.toLocaleString('pt-BR')}</strong></span>
+      }
+      {
+        valorExtenso === 'Zero centavos' ?
+          <p></p>
+          : valorExtenso === 'Um real negativo' ?
+            <p></p>
+          :
+          <p>{valorExtenso}</p>
+      }
     </div>
   );
 }

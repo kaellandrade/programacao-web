@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './index.css';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
@@ -8,6 +8,7 @@ import { getEvolucaoQuantidadeCirculacaoPorCategoria, getEvolucaoQuantidadeCircu
 function CardEvolucao(props: {pergunta: string, colunas: any, isDenominacao: boolean}) {
 
   const [dados, setDados] = useState([]);
+  const [dadosFormatados, setDadosFormatados] = useState([{}]);
   const dt = useRef<HTMLTableElement>(null);
   const [showAdditionalButtons, setShowAdditionalButtons] = useState(false);
 
@@ -29,6 +30,16 @@ function CardEvolucao(props: {pergunta: string, colunas: any, isDenominacao: boo
     setShowAdditionalButtons(!showAdditionalButtons);
   };
 
+  const formatarDados = dados.map( (item: any) => {
+    const quantidadeFormatada = parseInt(item.quantidade_total).toLocaleString();
+    if ( item.hasOwnProperty('denominacao') ){
+      const denominacaoFormartada = parseFloat(item.denominacao).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+      return { ...item, denominacao: denominacaoFormartada, 
+        quantidade_total: quantidadeFormatada };
+    }
+    return { ...item, quantidade_total: quantidadeFormatada };
+  });
+
   const getDados = async (isDenominacao: boolean) => {
     let dados;
     if (isDenominacao)
@@ -43,6 +54,10 @@ function CardEvolucao(props: {pergunta: string, colunas: any, isDenominacao: boo
   };
 
   useEffect(() => {
+    setDadosFormatados(formatarDados);
+  }, [dados]);
+
+  useEffect(() => {
     getDados(props.isDenominacao);
   }, []);
   
@@ -50,7 +65,7 @@ function CardEvolucao(props: {pergunta: string, colunas: any, isDenominacao: boo
     <div className="content table-evolucao">
       <h4>{props.pergunta}</h4>
       <br />
-      <DataTable ref={dt} size="small" value={dados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
+      <DataTable ref={dt} size="small" value={dadosFormatados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
           {props.colunas.map((col: any) => (
               <Column key={col.field} field={col.field} header={col.header} align="center" sortable style={{ width: '10%' }} />
           ))}

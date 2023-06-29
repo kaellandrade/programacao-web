@@ -10,6 +10,7 @@ import { getQuantidadeDenominacoesIntervaloAnos, getQuantidadeCategoriasInterval
 function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boolean}) {
 
   const [dados, setDados] = useState([]);
+  const [dadosFormatados, setDadosFormatados] = useState([{}]);
   const dt = useRef<HTMLTableElement>(null);
   const [showAdditionalButtons, setShowAdditionalButtons] = useState(false);
   const [selectedYearStart, setSelectedYearStart] = useState<{ year: number }>({ year: 0 });
@@ -34,18 +35,7 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
     setYearsEnd(yearsEnd);
   };
  
-  
-  // const dataFormatada = dados.map( (item: any) => {
-  //   const quantidadeFormatada = item.quantidade_total.toLocaleString();
-  //   if (item.hasOwnProperty('denominacao')){
-  //     const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-  //     return { ...item, denominacao: denominacaoFormartada, quantidade_total: quantidadeFormatada };
-  //   }
-  //   return { ...item, quantidade_total: quantidadeFormatada };
-  // });
 
-
-  
   const exportCSV = (selectionOnly: boolean) => {
     if (dt.current !== null) {
       dt.current.exportCSV({ selectionOnly });
@@ -66,6 +56,15 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
     setShowAdditionalButtons(!showAdditionalButtons);
   };
 
+  const formatarDados = dados.map( (item: any) => {
+    const quantidadeFormatada = parseInt(item.quantidade_total).toLocaleString();
+    if ( item.hasOwnProperty('denominacao') ){
+      const denominacaoFormartada = parseFloat(item.denominacao).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+      return { ...item, denominacao: denominacaoFormartada, 
+        quantidade_total: quantidadeFormatada };
+    }
+    return { ...item, quantidade_total: quantidadeFormatada };
+  });
 
   const getDados = async (isDenominacao: boolean) => {
     let dados;
@@ -73,9 +72,6 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
       dados = await getQuantidadeDenominacoesIntervaloAnos(selectedYearStart, selectedYearEnd);
     else
       dados = await getQuantidadeCategoriasIntervaloAnos(selectedYearStart, selectedYearEnd);
-
-    console.log(dados);
-
 
     if (dados != null)
       setDados(dados);
@@ -96,7 +92,7 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
   }, []);
 
   useEffect(() => {
-    // setDados(dataFormatada);
+    setDadosFormatados(formatarDados);
     gerarAnosInicio();
     gerarAnosFim();
   }, [dados]);
@@ -118,7 +114,7 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
         </div>
         <input type="submit" value="Aplicar"></input>
       </form>
-      <DataTable ref={dt} size="small" value={dados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
+      <DataTable ref={dt} size="small" value={dadosFormatados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
           {props.colunas.map((col: any) => (
               <Column key={col.field} field={col.field} header={col.header} align="center" sortable style={{ width: '10%' }} />
           ))}

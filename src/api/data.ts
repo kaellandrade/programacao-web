@@ -43,7 +43,7 @@ export function getValorCirculacaoDataEspecifica(data: string, especie: string):
 }
   
 export function getValorCirculacaoIntervaloAnos(anoInicio: { year: number }, anoFim: { year: number }, especie: string): Promise<string> {
-	console.log(anoInicio.year, anoFim.year, especie);
+	// console.log(anoInicio.year, anoFim.year, especie);
 	return new Promise<string>((resolve, reject) => {
 		if ( anoInicio.year != 0 && anoFim.year != 0) {
 			axios.get(`/valorCirculacaoIntervaloAnos/${anoInicio.year}/${anoFim.year}/${especie}`)
@@ -64,8 +64,7 @@ export function getQuantidadeDenominacoesIntervaloAnos( anoInicio: { year: numbe
 	return new Promise<string>((resolve, reject) => {
 		if ( anoInicio.year != 0 && anoFim.year != 0) {
 			axios.get(`/quantidadeDenominacoesIntervaloAnos/${anoInicio.year}/${anoFim.year}`)
-			.then((response) => {
-			  console.log(typeof response.data);	
+			.then((response) => {	
 				resolve(response.data);
 			})
 			.catch((error) => {
@@ -81,8 +80,7 @@ export function getQuantidadeCategoriasIntervaloAnos( anoInicio: { year: number 
 	return new Promise<string>((resolve, reject) => {
 		if ( anoInicio.year != 0 && anoFim.year != 0) {
 			axios.get(`/quantidadeCategoriasIntervaloAnos/${anoInicio.year}/${anoFim.year}`)
-			.then((response) => {
-			  console.log(typeof response.data);	
+			.then((response) => {	
 				resolve(response.data);
 			})
 			.catch((error) => {

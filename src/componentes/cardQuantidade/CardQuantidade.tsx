@@ -10,23 +10,8 @@ function Card_Quantidade(props: {pergunta: string, colunas: any, isPercentual: b
   const [dados, setDados] = useState([]);
   const dt = useRef<HTMLTableElement>(null);
   const [showAdditionalButtons, setShowAdditionalButtons] = useState(false);
+  const [dadosFormatados, setDadosFormatados] = useState([{}]);
 
-  
-
-  // const dataFormatada = props.data.map( (item: any) => {
-  //   const quantidadeFormatada = item.quantidade_total.toLocaleString();
-  //   if (item.hasOwnProperty('denominacao') && item.hasOwnProperty('diferenca_percentual')){
-  //     const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-  //     let diferenca_percentualFormatada = 'NULL';
-  //     if (item.diferenca_percentual != 'NULL')
-  //       diferenca_percentualFormatada = (item.diferenca_percentual * 1).toFixed(2) + '%';
-  //     return { ...item, denominacao: denominacaoFormartada, 
-  //       quantidade_total: quantidadeFormatada, diferenca_percentual: diferenca_percentualFormatada};
-  //   }
-  //   return { ...item, quantidade_total: quantidadeFormatada };
-  // });
-
-  
   const exportCSV = (selectionOnly: boolean) => {
     dt.current.exportCSV({ selectionOnly });
     setShowAdditionalButtons(false);
@@ -45,15 +30,25 @@ function Card_Quantidade(props: {pergunta: string, colunas: any, isPercentual: b
     setShowAdditionalButtons(!showAdditionalButtons);
   };
 
+  const formatarDados = dados.map( (item: any) => {
+    const quantidadeFormatada = parseInt(item.quantidade_total).toLocaleString();
+    if (item.hasOwnProperty('denominacaoAtual') && item.hasOwnProperty('diferencaPercentual')){
+      const denominacaoFormartada = parseFloat(item.denominacaoAtual).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+      let diferenca_percentualFormatada = 'NULL';
+      if (item.diferencaPercentual != 'NULL')
+        diferenca_percentualFormatada = (item.diferencaPercentual * 1).toFixed(2) + '%';
+      return { ...item, denominacaoAtual: denominacaoFormartada, 
+        quantidade_total: quantidadeFormatada, diferencaPercentual: diferenca_percentualFormatada};
+    }
+    return { ...item, quantidade_total: quantidadeFormatada };
+  });
+
   const getDados = async (isPercentual: boolean) => {
     let dados;
     if (isPercentual)
       dados = await getDiferencaPercentualQuantidadeDenominacao();
     else
       dados = await getQuantidadeCirculacaoMesAno();
-
-    console.log(dados);
-
 
     if (dados != null)
       setDados(dados);
@@ -62,10 +57,9 @@ function Card_Quantidade(props: {pergunta: string, colunas: any, isPercentual: b
     }
   };
 
-  const handleSubmit = async (event: any) => {  
-    event.preventDefault();
-    getDados(props.isPercentual);
-  };
+  useEffect(() => {
+    setDadosFormatados(formatarDados);
+  }, [dados]);
 
   useEffect(() => {
     getDados(props.isPercentual);
@@ -75,7 +69,7 @@ function Card_Quantidade(props: {pergunta: string, colunas: any, isPercentual: b
     <div className="content table-evolucao">
       <h4>{props.pergunta}</h4>
       <br />
-      <DataTable ref={dt} size="small" value={dados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
+      <DataTable ref={dt} size="small" value={dadosFormatados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
           {props.colunas.map((col: any) => (
               <Column key={col.field} field={col.field} header={col.header} align="center" sortable style={{ width: '10%' }} />
           ))}

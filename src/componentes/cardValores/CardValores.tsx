@@ -1,17 +1,18 @@
 import { useState, useEffect } from 'react';
 import './index.css';
 import { Dropdown } from 'primereact/dropdown';
-import getValorExtenso from '../../api/data.ts';
+import { getValorExtenso, getValorCirculacaoDataEspecifica, getValorCirculacaoIntervaloAnos } from '../../api/data.ts';
 import Calendar from './Calendar.tsx';
 
-function Card_Valores(props: { valor_moeda_data: number, pergunta: string, possuiIntervalo: boolean }) {
+function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiIntervalo: boolean, calendarioId: string }) {
 
-  const [selectedYearStart, setSelectedYearStart] = useState<{ year: number }>({ year: 0 });
-  const [selectedYearEnd, setSelectedYearEnd] = useState<{ year: number }>({ year: 1994 });
+  const [selectedYearStart, setSelectedYearStart] = useState<{ year: number }>({ year: -1 });
+  const [selectedYearEnd, setSelectedYearEnd] = useState<{ year: number }>({ year: -1 });
   const [yearsStart, setYearsStart] = useState<Array<{ year: number }>>([]);
   const [yearsEnd, setYearsEnd] = useState<Array<{ year: number }>>([]);
+  const [valor, setValor] = useState(0);
   const [valorExtenso, setValorExtenso] = useState('');
-
+  const [dataSelected, setDataSelected] = useState(null);
 
   const gerarAnosInicio = () => {
     const yearStart = [];
@@ -30,6 +31,47 @@ function Card_Valores(props: { valor_moeda_data: number, pergunta: string, possu
     setYearsEnd(yearsEnd);
   };
 
+  const converterData = (data: string) => {
+    const dataSplit = data.split('/');
+    const dataConvertida = `${dataSplit[2]}-${dataSplit[1]}-${dataSplit[0]}`;
+    return dataConvertida;
+  };
+
+  const getValor = async (isMoeda: boolean, possuiIntervalo: boolean) => {
+    let valor;
+    console.log(dataSelected);
+    if (isMoeda && !possuiIntervalo)
+      valor = await getValorCirculacaoDataEspecifica(converterData(dataSelected), 'Moedas');
+    else if (!isMoeda && !possuiIntervalo)
+      valor = await getValorCirculacaoDataEspecifica(converterData(dataSelected), 'Cédulas');
+    else if (isMoeda && possuiIntervalo)
+      valor = await getValorCirculacaoIntervaloAnos(selectedYearStart, selectedYearEnd, 'Moedas');
+    else if (!isMoeda && possuiIntervalo)
+      valor = await getValorCirculacaoIntervaloAnos(selectedYearStart, selectedYearEnd, 'Cédulas');
+
+    console.log(valor);
+
+    if (valor != null)
+      setValor(parseFloat(valor));
+    else{
+      setValor(0);
+    }
+  };
+
+  const handleSubmit = async (event: any) => {  
+    event.preventDefault();
+
+    if (props.calendarioId == 'calendario-input-1' || props.calendarioId == 'calendario-input-3'){
+      const  inputElementCalendar = document.querySelector('#' + props.calendarioId + ' .p-inputtext') as HTMLInputElement;
+      const data = inputElementCalendar ? inputElementCalendar.value : '';
+      if (data != null)
+        setDataSelected(data);
+    }
+    else{
+      getValor(props.isMoeda, props.possuiIntervalo);
+    }
+  };
+
   const setarValorExtenso = async (valor: number) => {
     const valorExtenso = await getValorExtenso(valor);
     setValorExtenso(valorExtenso);
@@ -38,8 +80,15 @@ function Card_Valores(props: { valor_moeda_data: number, pergunta: string, possu
   useEffect(() => {
     gerarAnosInicio();
     gerarAnosFim();
-    setarValorExtenso(props.valor_moeda_data);
   }, []);
+
+  useEffect(() => {
+    getValor(props.isMoeda, props.possuiIntervalo);
+  }, [dataSelected]);
+
+  useEffect(() => {
+    setarValorExtenso(valor);
+  }, [valor]);
 
   useEffect(() => {
     setSelectedYearEnd({});
@@ -49,7 +98,7 @@ function Card_Valores(props: { valor_moeda_data: number, pergunta: string, possu
   return (
     <div className="content">
       <h4>{props.pergunta}</h4>
-      <form action="" className="form date">
+      <form className="form date" onSubmit={handleSubmit} >
         {
           props.possuiIntervalo ?
             <div>
@@ -59,15 +108,11 @@ function Card_Valores(props: { valor_moeda_data: number, pergunta: string, possu
               placeholder="Ano fim" className="dropdown years" required />
             </div>
             :
-            // <div>
-            //   <label htmlFor="date">Selecione uma data:</label>
-            //   <input type="date" id="date"></input>
-            // </div>
-            <Calendar />
+            <Calendar calendarioId={props.calendarioId} />
         }
         <input type="submit" value="Aplicar"></input>
       </form>
-      <span><strong>R$ {props.valor_moeda_data.toLocaleString('pt-BR')}</strong></span>
+      <span><strong>R$ {valor.toLocaleString('pt-BR')}</strong></span>
       <p>{valorExtenso}</p>
     </div>
   );

@@ -65,6 +65,7 @@ input[type="submit"]:hover{
   font-size: 14px;
   padding: 0;
   padding-left: 10px;
+  color: var(--black-light--)
 }
 
 ul li{

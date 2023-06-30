@@ -7,11 +7,13 @@ export default function Calendario(props: { calendarioId: string }) {
     const [date, setDate] = useState<string | Date | Date[] | null>(null);
 
     const minDate = new Date();
-    minDate.setMonth(8);
+    minDate.setDate(3);
+    minDate.setMonth(9);
     minDate.setFullYear(1994);
 
     const maxDate = new Date();
-    maxDate.setMonth(6);
+    maxDate.setDate(7);
+    maxDate.setMonth(5);
     maxDate.setFullYear(2023);
 
     addLocale('pt-br', {

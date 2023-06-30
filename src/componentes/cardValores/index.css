@@ -44,6 +44,22 @@ input[type="submit"]:hover{
   background-color: var(--green-dark--);
 }
 
+.p-button{
+  background: var(--green-medium--);
+  height: 22px;
+  width: 100px;
+}
+
+.p-button:hover{
+  background: var(--green-dark--);
+}
+
+#button-aplicar span.p-button-label.p-c{
+  font-size: 14px;
+  color: var(--white-medium--);
+  padding-right: 6px;
+}
+
 .content span{
   font-size: 20px;
   color: var(--green-medium--);
@@ -87,6 +103,7 @@ ul li{
   padding: 0;
   background-color: var(--green-medium--);
   border-radius: 2px;
+  height: 100%;
 }
 
 .p-button.p-component.p-datepicker-trigger.p-button-icon-only:hover{

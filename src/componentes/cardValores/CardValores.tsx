@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './index.css';
 import { Dropdown } from 'primereact/dropdown';
 import { getValorExtenso, getValorCirculacaoDataEspecifica, getValorCirculacaoIntervaloAnos } from '../../api/data.ts';
 import Calendar from './Calendar.tsx';
+import { Button } from 'primereact/button';
 
 function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiIntervalo: boolean, calendarioId: string }) {
 
@@ -13,6 +14,11 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
   const [valor, setValor] = useState(-1);
   const [valorExtenso, setValorExtenso] = useState('');
   const [dataSelected, setDataSelected] = useState(null);
+  const [dataAtual, setDataAtual] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+
+  const formRef = useRef(null);
 
   const gerarAnosInicio = () => {
     const yearStart = [];
@@ -48,21 +54,33 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
     else if (!isMoeda && possuiIntervalo)
       valor = await getValorCirculacaoIntervaloAnos(selectedYearStart, selectedYearEnd, 'Cédulas');
 
+    
     if (valor != null)
       setValor(parseFloat(valor));
     else{
       setValor(0);
+    }
+    setLoading(false);
+    setButtonDisabled(true);
+  };
+
+  const handleButtonClick = () => {
+    if (formRef.current) {
+      formRef.current.submit();
     }
   };
 
   const handleSubmit = async (event: any) => {  
     event.preventDefault();
 
+    setLoading(true);
+
     if (props.calendarioId == 'calendario-input-1' || props.calendarioId == 'calendario-input-3'){
       const  inputElementCalendar = document.querySelector('#' + props.calendarioId + ' .p-inputtext') as HTMLInputElement;
       const data = inputElementCalendar ? inputElementCalendar.value : '';
-      if (data != null)
+      if (data != null){
         setDataSelected(data);
+      }
     }
     else{
       getValor(props.isMoeda, props.possuiIntervalo);
@@ -74,6 +92,17 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
     setValorExtenso(valorExtenso);
   };
 
+  const receberDataAtual = (data: string) => {
+    setDataAtual(data);
+  };
+
+  useEffect(() => {
+    if (dataAtual == dataSelected) 
+      setButtonDisabled(true);
+    else
+      setButtonDisabled(false);
+  }, [dataAtual]);
+
   useEffect(() => {
     gerarAnosInicio();
     gerarAnosFim();
@@ -82,6 +111,7 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
   useEffect(() => {
     if (dataSelected !== null) {
       getValor(props.isMoeda, props.possuiIntervalo);
+      setButtonDisabled(false);
     }
   }, [dataSelected]);
 
@@ -107,9 +137,10 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
               placeholder="Ano fim" className="dropdown years" required />
             </div>
             :
-            <Calendar calendarioId={props.calendarioId} />
+            <Calendar calendarioId={props.calendarioId} enviarDataAtual={receberDataAtual} />
         }
-        <input type="submit" value="Aplicar"></input>
+        {/* <input type="submit" value="Aplicar"></input> */}
+        <Button id='button-aplicar' label="Aplicar" icon="pi pi-check" loading={loading} onClick={handleButtonClick} disabled={buttonDisabled} rounded />
       </form>
       {
         valor === 0 ?

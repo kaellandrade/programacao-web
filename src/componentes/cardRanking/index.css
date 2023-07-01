@@ -26,20 +26,26 @@ form label{
   
 }
 
-input[type="submit"]{
-  padding: 3px 15px 3px 15px;
-  cursor: pointer;
-  border-radius: 4px;
-  border: none;
-  background-color: var(--green-medium--);
+.p-button{
+  background: var(--green-medium--);
+  height: 22px;
+  width: 100px;
+}
+
+.p-button:enabled:hover{
+  background: var(--green-dark--);
+}
+
+#button-aplicar span.p-button-label.p-c{
+  font-size: 14px;
   color: var(--white-medium--);
-  font-weight: bold;
+  padding-right: 6px;
 }
 
-input[type="submit"]:hover{
-  background-color: var(--green-dark--);
-}
+.p-button:enabled:focus{
+  background: var(--green-medium--);
 
+}
 
 .p-datatable-header{
   font-size: 12px;

@@ -1,3 +1,17 @@
+@keyframes p-progress-spinner-color{
+  100%, 0%{
+    stroke: var(--green-medium--);
+  }
+  40%{
+    stroke: var(--green-dark--);
+  }
+  60%{
+    stroke: var(--green-medium--);
+  }
+  80%, 90%{
+    stroke: var(--green-dark--);
+  }
+} 
 
 h4{
   font-size: 16px;
@@ -15,32 +29,6 @@ h4{
   padding: 15px;
 }
 
-.form.date{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-form label{
-  font-size: 14px;
-  
-}
-
-input[type="submit"]{
-  padding: 3px 15px 3px 15px;
-  cursor: pointer;
-  border-radius: 4px;
-  border: none;
-  background-color: var(--green-medium--);
-  color: var(--white-medium--);
-  transition: 0.2s;
-  font-weight: bold;
-}
-
-input[type="submit"]:hover{
-  background-color: var(--green-dark--);
-}
-
 .content span{
   font-size: 20px;
   color: var(--green-medium--);
@@ -53,3 +41,7 @@ input[type="submit"]:hover{
   color: var(--black-light--);
 }
 
+.p-progress-spinner{
+  width: 50px;
+  height: 50px;
+}

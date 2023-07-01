@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import './index.css';
 import { Dropdown } from 'primereact/dropdown';
 import { getValorExtenso, getValorCirculacaoDataEspecifica, getValorCirculacaoIntervaloAnos } from '../../api/data.ts';
@@ -18,8 +18,6 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
   const [loading, setLoading] = useState(false);
   const [buttonDisabled, setButtonDisabled] = useState(true);
 
-  const formRef = useRef(null);
-
   const gerarAnosInicio = () => {
     const yearStart = [];
     for (let i = 1994; i <= 2023; i++) {
@@ -29,7 +27,7 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
   };
 
   const gerarAnosFim = () => {
-    const yearStart = selectedYearStart.year === 0 ? 1994 : selectedYearStart.year;
+    const yearStart = selectedYearStart.year === -1 ? 1994 : selectedYearStart.year;
     const yearsEnd = [];
     for (let i = yearStart; i <= 2023; i++) {
       yearsEnd.push({ year: i });
@@ -62,12 +60,6 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
     }
     setLoading(false);
     setButtonDisabled(true);
-  };
-
-  const handleButtonClick = () => {
-    if (formRef.current) {
-      formRef.current.submit();
-    }
   };
 
   const handleSubmit = async (event: any) => {  
@@ -120,9 +112,15 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
   }, [valor]);
 
   useEffect(() => {
-    setSelectedYearEnd({});
     gerarAnosFim();
   }, [selectedYearStart]);
+
+  useEffect(() => {
+    if (selectedYearStart.year !== -1 && selectedYearEnd.year !== -1)
+      setButtonDisabled(false);
+    else
+      setButtonDisabled(true);
+  }, [selectedYearStart, selectedYearEnd]);
 
   return (
     <div className="content">
@@ -139,8 +137,7 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
             :
             <Calendar calendarioId={props.calendarioId} enviarDataAtual={receberDataAtual} />
         }
-        {/* <input type="submit" value="Aplicar"></input> */}
-        <Button id='button-aplicar' label="Aplicar" icon="pi pi-check" loading={loading} onClick={handleButtonClick} disabled={buttonDisabled} rounded />
+        <Button id='button-aplicar' label="Aplicar" icon="pi pi-check" loading={loading} disabled={buttonDisabled} rounded />
       </form>
       {
         valor === 0 ?

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import './index.css';
 import { DataTable } from 'primereact/datatable';
+import { ProgressSpinner } from 'primereact/progressspinner';
 import { Column } from 'primereact/column';
 import { getEvolucaoQuantidadeCirculacaoPorCategoria, getEvolucaoQuantidadeCirculacaoPorDenominacao } from '../../api/data.ts';
 
@@ -70,6 +71,11 @@ function CardEvolucao(props: {pergunta: string, colunas: any, isDenominacao: boo
               <Column key={col.field} field={col.field} header={col.header} align="center" sortable style={{ width: '10%' }} />
           ))}
       </DataTable>
+      {dadosFormatados.length !== 0 ? 
+        ''
+       : 
+        <ProgressSpinner strokeWidth="4" fill="var(--surface-ground)" />
+      }
       <div className='buttons-export'>
         <button className='button export main' onClick={ () => handleButtonClick()}>
           Exportar 

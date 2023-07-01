@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './index.css';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import { ProgressSpinner } from 'primereact/progressspinner';
 import { getQuantidadeCirculacaoMesAno, getDiferencaPercentualQuantidadeDenominacao } from '../../api/data.ts';
 
 
@@ -69,11 +70,16 @@ function Card_Quantidade(props: {pergunta: string, colunas: any, isPercentual: b
     <div className="content table-evolucao">
       <h4>{props.pergunta}</h4>
       <br />
-      <DataTable ref={dt} size="small" value={dadosFormatados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
-          {props.colunas.map((col: any) => (
-              <Column key={col.field} field={col.field} header={col.header} align="center" sortable style={{ width: '10%' }} />
-          ))}
+      <DataTable ref={dt} size="small" value={dadosFormatados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }} id='tableQuantidade' >
+        {props.colunas.map((col: any) => (
+            <Column key={col.field} field={col.field} header={col.header} align="center" sortable style={{ width: '10%' }} />
+        ))}
       </DataTable>
+      {dadosFormatados.length !== 0 ? 
+        ''
+       : 
+        <ProgressSpinner strokeWidth="4" fill="var(--surface-ground)" />
+      }
       <div className='buttons-export'>
         <button className='button export main' onClick={ () => handleButtonClick()}>
           Exportar 

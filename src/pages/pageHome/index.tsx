@@ -15,7 +15,7 @@ function Main() {
             Os registros contemplam dados entre <strong> 03 de outubro de 1994 e 07 de 
             junho de 2023.</strong> <br /><br />
             Dados extraídos do
-            <a href="https://dadosabertos.bcb.gov.br/dataset/dinheiro-em-circulao"> Portal do Banco Central do Brasil.</a>
+            <a href="https://dadosabertos.bcb.gov.br/dataset/dinheiro-em-circulao" target='_blank' > Portal do Banco Central do Brasil.</a>
             
           </p>
         </div>

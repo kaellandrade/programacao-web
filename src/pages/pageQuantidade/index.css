@@ -99,6 +99,11 @@ section h2{
   color: var(--white-medium--);
 }
 
+@media (max-width: 414px){
+
+  .column.valores .content{
+    margin-bottom: 5px;
+  }
 
 
-
+}

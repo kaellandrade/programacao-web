@@ -56,3 +56,27 @@ aside .active {
   background-color: var(--green-medium--);
   color: var(--white-medium--);
 }
+
+@media (max-width: 414px){
+
+  @keyframes showAside {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }    
+  }
+
+  aside{
+    display: none;
+    align-self: flex-end;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+    flex-direction: row;
+    animation: showAside;
+    animation-duration: 0.3s;
+    
+  }
+}

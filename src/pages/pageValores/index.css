@@ -32,3 +32,16 @@ section h2{
   justify-content: space-between;
   margin-right: 4px;
 }
+
+@media (max-width: 414px){
+
+  .container.valores{
+    flex-direction: column;
+  }
+
+  .column.valores{
+    width: 100%;
+    
+  }
+
+}

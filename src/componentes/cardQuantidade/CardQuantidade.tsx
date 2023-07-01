@@ -78,7 +78,7 @@ function Card_Quantidade(props: {pergunta: string, colunas: any, isPercentual: b
       {dadosFormatados.length !== 0 ? 
         ''
        : 
-        <ProgressSpinner strokeWidth="4" fill="var(--surface-ground)" />
+        <ProgressSpinner strokeWidth="4" />
       }
       <div className='buttons-export'>
         <button className='button export main' onClick={ () => handleButtonClick()}>

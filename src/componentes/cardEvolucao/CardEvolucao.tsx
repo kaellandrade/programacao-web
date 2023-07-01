@@ -74,7 +74,7 @@ function CardEvolucao(props: {pergunta: string, colunas: any, isDenominacao: boo
       {dadosFormatados.length !== 0 ? 
         ''
        : 
-        <ProgressSpinner strokeWidth="4" fill="var(--surface-ground)" />
+        <ProgressSpinner strokeWidth="4" />
       }
       <div className='buttons-export'>
         <button className='button export main' onClick={ () => handleButtonClick()}>

@@ -35,3 +35,24 @@ a{
   transform: scale(1.04);
 }
 
+span#menu-show-aside{
+  display: none;
+}
+
+@media (max-width: 414px){
+  .nav{
+    width: auto;
+  }
+
+  header h1{
+    text-align: center;
+  }
+
+  span#menu-show-aside{
+    display: block;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+}
+

@@ -145,9 +145,9 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
             Tente novamente com outra data. 
           </strong></span>
           : valor === -1 ?
-            <span></span>
+            <span id='valor'></span>
           :
-          <span><strong>R$ {valor.toLocaleString('pt-BR')}</strong></span>
+          <span id='valor'><strong>R$ {valor.toLocaleString('pt-BR')}</strong></span>
       }
       {
         valorExtenso === 'Zero centavos' ?

@@ -15,7 +15,7 @@ function Main() {
     <>
       <Header />
       <main>
-        <Aside />
+        <Aside id='sidebar-desktop' />
         <section>
           {
             pathname === '/' ? <Home /> : <Outlet />

@@ -1,20 +1,27 @@
-import React from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Sidebar } from 'primereact/sidebar';
+import Aside from '../aside/Aside';
 import './index.css';
 
 function Header() {
 
-  const showAside = () => {
-    const aside = document.querySelector('aside') as HTMLElement;
-    if (aside){
-      if (aside.style.display == 'block'){
-        aside.style.display = 'none';
-        aside.style.opacity = '1';
-      }
-      else
-        aside.style.display = 'block';
-    }
+  const [visible, setVisible] = useState(false);
+
+  const asideSetNotVisible = (isVisible: boolean) => {
+    setVisible(isVisible);
   };
+
+  useEffect(() => {
+    const body = document.getElementById('root') as HTMLElement;
+    if (body){
+      if (visible)
+        body.style.filter = 'blur(.2rem)';
+      else
+        body.style.filter = 'blur(0)';
+    }
+  }, [visible]);
+
 
   return (
     <header>
@@ -24,9 +31,12 @@ function Header() {
       
       <nav className="nav">
         <ul className="nav-list">
-          <span id='menu-show-aside' className="material-symbols-outlined" onClick={showAside} >
+          <span id='menu-show-aside' className="material-symbols-outlined" onClick={() => setVisible(true)} >
             menu
           </span>
+          <Sidebar visible={visible} onHide={() => setVisible(false)} > 
+            <Aside id='sidebar-mobile' asideSetNotVisible={asideSetNotVisible} />
+          </Sidebar>
           <a href="#">
             <li>
               <span className="material-symbols-outlined">person</span>

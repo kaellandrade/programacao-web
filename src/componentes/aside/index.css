@@ -59,16 +59,33 @@ aside .active {
 
 @media (max-width: 414px){
 
-  @keyframes showAside {
+  aside{
+    width: 100%;
+  }
+
+  aside#sidebar-desktop{
+    display: none;
+  }
+
+  .p-sidebar-mask.p-component-overlay{
+    width: 54%;
+    /* height: 50%; */
+  }
+
+  aside a{
+    /* width: auto; */
+  }
+
+  /* Aside para menu hamburguer manual */
+  /* @keyframes showAside {
     0%{
       opacity: 0;
     }
     100%{
       opacity: 1;
     }    
-  }
-
-  aside{
+  } */
+  /* aside{
     display: none;
     align-self: flex-end;
     width: auto;
@@ -78,5 +95,5 @@ aside .active {
     animation: showAside;
     animation-duration: 0.3s;
     
-  }
+  } */
 }

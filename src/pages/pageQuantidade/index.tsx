@@ -1,4 +1,3 @@
-import './index.css';
 import Card_Quantidade from '../../componentes/cardQuantidade/CardQuantidade';
 
 function Main() {

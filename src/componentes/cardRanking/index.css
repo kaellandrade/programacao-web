@@ -1,31 +1,3 @@
-
-h4{
-  font-size: 16px;
-  text-align: center;
-}
-
-.column.valores .content{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--white-medium--);
-  margin: 2px;
-  padding: 15px;
-}
-
-.form.date{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-form label{
-  font-size: 14px;
-  
-}
-
 .p-button{
   background: var(--green-medium--);
   height: 22px;
@@ -44,86 +16,12 @@ form label{
 
 .p-button:enabled:focus{
   background: var(--green-medium--);
-
-}
-
-.p-datatable-header{
-  font-size: 12px;
 }
 
 .ranking .p-datatable.p-component.p-datatable-scrollable.p-datatable-responsive-scroll.p-datatable-sm{
   width: 100%;
   height: 75%;    
   font-size: 14px;
-}
-
-.buttons-export{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;	
-}
-
-.buttons-option{
-  display: flex;
-  /* justify-content: flex-end; */
-  width: 100%;
-}
-
-
-.button.export{
-  padding: 5px 15px 5px 15px;
-  cursor: pointer;
-  border-radius: 4px;
-  border: none;
-  background-color: var(--green-medium--);
-  color: var(--white-medium--);
-  font-weight: bold;
-  min-width: 120px;
-  margin-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.button.export .material-symbols-outlined{
-  /* margin-left: 5px; */
-  color: var(--white-medium--);
-}
-
-.button.export.option .material-symbols-outlined{
-  margin-left: 5px;
-  color: var(--gray-dark--);
-}
-
-.button.export:hover{
-  background-color: var(--green-dark--);
-}
-
-.button.export.option{
-  background-color: white;
-  color: var(--gray-dark--);
-  
-}
-
-.button.export.option:hover{
-  background-color: var(--green-medium--);
-  color: var(--white-medium--);
-}
-
-
-.content span{
-  font-size: 20px;
-  color: var(--green-medium--);
-  text-align: center;
-}
-
-.content p{
-  font-size: 12px;
-  text-align: center;
-  color: var(--black-light--);
 }
 
 .dropdown.years{
@@ -135,6 +33,7 @@ form label{
   font-size: 14px;
   padding: 0;
   padding-left: 10px;
+  color: var(--black-light--)
 }
 
 ul li{

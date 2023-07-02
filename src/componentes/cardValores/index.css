@@ -1,86 +1,5 @@
 @import url('../../variaveis.css');
 
-h4{
-  font-size: 16px;
-  text-align: center;
-}
-
-.column.valores .content{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--white-medium--);
-  margin: 2px;
-  padding: 15px;
-}
-
-.form.date{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-form label{
-  font-size: 14px;
-  
-}
-
-input[type="date"]{
-  margin-left: 10px;
-}
-
-.p-button{
-  background: var(--green-medium--);
-  height: 22px;
-  width: 100px;
-}
-
-.p-button:enabled:hover{
-  background: var(--green-dark--);
-}
-
-.p-button:enabled:focus{
-  background: var(--green-medium--);
-}
-
-#button-aplicar span.p-button-label.p-c{
-  font-size: 14px;
-  color: var(--white-medium--);
-  padding-right: 6px;
-}
-
-
-
-.content span{
-  font-size: 20px;
-  color: var(--green-medium--);
-  text-align: center;
-}
-
-.content p{
-  font-size: 12px;
-  text-align: center;
-  color: var(--black-light--);
-}
-
-.dropdown.years{
-  height: 20px;
-  margin-right: 15px;
-}
-
-.dropdown.years .p-dropdown-label{
-  font-size: 14px;
-  padding: 0;
-  padding-left: 10px;
-  color: var(--black-light--)
-}
-
-ul li{
-  font-size: 14px;
-}
-
 .p-calendar-w-btn{
   height: 22px;
   width: 200px;
@@ -114,16 +33,4 @@ ul li{
 .p-datepicker-calendar{
   transform: scale(0.8);
   transform-origin: top left;
-}
-
-@media (max-width: 414px){
-
-  .column.valores .content{
-    margin-bottom: 5px;
-  }
-
-  .content p, .content span#valor, .form.date{
-    margin: 10px;
-  }
-
 }

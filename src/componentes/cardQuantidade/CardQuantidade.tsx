@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './index.css';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { ProgressSpinner } from 'primereact/progressspinner';

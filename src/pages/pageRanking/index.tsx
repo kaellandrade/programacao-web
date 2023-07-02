@@ -1,4 +1,3 @@
-import './index.css';
 import Card_Ranking from '../../componentes/cardRanking/CardRanking';
 
 function Main() {

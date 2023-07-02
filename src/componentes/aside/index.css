@@ -68,12 +68,12 @@ aside .active {
   }
 
   .p-sidebar-mask.p-component-overlay{
-    width: 54%;
+    width: auto;
   }
 
 }
 
-@media (max-width: 414px){
+@media (max-width: 425px){
 
   aside{
     width: 100%;

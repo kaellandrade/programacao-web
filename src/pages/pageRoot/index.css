@@ -15,6 +15,7 @@ html{
 
 body{
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
   background-color: var(--white-medium--);
 }
 
@@ -23,6 +24,7 @@ body{
   /* padding: 0; */
   max-width: 1280px;
   margin: 0 auto;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -81,9 +83,13 @@ section h2{
     flex-direction: column;
   }
 
+  section{
+    margin-left: 0;
+  }
+
 }
 
-@media (max-width: 414px){
+@media (max-width: 768px){
   main{
     flex-direction: column;
     margin-top: 0;
@@ -97,6 +103,8 @@ section h2{
 
   .container.valores{
     flex-direction: column;
+    padding-left: 8px;
+    padding-right: 5px;
   }
 
   .column.valores{
@@ -108,3 +116,7 @@ section h2{
   }
 
 }
+
+/* @media (max-width: 425px){
+
+} */

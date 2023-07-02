@@ -39,10 +39,7 @@ span#menu-show-aside{
   display: none;
 }
 
-@media (max-width: 1024px){
-  .nav{
-    /* width: auto; */
-  }
+@media (max-width: 1024px  ){
 
   header h1{
     width: 400px;
@@ -56,13 +53,14 @@ span#menu-show-aside{
   
 }
 
-@media (max-width: 414px){
+@media (max-width: 425px){
   .nav{
     width: auto;
   }
 
   header h1{
     text-align: center;
+    width: auto;
   }
 
   span#menu-show-aside{

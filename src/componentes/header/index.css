@@ -39,6 +39,23 @@ span#menu-show-aside{
   display: none;
 }
 
+@media (max-width: 1024px){
+  .nav{
+    /* width: auto; */
+  }
+
+  header h1{
+    width: 400px;
+  }
+
+  span#menu-show-aside{
+    display: block;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+}
+
 @media (max-width: 414px){
   .nav{
     width: auto;

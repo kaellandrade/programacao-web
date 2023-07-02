@@ -76,6 +76,13 @@ section h2{
   margin-right: 4px;
 }
 
+@media (max-width: 1024px){
+  main{
+    flex-direction: column;
+  }
+
+}
+
 @media (max-width: 414px){
   main{
     flex-direction: column;

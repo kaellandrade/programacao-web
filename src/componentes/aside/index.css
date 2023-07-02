@@ -57,6 +57,22 @@ aside .active {
   color: var(--white-medium--);
 }
 
+@media (max-width: 1024px){
+
+  aside{
+    width: 100%;
+  }
+
+  aside#sidebar-desktop{
+    display: none;
+  }
+
+  .p-sidebar-mask.p-component-overlay{
+    width: 54%;
+  }
+
+}
+
 @media (max-width: 414px){
 
   aside{
@@ -69,31 +85,6 @@ aside .active {
 
   .p-sidebar-mask.p-component-overlay{
     width: 54%;
-    /* height: 50%; */
   }
 
-  aside a{
-    /* width: auto; */
-  }
-
-  /* Aside para menu hamburguer manual */
-  /* @keyframes showAside {
-    0%{
-      opacity: 0;
-    }
-    100%{
-      opacity: 1;
-    }    
-  } */
-  /* aside{
-    display: none;
-    align-self: flex-end;
-    width: auto;
-    height: auto;
-    margin-bottom: 20px;
-    flex-direction: row;
-    animation: showAside;
-    animation-duration: 0.3s;
-    
-  } */
 }

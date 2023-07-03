@@ -81,6 +81,7 @@ section h2{
 @media (max-width: 1024px){
   main{
     flex-direction: column;
+    height: 900px;
   }
 
   section{

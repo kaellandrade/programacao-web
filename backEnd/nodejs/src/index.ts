@@ -18,6 +18,8 @@ AppDataSource.initialize().then(() => {
 	});
 
 	console.log('conectado ao banco');
-
+	
+	console.log('rodando na porta:', process.env.PORT)
+	
 	return app.listen(process.env.PORT);
 });

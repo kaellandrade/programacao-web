@@ -17,5 +17,7 @@ AppDataSource.initialize().then(() => {
 		return res.json('ok');
 	});
 
+	console.log('conectado ao banco');
+
 	return app.listen(process.env.PORT);
 });

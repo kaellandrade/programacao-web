@@ -1,4 +1,3 @@
-
 h4{
   font-size: 16px;
   text-align: center;
@@ -15,32 +14,6 @@ h4{
   padding: 15px;
 }
 
-.form.date{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-form label{
-  font-size: 14px;
-  
-}
-
-input[type="submit"]{
-  padding: 3px 15px 3px 15px;
-  cursor: pointer;
-  border-radius: 4px;
-  border: none;
-  background-color: var(--green-medium--);
-  color: var(--white-medium--);
-  transition: 0.2s;
-  font-weight: bold;
-}
-
-input[type="submit"]:hover{
-  background-color: var(--green-dark--);
-}
-
 .content span{
   font-size: 20px;
   color: var(--green-medium--);
@@ -53,3 +26,164 @@ input[type="submit"]:hover{
   color: var(--black-light--);
 }
 
+.form.date{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form label{
+  font-size: 14px;
+}
+
+span.p-column-title{
+  font-size: 16px;
+}
+
+span.p-sortable-column-icon svg{
+  width: 14px;
+  height: 14px;
+}
+
+.p-datatable.p-component.p-datatable-responsive-scroll{
+  width: 100%;
+  height: 85%;
+  font-size: 14px;
+}
+
+.buttons-export{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;	
+}
+
+.buttons-option{
+  display: flex;
+  /* justify-content: flex-end; */
+  width: 100%;
+}
+
+
+.button.export{
+  padding: 5px 15px 5px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--green-medium--);
+  color: var(--white-medium--);
+  font-weight: bold;
+  min-width: 120px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.button.export .material-symbols-outlined{
+  /* margin-left: 5px; */
+  color: var(--white-medium--);
+}
+
+.button.export.option .material-symbols-outlined{
+  margin-left: 5px;
+  color: var(--gray-dark--);
+}
+
+.button.export:hover{
+  background-color: var(--green-dark--);
+}
+
+.button.export.option{
+  background-color: white;
+  color: var(--gray-dark--);
+  
+}
+
+.button.export.option:hover{
+  background-color: var(--green-medium--);
+  color: var(--white-medium--);
+}
+
+.p-progress-spinner{
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes p-progress-spinner-color{
+  100%, 0%{
+    stroke: var(--green-medium--);
+  }
+  40%{
+    stroke: var(--green-dark--);
+  }
+  60%{
+    stroke: var(--green-medium--);
+  }
+  80%, 90%{
+    stroke: var(--green-dark--);
+  }
+} 
+
+@media (max-width: 768px){
+
+  .column.valores .content{
+    margin-bottom: 8px;
+    margin-left: 0;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .content p, .content span#valor, .form.date{
+    margin: 15px;
+  }
+
+  span.p-column-title{
+    font-size: 14px;
+  }
+
+  .p-datatable.p-component.p-datatable-responsive-scroll{
+    height: 600px;
+  }
+
+} 
+
+
+@media (max-width: 425px){
+
+  .column.valores .content{
+    margin-bottom: 8px;
+    margin-left: 0;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .content p, .content span#valor, .form.date{
+    margin: 15px;
+  }
+
+  span.p-column-title{
+    font-size: 14px;
+  }
+
+  .p-datatable.p-component.p-datatable-responsive-scroll{
+    height: 600px;
+  }
+
+} 
+
+@media (max-width: 375px){
+
+  span.p-column-title{
+    font-size: 10px;
+  }
+
+  .p-datatable.p-component.p-datatable-responsive-scroll{
+    font-size: 10px;
+  }
+
+}

@@ -4,7 +4,6 @@ import 'primereact/resources/primereact.min.css';
 import 'primeflex/primeflex.css';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css';
 import PageRoot from './pages/pageRoot';
 import Page404 from './pages/page404';
 import PageQuantidade from './pages/pageQuantidade';

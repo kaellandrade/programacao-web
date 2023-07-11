@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import { Calendar } from 'primereact/calendar';
 import { addLocale } from 'primereact/api';
 
-export default function Calendario(props: { calendarioId: string }) {
+export default function Calendario(props: { calendarioId: string, enviarDataAtual: (data: string) => void }) {
 
     const [date, setDate] = useState<string | Date | Date[] | null>(null);
 
     const minDate = new Date();
-    minDate.setMonth(8);
+    minDate.setDate(3);
+    minDate.setMonth(9);
     minDate.setFullYear(1994);
 
     const maxDate = new Date();
-    maxDate.setMonth(6);
+    maxDate.setDate(7);
+    maxDate.setMonth(5);
     maxDate.setFullYear(2023);
 
     addLocale('pt-br', {
@@ -25,12 +27,25 @@ export default function Calendario(props: { calendarioId: string }) {
         clear: 'Limpar'
     });
 
+    const onChangeDate = (e: any) => {
+        const data = e.value;
+        setDate(data);
+
+        const day = String(data.getDate()).padStart(2, '0');
+        const month = String(data.getMonth() + 1).padStart(2, '0');
+        const year = data.getFullYear();
+        
+        const dataFormatada = `${day}/${month}/${year}`;
+        props.enviarDataAtual(dataFormatada);
+    };
+
     return (
         <div className="card flex justify-content-center">
             <Calendar 
             value={date} 
             id={props.calendarioId} 
-            onChange={(e) => setDate(e.value)}
+            // onChange={(e) => setDate(e.value)}
+            onChange={onChangeDate}
             minDate={minDate} 
             maxDate={maxDate} 
             locale="pt-br"

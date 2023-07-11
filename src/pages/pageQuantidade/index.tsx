@@ -1,8 +1,3 @@
-import React from 'react';
-import './index.css';
-import Header from '../../componentes/header/Header';
-import Footer from '../../componentes/footer/Footer';
-import Aside from '../../componentes/aside/Aside';
 import Card_Quantidade from '../../componentes/cardQuantidade/CardQuantidade';
 
 function Main() {
@@ -15,7 +10,7 @@ function Main() {
     {field: 'quantidade_total', header: 'Quantidade total'}
   ];
   
-  const pergunta2 = 'Qual a diferença percentual da quantidade de cada denominação ao longo dos anos? (sempre referente ao ano anterior)';
+  const pergunta2 = 'Qual a diferença percentual da quantidade de cada denominação ao longo dos anos?';
 
   const colunas2 = [
     {field: 'anoAnterior', header: 'Ano Anterior'},

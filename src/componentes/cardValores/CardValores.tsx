@@ -3,6 +3,7 @@ import './index.css';
 import { Dropdown } from 'primereact/dropdown';
 import { getValorExtenso, getValorCirculacaoDataEspecifica, getValorCirculacaoIntervaloAnos } from '../../api/data.ts';
 import Calendar from './Calendar.tsx';
+import { Button } from 'primereact/button';
 
 function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiIntervalo: boolean, calendarioId: string }) {
 
@@ -10,9 +11,12 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
   const [selectedYearEnd, setSelectedYearEnd] = useState<{ year: number }>({ year: -1 });
   const [yearsStart, setYearsStart] = useState<Array<{ year: number }>>([]);
   const [yearsEnd, setYearsEnd] = useState<Array<{ year: number }>>([]);
-  const [valor, setValor] = useState(0);
+  const [valor, setValor] = useState(-1);
   const [valorExtenso, setValorExtenso] = useState('');
   const [dataSelected, setDataSelected] = useState(null);
+  const [dataAtual, setDataAtual] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
 
   const gerarAnosInicio = () => {
     const yearStart = [];
@@ -23,7 +27,7 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
   };
 
   const gerarAnosFim = () => {
-    const yearStart = selectedYearStart.year === 0 ? 1994 : selectedYearStart.year;
+    const yearStart = selectedYearStart.year === -1 ? 1994 : selectedYearStart.year;
     const yearsEnd = [];
     for (let i = yearStart; i <= 2023; i++) {
       yearsEnd.push({ year: i });
@@ -39,7 +43,6 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
 
   const getValor = async (isMoeda: boolean, possuiIntervalo: boolean) => {
     let valor;
-    console.log(dataSelected);
     if (isMoeda && !possuiIntervalo)
       valor = await getValorCirculacaoDataEspecifica(converterData(dataSelected), 'Moedas');
     else if (!isMoeda && !possuiIntervalo)
@@ -49,23 +52,27 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
     else if (!isMoeda && possuiIntervalo)
       valor = await getValorCirculacaoIntervaloAnos(selectedYearStart, selectedYearEnd, 'Cédulas');
 
-    console.log(valor);
-
+    
     if (valor != null)
       setValor(parseFloat(valor));
     else{
       setValor(0);
     }
+    setLoading(false);
+    setButtonDisabled(true);
   };
 
   const handleSubmit = async (event: any) => {  
     event.preventDefault();
 
+    setLoading(true);
+
     if (props.calendarioId == 'calendario-input-1' || props.calendarioId == 'calendario-input-3'){
       const  inputElementCalendar = document.querySelector('#' + props.calendarioId + ' .p-inputtext') as HTMLInputElement;
       const data = inputElementCalendar ? inputElementCalendar.value : '';
-      if (data != null)
+      if (data != null){
         setDataSelected(data);
+      }
     }
     else{
       getValor(props.isMoeda, props.possuiIntervalo);
@@ -77,13 +84,27 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
     setValorExtenso(valorExtenso);
   };
 
+  const receberDataAtual = (data: string) => {
+    setDataAtual(data);
+  };
+
+  useEffect(() => {
+    if (dataAtual == dataSelected) 
+      setButtonDisabled(true);
+    else
+      setButtonDisabled(false);
+  }, [dataAtual]);
+
   useEffect(() => {
     gerarAnosInicio();
     gerarAnosFim();
   }, []);
 
   useEffect(() => {
-    getValor(props.isMoeda, props.possuiIntervalo);
+    if (dataSelected !== null) {
+      getValor(props.isMoeda, props.possuiIntervalo);
+      setButtonDisabled(false);
+    }
   }, [dataSelected]);
 
   useEffect(() => {
@@ -91,9 +112,15 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
   }, [valor]);
 
   useEffect(() => {
-    setSelectedYearEnd({});
     gerarAnosFim();
   }, [selectedYearStart]);
+
+  useEffect(() => {
+    if (selectedYearStart.year !== -1 && selectedYearEnd.year !== -1)
+      setButtonDisabled(false);
+    else
+      setButtonDisabled(true);
+  }, [selectedYearStart, selectedYearEnd]);
 
   return (
     <div className="content">
@@ -108,12 +135,28 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
               placeholder="Ano fim" className="dropdown years" required />
             </div>
             :
-            <Calendar calendarioId={props.calendarioId} />
+            <Calendar calendarioId={props.calendarioId} enviarDataAtual={receberDataAtual} />
         }
-        <input type="submit" value="Aplicar"></input>
+        <Button id='button-aplicar' label="Aplicar" icon="pi pi-check" loading={loading} disabled={buttonDisabled} rounded />
       </form>
-      <span><strong>R$ {valor.toLocaleString('pt-BR')}</strong></span>
-      <p>{valorExtenso}</p>
+      {
+        valor === 0 ?
+          <span style={{ fontSize: '14px' }} ><strong>Desculpe, nosso banco de dados não possui informações sobre a data escolhida. <br />
+            Tente novamente com outra data. 
+          </strong></span>
+          : valor === -1 ?
+            <span id='valor'></span>
+          :
+          <span id='valor'><strong>R$ {valor.toLocaleString('pt-BR')}</strong></span>
+      }
+      {
+        valorExtenso === 'Zero centavos' ?
+          <p></p>
+          : valorExtenso === 'Um real negativo' ?
+            <p></p>
+          :
+          <p>{valorExtenso}</p>
+      }
     </div>
   );
 }

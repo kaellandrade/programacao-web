@@ -1,4 +1,3 @@
-import './index.css';
 import Card_Valores from '../../componentes/cardValores/CardValores';
 
 function Main() {

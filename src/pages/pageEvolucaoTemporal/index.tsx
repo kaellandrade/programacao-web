@@ -1,8 +1,3 @@
-import React from 'react';
-import './index.css';
-import Header from '../../componentes/header/Header';
-import Footer from '../../componentes/footer/Footer';
-import Aside from '../../componentes/aside/Aside';
 import CardEvolucao from '../../componentes/cardEvolucao/CardEvolucao';
 
 

@@ -3,7 +3,7 @@
 footer{
   width: 100%;
   background-color: var(--green-medium--);
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
 }
@@ -15,3 +15,4 @@ footer p{
   font-weight: medium;
   text-align: center;
 }
+

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './index.css';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import { Button } from 'primereact/button';
 import { Dropdown } from 'primereact/dropdown';
 import { getQuantidadeDenominacoesIntervaloAnos, getQuantidadeCategoriasIntervaloAnos } from '../../api/data.ts';
 
@@ -10,12 +11,15 @@ import { getQuantidadeDenominacoesIntervaloAnos, getQuantidadeCategoriasInterval
 function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boolean}) {
 
   const [dados, setDados] = useState([]);
+  const [dadosFormatados, setDadosFormatados] = useState([{}]);
   const dt = useRef<HTMLTableElement>(null);
   const [showAdditionalButtons, setShowAdditionalButtons] = useState(false);
-  const [selectedYearStart, setSelectedYearStart] = useState<{ year: number }>({ year: 0 });
-  const [selectedYearEnd, setSelectedYearEnd] = useState<{ year: number }>({ year: 1994 });
+  const [selectedYearStart, setSelectedYearStart] = useState<{ year: number }>({ year: -1 });
+  const [selectedYearEnd, setSelectedYearEnd] = useState<{ year: number }>({ year: -1 });
   const [yearsStart, setYearsStart] = useState<Array<{ year: number }>>([]);
   const [yearsEnd, setYearsEnd] = useState<Array<{ year: number }>>([]);
+  const [loading, setLoading] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
 
   const gerarAnosInicio = () => {
     const yearStart = [];
@@ -26,7 +30,7 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
   };
 
   const gerarAnosFim = () => {
-    const yearStart = selectedYearStart.year === 0 ? 1994 : selectedYearStart.year;
+    const yearStart = selectedYearStart.year === -1 ? 1994 : selectedYearStart.year;
     const yearsEnd = [];
     for (let i = yearStart; i <= 2023; i++) {
       yearsEnd.push({ year: i });
@@ -34,18 +38,7 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
     setYearsEnd(yearsEnd);
   };
  
-  
-  // const dataFormatada = dados.map( (item: any) => {
-  //   const quantidadeFormatada = item.quantidade_total.toLocaleString();
-  //   if (item.hasOwnProperty('denominacao')){
-  //     const denominacaoFormartada = item.denominacao.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-  //     return { ...item, denominacao: denominacaoFormartada, quantidade_total: quantidadeFormatada };
-  //   }
-  //   return { ...item, quantidade_total: quantidadeFormatada };
-  // });
 
-
-  
   const exportCSV = (selectionOnly: boolean) => {
     if (dt.current !== null) {
       dt.current.exportCSV({ selectionOnly });
@@ -66,6 +59,15 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
     setShowAdditionalButtons(!showAdditionalButtons);
   };
 
+  const formatarDados = dados.map( (item: any) => {
+    const quantidadeFormatada = parseInt(item.quantidade_total).toLocaleString();
+    if ( item.hasOwnProperty('denominacao') ){
+      const denominacaoFormartada = parseFloat(item.denominacao).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+      return { ...item, denominacao: denominacaoFormartada, 
+        quantidade_total: quantidadeFormatada };
+    }
+    return { ...item, quantidade_total: quantidadeFormatada };
+  });
 
   const getDados = async (isDenominacao: boolean) => {
     let dados;
@@ -74,37 +76,40 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
     else
       dados = await getQuantidadeCategoriasIntervaloAnos(selectedYearStart, selectedYearEnd);
 
-    console.log(dados);
-
-
     if (dados != null)
       setDados(dados);
     else{
       setDados([]);
     }
+    setLoading(false);
+
   };
 
   const handleSubmit = async (event: any) => {  
     event.preventDefault();
+    setLoading(true);
     getDados(props.isDenominacao);
   };
 
   useEffect(() => {
-    // setDados(dataFormatada);
     gerarAnosInicio();
     gerarAnosFim();
   }, []);
 
   useEffect(() => {
-    // setDados(dataFormatada);
-    gerarAnosInicio();
-    gerarAnosFim();
+    setDadosFormatados(formatarDados);
   }, [dados]);
 
   useEffect(() => {
-    setSelectedYearEnd({});
     gerarAnosFim();
   }, [selectedYearStart]);
+
+  useEffect(() => {
+    if (selectedYearStart.year !== -1 && selectedYearEnd.year !== -1)
+      setButtonDisabled(false);
+    else
+      setButtonDisabled(true);
+  }, [selectedYearStart, selectedYearEnd]);
 
   return (
     <div className="content ranking">
@@ -116,12 +121,13 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
           <Dropdown value={selectedYearEnd} onChange={(e) => setSelectedYearEnd(e.value)} options={yearsEnd} optionLabel="year" 
             placeholder="Ano fim" className="dropdown years" required />
         </div>
-        <input type="submit" value="Aplicar"></input>
+        <Button id='button-aplicar' label="Aplicar" icon="pi pi-check" loading={loading} disabled={buttonDisabled} rounded />
+
       </form>
-      <DataTable ref={dt} size="small" value={dados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
-          {props.colunas.map((col: any) => (
-              <Column key={col.field} field={col.field} header={col.header} align="center" sortable style={{ width: '10%' }} />
-          ))}
+      <DataTable ref={dt} size="small" value={dadosFormatados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>
+        {props.colunas.map((col: any) => (
+            <Column key={col.field} field={col.field} header={col.header} align="center" sortable style={{ width: '10%' }} />
+        ))}
       </DataTable>
       <div className='buttons-export'>
         <button className='button export main' onClick={ () => handleButtonClick()}>

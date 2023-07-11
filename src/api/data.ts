@@ -1,6 +1,9 @@
 import axios from 'axios';
-const URL_LOCAL = 'http://localhost:3000';
-const URL_PRODUCAO = '';
+
+// TODO: corrigir a logica de uso da URL_LOCAL e URL_PRODUCAO
+// const URL_LOCAL = 'http://localhost:3000';
+const URL_LOCAL = 'https://prog-web.fisioluanamenezes.com';
+const URL_PRODUCAO = 'https://prog-web.fisioluanamenezes.com';
 
 if(import.meta.env.MODE === 'development'){
 	axios.defaults.baseURL=URL_LOCAL;

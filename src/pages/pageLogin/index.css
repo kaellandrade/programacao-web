@@ -1,0 +1,48 @@
+.container-login{
+  background-color: white;
+  color: var(--black-light--);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: 350px;
+  width: 350px;
+  margin: auto;
+  margin-top: calc(50vh - 150px);
+}
+
+.container-login .p-inputtext {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+.container-login .p-inputtext:enabled:focus {
+  box-shadow: inset 0 0 0 1px var(--green-medium--), 
+              inset 0 0 0 1px var(--green-medium--), 
+              inset 0 0 0 1px var(--green-medium--), 
+              inset 0 0 0 1px var(--green-medium--)
+}
+
+.container-login .p-button {
+  /* background: var(--green-medium--); */
+  height: 22px;
+  width: 150px;
+  font-size: 14px;
+  border-radius: 20px;
+  
+}
+
+#bt-entrar{
+  width: 100px;
+  margin-left: calc(100% - 100px);
+}
+
+.bt-esqueci-criar{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}

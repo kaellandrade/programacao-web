@@ -1,5 +1,5 @@
 import './index.css';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Header from '../../componentes/header/Header';
 import Footer from '../../componentes/footer/Footer';

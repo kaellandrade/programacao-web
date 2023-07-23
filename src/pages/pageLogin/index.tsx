@@ -9,6 +9,7 @@ import LoginImg from '../../../imgs/login-img.jpg';
 import { Image } from 'primereact/image';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import './index.css';
+import { Link } from 'react-router-dom';
 
 interface IFormInput {
 	email: string;
@@ -97,15 +98,17 @@ export default function Login() {
 							)}
 						/>
 						<Button className="btn btn-enviar" type="submit" label="Entrar" />
-						<Button
-							className="btn btn-cadastro"
-							type="button"
-							label="Realizar cadastro"
-						/>
+						<Link to={'/cadastro'}>
+							<Button
+								className="btn btn-cadastro"
+								type="button"
+								label="Realizar cadastro"
+							/>
+						</Link>
 					</form>
 				</div>
 				<div className="col-12 md:col-7 hidden md:block sm:hidden">
-					<img className='img-login' src={LoginImg} alt="Image" width="100%" />
+					<img className="img-login" src={LoginImg} alt="Image" width="100%" />
 				</div>
 			</div>
 		</div>

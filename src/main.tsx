@@ -7,12 +7,15 @@ import router from './router/router';
 import reportWebVitals from './reportWebVitals';
 import 'primereact/resources/themes/md-light-indigo/theme.css';
 import ReactGA from 'react-ga4';
+import { AuthProvider } from './context/auth';
 
 ReactGA.initialize('G-HRSML86GPK');
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<AuthProvider>
+			<RouterProvider router={router} />
+		</AuthProvider>
 	</React.StrictMode>
 );
 

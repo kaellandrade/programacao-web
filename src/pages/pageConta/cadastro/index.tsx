@@ -4,16 +4,17 @@ import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
 import { classNames } from 'primereact/utils';
 import { Password } from 'primereact/password';
-import Logo from '../../../imgs/Logo.svg';
-import LoginImg from '../../../imgs/login-img.jpg';
-import { Image } from 'primereact/image';
+import Logo from '../../../../imgs/Logo.svg';
+import LoginImg from '../../../../imgs/login-img.jpg';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import './index.css';
+import '../index.css';
 import { Link } from 'react-router-dom';
 
 interface IFormInput {
+	nome: string;
 	email: string;
 	senha: string;
+	confirmarSenha: string;
 }
 
 export default function Login() {
@@ -44,10 +45,36 @@ export default function Login() {
 				<div className="col-12 md:col-5">
 					<div className="text-center">
 						<img className="mb-5" src={Logo} alt="Dinheiro em circulação" />
-						<h2 className="titulo mb-5">Entrar</h2>
+						<h2 className="titulo mb-5">Cadastre sua conta</h2>
+						<p className="text-left">
+							Explore o dinheiro em circulação no Brasil gratuitamente!
+						</p>
 					</div>
 					<form onSubmit={handleSubmit(onSubmit)}>
 						<Toast ref={toast} />
+						<Controller
+							name="nome"
+							control={control}
+							render={({ field, fieldState }) => (
+								<div className="input-div">
+									<span className="p-float-label">
+										<InputText
+											{...register('nome', { required: true })}
+											id={field.name}
+											value={field.value}
+											className={classNames({ 'p-invalid': fieldState.error })}
+											onChange={(e) => field.onChange(e.target.value)}
+										/>
+										<label htmlFor={field.name}>Nome</label>
+									</span>
+									{errors.nome?.type === 'required' && (
+										<p className="msg-form" role="alert">
+											Digite o nome
+										</p>
+									)}
+								</div>
+							)}
+						/>
 						<Controller
 							name="email"
 							control={control}
@@ -97,8 +124,34 @@ export default function Login() {
 								</div>
 							)}
 						/>
+						<Controller
+							name="confirmarSenha"
+							control={control}
+							render={({ field, fieldState }) => (
+								<div className="input-div">
+									<span className="p-float-label">
+										<Password
+											{...register('confirmarSenha', { required: true })}
+											id={field.name}
+											value={field.value}
+											className={classNames({ 'p-invalid': fieldState.error })}
+											onChange={(e) => field.onChange(e.target.value)}
+											placeholder="confirmarSenha"
+											required
+											toggleMask
+										/>
+										<label htmlFor={field.name}>Confirme sua senha</label>
+									</span>
+									{errors.confirmarSenha?.type === 'required' && (
+										<p className="msg-form" role="alert">
+											Digite a senha novamente
+										</p>
+									)}
+								</div>
+							)}
+						/>
 						<Button className="btn btn-enviar" type="submit" label="Entrar" />
-						<Link to={'/cadastro'}>
+						<Link to={'/entrar'}>
 							<Button
 								className="btn btn-cadastro"
 								type="button"

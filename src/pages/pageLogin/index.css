@@ -1,48 +1,55 @@
+@import "../../variaveis.css";
 .container-login{
-  background-color: white;
-  color: var(--black-light--);
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  height: 350px;
-  width: 350px;
-  margin: auto;
-  margin-top: calc(50vh - 150px);
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+}
+.box-login{
+    background-color: yellow;
+
+}
+.titulo{
+    color: var(--green-medium--);
+}
+.input-div{
+    margin-top: 1rem;
+}
+.input-div .p-component{
+    width: 100%;
+    border-color: #3e445173;
+    border-radius: 15px;
+
 }
 
-.container-login .p-inputtext {
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 20px;
-  padding-left: 15px;
-  width: 100%;
+.p-inputtext:enabled:focus{
+    border-color: var(--green-medium--) !important;
+    box-shadow: 0 0 0 0.02rem transparent!important;
 }
 
-.container-login .p-inputtext:enabled:focus {
-  box-shadow: inset 0 0 0 1px var(--green-medium--), 
-              inset 0 0 0 1px var(--green-medium--), 
-              inset 0 0 0 1px var(--green-medium--), 
-              inset 0 0 0 1px var(--green-medium--)
+
+.p-inputtext:hover{
+    box-shadow: 0 0 0 0.02rem transparent!important;
+}
+.btn{
+    border-radius: 15px !important;
+    padding: 1.5rem !important;
+    margin-top: 1rem;
+    width: 100% !important;
+}
+.btn-enviar{
+    background-color: var(--green-medium--) !important;
+}
+.btn-cadastro{
+    background-color: var(--black-light--) !important;
+
 }
 
-.container-login .p-button {
-  /* background: var(--green-medium--); */
-  height: 22px;
-  width: 150px;
-  font-size: 14px;
-  border-radius: 20px;
-  
+.msg-form{
+    margin-top: 3px;
+    margin-left: 10px;
+    color: var(--black-light--_);
 }
-
-#bt-entrar{
-  width: 100px;
-  margin-left: calc(100% - 100px);
-}
-
-.bt-esqueci-criar{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+.img-login{
+    border-radius: 15px;
+    opacity: 0.9;
 }

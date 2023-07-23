@@ -150,12 +150,12 @@ export default function Login() {
 								</div>
 							)}
 						/>
-						<Button className="btn btn-enviar" type="submit" label="Entrar" />
+						<Button className="btn btn-enviar" type="submit" label="Criar minha conta" />
 						<Link to={'/entrar'}>
 							<Button
 								className="btn btn-cadastro"
 								type="button"
-								label="Realizar cadastro"
+								label="Já tenho cadastro"
 							/>
 						</Link>
 					</form>

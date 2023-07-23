@@ -6,10 +6,15 @@ import PageRanking from '../pages/pageRanking';
 import PageValores from '../pages/pageValores';
 import PageEvoucaoTemporal from '../pages/pageEvolucaoTemporal';
 import ProtectedRoute from './ProtectedRoute';
-import Login from '../pages/pageLogin';
+import Login from '../pages/pageConta/login';
+import Cadastro from '../pages/pageConta/cadastro';
 const router = createBrowserRouter([
 	{
 		path: '/',
+		element: <Navigate to="/painel/evolucao" />
+	},
+	{
+		path: '/painel',
 		element: <Navigate to="/painel/evolucao" />
 	},
 	{
@@ -62,7 +67,7 @@ const router = createBrowserRouter([
 		path: 'cadastro',
 		element: (
 			<ProtectedRoute isPrivate={false}>
-				<Login />
+				<Cadastro />
 			</ProtectedRoute>
 		)
 	},

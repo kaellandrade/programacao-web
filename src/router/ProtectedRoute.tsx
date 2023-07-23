@@ -14,18 +14,18 @@ export default function ProtectedRoute({ children, isPrivate }: Props) {
 	const { signed } = context.state;
 
 	const { pathname } = useLocation();
-	console.log(pathname);
-	console.log(isPrivate);
 
-	// Se Usuário não estiver logado e a rota for privada.
+	// Se Usuário não estiver logado e a rota for privada ele será redirecionado para tela de login.
 	if (!signed && isPrivate) {
 		return <Navigate to="/entrar" replace />;
 	}
 
+	// Caso esteja logado e tentar acessar a tela de login ou cadastro, será redirecionado para o painel.
 	if (signed && ['/entrar', '/cadastro'].includes(pathname)) {
 		return <Navigate to={'/painel/evolucao'} />;
 	}
 
+	// Rotas privadas tem cabeçalho e footer.
 	if (isPrivate) {
 		return (
 			<>

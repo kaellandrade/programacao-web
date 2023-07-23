@@ -5,7 +5,7 @@ import Header from '../../componentes/header/Header';
 import Footer from '../../componentes/footer/Footer';
 import Aside from '../../componentes/aside/Aside';
 import Home from '../pageHome';
-import Login from '../pageLogin';
+import Login from '../pageConta/login';
 
 function Main() {
 

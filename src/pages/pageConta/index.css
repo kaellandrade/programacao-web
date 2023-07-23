@@ -1,9 +1,4 @@
 @import "../../variaveis.css";
-.container-login{
-    height: 100vh;
-    width: 90%;
-    margin: auto;
-}
 .box-login{
     background-color: yellow;
 
@@ -52,4 +47,12 @@
 .img-login{
     border-radius: 15px;
     opacity: 0.9;
+}
+
+@media(min-height:600px){
+    .container-login{
+        height: 100vh;
+        width: 90%;
+        margin: auto;
+    }
 }

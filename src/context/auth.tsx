@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-const AuthContext = createContext({});
+const AuthContext = createContext<Context>({} as Context);
 
 export interface Auth {
 	signed?: boolean;
@@ -33,7 +33,11 @@ const INITIAL_STATE = {
 	user: null
 } as Auth;
 
-export const AuthProvider: React.FC = ({ children }) => {
+type RoterProps = {
+	children: React.ReactNode;
+};
+
+export function AuthProvider({ children }: RoterProps) {
 	const [state, setState] = useState<Auth>(INITIAL_STATE);
 
 	const setLogin = (estado: Auth) => {
@@ -74,6 +78,6 @@ export const AuthProvider: React.FC = ({ children }) => {
 			{children}
 		</AuthContext.Provider>
 	);
-};
+}
 
 export default AuthContext;

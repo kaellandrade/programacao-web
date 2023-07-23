@@ -1,5 +1,4 @@
 import React from 'react';
-import 'primereact/resources/themes/md-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeflex/primeflex.css';
 import ReactDOM from 'react-dom/client';
@@ -11,6 +10,7 @@ import PageRanking from './pages/pageRanking';
 import PageValores from './pages/pageValores';
 import PageEvoucaoTemporal from './pages/pageEvolucaoTemporal';
 import reportWebVitals from './reportWebVitals';
+import 'primereact/resources/themes/md-light-indigo/theme.css';
 
 import ReactGA from 'react-ga4';
 

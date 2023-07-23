@@ -21,16 +21,16 @@ AppDataSource.initialize().then(() => {
 
 	console.log('rodando na porta:', process.env.PORT);
 
-	const mongoUser = process.env.MONGO_USE;
-	const mongoPass = process.env.MONGO_PASS;
-	mongoose
-		.connect(
-			`mongodb+srv://${mongoUser}:${mongoPass}@cluster0.e1rgxg1.mongodb.net/?retryWrites=true&w=majority`
-		)
-		.then(() => {
-			console.log('conectou ao mongo');
-		})
-		.catch((err) => console.log(err));
-
 	return app.listen(process.env.PORT);
 });
+
+const mongoUser = process.env.MONGO_USE;
+const mongoPass = process.env.MONGO_PASS;
+mongoose
+	.connect(
+		`mongodb+srv://${mongoUser}:${mongoPass}@cluster0.e1rgxg1.mongodb.net/?retryWrites=true&w=majority`
+	)
+	.then(() => {
+		console.log('conectou ao mongo');
+	})
+	.catch((err) => console.log(err));

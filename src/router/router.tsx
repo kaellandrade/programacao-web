@@ -9,26 +9,39 @@ import PageEvoucaoTemporal from '../pages/pageEvolucaoTemporal';
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <PageRoot/>,
+		element: <PageRoot />,
 		errorElement: <Page404 />,
 		children: [
 			{
-				path: 'valores',
-				element: <PageValores />
-			},
-			{
-				path: 'evolucao',
-				element: <PageEvoucaoTemporal />
-			},
-			{
-				path: 'ranking',
-				element: <PageRanking />
-			},
-			{
-				path: 'quantidade',
-				element: <PageQuantidade />
+				path: 'painel',
+				children: [
+					{
+						path: 'valores',
+						element: <PageValores />
+					},
+					{
+						path: 'evolucao',
+						element: <PageEvoucaoTemporal />
+					},
+					{
+						path: 'ranking',
+						element: <PageRanking />
+					},
+					{
+						path: 'quantidade',
+						element: <PageQuantidade />
+					}
+				]
 			}
 		]
+	},
+	{
+		path: 'cadastro',
+		element: <h1>Cadastro</h1>
+	},
+	{
+		path: 'entrar',
+		element: <h1>Entrar</h1>
 	}
 ]);
 export default router;

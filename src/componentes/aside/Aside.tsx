@@ -7,21 +7,21 @@ function Aside(props: { id: string, asideSetNotVisible: (isVisible: boolean) => 
 		<aside id={props.id}>
 			<h3>Consultas</h3>
 			<hr/>
-			<NavLink to={'evolucao'} onClick={() => props.asideSetNotVisible(false)} >
+			<NavLink to={'painel/evolucao'} onClick={() => props.asideSetNotVisible(false)} >
 				<span className="material-symbols-outlined">timeline</span>
 				Evolução temporal
 			</NavLink>
-			<NavLink to={'quantidade'} onClick={() => props.asideSetNotVisible(false)} >
+			<NavLink to={'painel/quantidade'} onClick={() => props.asideSetNotVisible(false)} >
 				<span className="material-symbols-outlined">
 					format_list_numbered_rtl
 				</span>
 				Quantidade
 			</NavLink>
-			<NavLink to={'ranking'} onClick={() => props.asideSetNotVisible(false)} >
+			<NavLink to={'painel/ranking'} onClick={() => props.asideSetNotVisible(false)} >
 				<span className="material-symbols-outlined">star_rate</span>
 				Ranking
 			</NavLink>
-			<NavLink to={'valores'} onClick={() => props.asideSetNotVisible(false)} >
+			<NavLink to={'painel/valores'} onClick={() => props.asideSetNotVisible(false)} >
 				<span className="material-symbols-outlined">paid</span>
 				Valores
 			</NavLink>

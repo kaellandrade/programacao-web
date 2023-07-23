@@ -1,35 +1,58 @@
-import { createBrowserRouter } from 'react-router-dom';
-import PageRoot from '../pages/pageRoot';
+import { Navigate, Outlet, createBrowserRouter } from 'react-router-dom';
 import Page404 from '../pages/page404';
+import '../pages/pageRoot/index.css';
 import PageQuantidade from '../pages/pageQuantidade';
 import PageRanking from '../pages/pageRanking';
 import PageValores from '../pages/pageValores';
 import PageEvoucaoTemporal from '../pages/pageEvolucaoTemporal';
-
+import ProtectedRoute from './ProtectedRoute';
+import Login from '../pages/pageLogin';
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <PageRoot />,
-		errorElement: <Page404 />,
+		element: <Navigate to="/painel/evolucao" />
+	},
+	{
+		errorElement: (
+			<ProtectedRoute isPrivate={false}>
+				<Page404 />
+			</ProtectedRoute>
+		),
 		children: [
 			{
 				path: 'painel',
 				children: [
 					{
 						path: 'valores',
-						element: <PageValores />
+						element: (
+							<ProtectedRoute isPrivate>
+								<PageValores />
+							</ProtectedRoute>
+						)
 					},
 					{
 						path: 'evolucao',
-						element: <PageEvoucaoTemporal />
+						element: (
+							<ProtectedRoute isPrivate>
+								<PageEvoucaoTemporal />
+							</ProtectedRoute>
+						)
 					},
 					{
 						path: 'ranking',
-						element: <PageRanking />
+						element: (
+							<ProtectedRoute isPrivate>
+								<PageRanking />
+							</ProtectedRoute>
+						)
 					},
 					{
 						path: 'quantidade',
-						element: <PageQuantidade />
+						element: (
+							<ProtectedRoute isPrivate>
+								<PageQuantidade />
+							</ProtectedRoute>
+						)
 					}
 				]
 			}
@@ -37,11 +60,19 @@ const router = createBrowserRouter([
 	},
 	{
 		path: 'cadastro',
-		element: <h1>Cadastro</h1>
+		element: (
+			<ProtectedRoute isPrivate={false}>
+				<Login />
+			</ProtectedRoute>
+		)
 	},
 	{
 		path: 'entrar',
-		element: <h1>Entrar</h1>
+		element: (
+			<ProtectedRoute isPrivate={false}>
+				<Login />
+			</ProtectedRoute>
+		)
 	}
 ]);
 export default router;

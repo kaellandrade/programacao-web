@@ -32,7 +32,7 @@ function Card_Quantidade(props: {pergunta: string, colunas: any, isPercentual: b
 
   const formatarDados = dados.map( (item: any) => {
     const quantidadeFormatada = parseInt(item.quantidade_total).toLocaleString();
-    if (item.hasOwnProperty('denominacaoAtual') && item.hasOwnProperty('diferencaPercentual')){
+    if (Object.prototype.hasOwnProperty.call(item,'denominacaoAtual') && Object.prototype.hasOwnProperty.call(item,'diferencaPercentual')){
       const denominacaoFormartada = parseFloat(item.denominacaoAtual).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
       let diferenca_percentualFormatada = 'NULL';
       if (item.diferencaPercentual != 'NULL')

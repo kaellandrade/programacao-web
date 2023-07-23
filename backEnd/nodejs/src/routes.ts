@@ -1,59 +1,65 @@
-import { CategoriasController } from "./controllers/CategoriasController";
-import { Router } from "express";
-import { GetNoParamsController } from "./controllers/GetNoParamsController";
-import { GetParamsController } from "./controllers/GetParamsController";
+import { CategoriasController } from './controllers/CategoriasController';
+import { Router } from 'express';
+import { GetNoParamsController } from './controllers/GetNoParamsController';
+import { GetParamsController } from './controllers/GetParamsController';
 const extenso = require('extenso');
 
 const routes = Router();
 
 routes.get(
-  "/evolucaoQuantidadeCirculacaoPorCategoria",
-  new GetNoParamsController().evolucaoQuantidadeCirculacaoPorCategoria
+	'/evolucaoQuantidadeCirculacaoPorCategoria',
+	new GetNoParamsController().evolucaoQuantidadeCirculacaoPorCategoria
 );
 
 routes.get(
-  "/evolucaoQuantidadeCirculacaoPorDenominacao",
-  new GetNoParamsController().evolucaoQuantidadeCirculacaoPorDenominacao
+	'/evolucaoQuantidadeCirculacaoPorDenominacao',
+	new GetNoParamsController().evolucaoQuantidadeCirculacaoPorDenominacao
 );
 
 routes.get(
-  "/quantidadeCirculacaoMesAno",
-  new GetNoParamsController().quantidadeCirculacaoMesAno
+	'/quantidadeCirculacaoMesAno',
+	new GetNoParamsController().quantidadeCirculacaoMesAno
 );
 
 routes.get(
-  "/diferencaPercentualQuantidadeDenominacao",
-  new GetNoParamsController().diferencaPercentualQuantidadeDenominacao
+	'/diferencaPercentualQuantidadeDenominacao',
+	new GetNoParamsController().diferencaPercentualQuantidadeDenominacao
 );
 
 routes.get(
-  "/valorCirculacaoDataEspecifica/:data/:especie",
-  new GetParamsController().valorCirculacaoDataEspecifica
+	'/valorCirculacaoDataEspecifica/:data/:especie',
+	new GetParamsController().valorCirculacaoDataEspecifica
 );
 
 routes.get(
-  "/valorCirculacaoIntervaloAnos/:anoInicio/:anoFim/:especie",
-  new GetParamsController().valorCirculacaoIntervaloAnos
+	'/valorCirculacaoIntervaloAnos/:anoInicio/:anoFim/:especie',
+	new GetParamsController().valorCirculacaoIntervaloAnos
 );
 
 routes.get(
-  "/quantidadeDenominacoesIntervaloAnos/:anoInicio/:anoFim",
-  new GetParamsController().quantidadeDenominacoesIntervaloAnos
+	'/quantidadeDenominacoesIntervaloAnos/:anoInicio/:anoFim',
+	new GetParamsController().quantidadeDenominacoesIntervaloAnos
 );
 
 routes.get(
-  "/quantidadeCategoriasIntervaloAnos/:anoInicio/:anoFim",
-  new GetParamsController().quantidadeCategoriasIntervaloAnos
+	'/quantidadeCategoriasIntervaloAnos/:anoInicio/:anoFim',
+	new GetParamsController().quantidadeCategoriasIntervaloAnos
 );
 
-
+routes.post('/auth/register', async (req, res) => {
+	const { nome, email, pass, confirmPass } = req.body;
+});
 
 routes.get('/valores/:valor', (req, res) => {
-    let valor = req.params.valor; 
-    valor = valor.replace('.', ','); 
-    const valorExtenso = extenso(valor, { number: { decimalSeparator: 'dot' }, mode: 'currency' } );
-    const valorExtensoMaiuscula = valorExtenso[0].toUpperCase() + valorExtenso.substring(1);
-    res.json({ valorExtensoMaiuscula }); 
+	let valor = req.params.valor;
+	valor = valor.replace('.', ',');
+	const valorExtenso = extenso(valor, {
+		number: { decimalSeparator: 'dot' },
+		mode: 'currency'
+	});
+	const valorExtensoMaiuscula =
+		valorExtenso[0].toUpperCase() + valorExtenso.substring(1);
+	res.json({ valorExtensoMaiuscula });
 });
 
 export default routes;

@@ -48,6 +48,8 @@ routes.get(
 
 routes.post('/auth/register', async (req, res) => {
 	const { nome, email, pass, confirmPass } = req.body;
+
+	if (!nome) return res.status(422).json({ msg: 'nome obrigatorio' });
 });
 
 routes.get('/valores/:valor', (req, res) => {

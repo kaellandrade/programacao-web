@@ -2,11 +2,11 @@
 
 import { Schema, model, Document } from 'mongoose';
 
-interface IUser extends Document {
+export interface IUser extends Document {
 	nome: string;
 	email: string;
 	pass: string;
-	confirmPass?: string;
+	confirmPass: string;
 }
 
 const userSchema = new Schema<IUser>({

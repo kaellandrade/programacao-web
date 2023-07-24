@@ -2,7 +2,7 @@ import { CategoriasController } from './controllers/CategoriasController';
 import { Router } from 'express';
 import { GetNoParamsController } from './controllers/GetNoParamsController';
 import { GetParamsController } from './controllers/GetParamsController';
-import { User } from './controllers/User';
+import User from './controllers/User';
 
 import bcrypt from 'bcrypt';
 const extenso = require('extenso');
@@ -59,13 +59,11 @@ routes.post('/auth/register', async (req, res) => {
 
 	const passwordHash = await bcrypt.hash(pass, salt);
 
-	const user = new User();
-
-	const salvarUsuario = new user.user({ nome, email, pass: passwordHash });
+	const user = new User({ nome, email, pass: passwordHash });
 
 	try {
-		console.log('user', salvarUsuario);
-		await salvarUsuario.save();
+		console.log('user', user);
+		await user.save();
 
 		res.status(201).json({ msg: 'Usuario Criado com Sucesso' });
 	} catch (err) {

@@ -1,25 +1,20 @@
-import { Model, Schema, model, connect, Document } from 'mongoose';
+// user.model.ts (ou outro nome que preferir)
 
-interface IUser {
+import { Schema, model, Document } from 'mongoose';
+
+interface IUser extends Document {
 	nome: string;
 	email: string;
 	pass: string;
 	confirmPass?: string;
 }
 
-export class User {
-	user: Model<IUser>;
+const userSchema = new Schema<IUser>({
+	nome: { type: String, required: true },
+	email: { type: String, required: true },
+	pass: { type: String, required: true }
+});
 
-	constructor() {
-		const userSchema = new Schema<IUser>({
-			nome: { type: String, required: true },
-			email: { type: String, required: true },
-			pass: { type: String, required: true }
-		});
-		this.user = model<IUser>('User', userSchema);
-	}
+const User = model<IUser>('User', userSchema);
 
-	get getuser() {
-		return this.user;
-	}
-}
+export default User;

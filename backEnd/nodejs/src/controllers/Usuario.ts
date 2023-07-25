@@ -39,6 +39,18 @@ export class Usuario {
 		}
 	}
 
+	async getUserIID(req: Request, res: Response) {
+		const id = req.params.id;
+
+		const user = await User.findById(id, '-pass');
+
+		if (!user) {
+			return res.status(404).json({ msg: 'Usuário não encontrado!' });
+		}
+
+		res.status(200).json({ user });
+	}
+
 	private async validateForms(usr: IUser): Promise<Mensagem> {
 		const { nome, email, pass, confirmPass } = usr;
 

@@ -18,27 +18,24 @@ export class Usuario {
 	async postNewUser(req: Request, res: Response) {
 		const { nome, email, pass, confirmPass } = req.body;
 
-		const validate = this.validateForms(req.body);
-
-		validate.then((data: Mensagem) => {
-			const { status, mensagem } = data;
-
-			if (status) {
-				return res.status(status).json(mensagem);
-			}
-		});
-
 		const salt = await bcrypt.genSalt(12);
 		const passwordHash = await bcrypt.hash(pass, salt);
 
 		const user = new User({ nome, email, pass: passwordHash });
 
 		try {
+			const validate = await this.validateForms(req.body);
+			const { status, mensagem } = validate;
+
+			if (status) {
+				return res.status(status).json({ mensagem });
+			}
+
 			await user.save();
 
-			res.status(201).json({ msg: 'Usuario Criado com Sucesso' });
+			res.status(201).json({ mensagem: 'Usuario Criado com Sucesso' });
 		} catch (err) {
-			console.log(err);
+			res.status(500).json({ mensagem: 'Erro no servidor' });
 		}
 	}
 
@@ -61,7 +58,7 @@ export class Usuario {
 
 	private async verifyEmailDataBase(email: string) {
 		const find = await User.findOne({ email: email });
-		if (!find) {
+		if (find) {
 			return this.utilMessage(422, 'Email ja existe');
 		}
 		return this.utilMessage(0, '');

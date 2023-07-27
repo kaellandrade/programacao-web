@@ -2,7 +2,7 @@ import express from 'express';
 import { AppDataSource } from './data-source';
 import routes from './routes';
 import mongoose from 'mongoose';
-const cors = require('cors');
+import cors from 'cors';
 
 AppDataSource.initialize().then(() => {
 	const app = express();

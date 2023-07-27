@@ -48,9 +48,12 @@ routes.get(
 	new GetParamsController().quantidadeCategoriasIntervaloAnos
 );
 
+const user = new Usuario();
 routes.post('/auth/register', new Usuario().postNewUser);
 
-routes.get('/user/:id', new Usuario().getUserIID);
+routes.post('/auth/login', user.login);
+
+routes.get('/user/:id', new Usuario().getUserByID);
 
 routes.get('/valores/:valor', (req, res) => {
 	let valor = req.params.valor;

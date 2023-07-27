@@ -1,8 +1,10 @@
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
 import User, { IUser } from '../repo/User';
 
 import bcrypt from 'bcrypt';
+
+import jwt from 'jsonwebtoken';
 
 type Mensagem = {
 	status: number;
@@ -13,6 +15,9 @@ type Mensagem = {
 export class Usuario {
 	constructor() {
 		this.postNewUser = this.postNewUser.bind(this);
+		this.login = this.login.bind(this);
+		this.getUserByID = this.getUserByID.bind(this);
+		this.checkToken = this.checkToken.bind(this);
 	}
 
 	async postNewUser(req: Request, res: Response) {
@@ -39,16 +44,109 @@ export class Usuario {
 		}
 	}
 
-	async getUserIID(req: Request, res: Response) {
-		const id = req.params.id;
+	async login(req: Request, res: Response) {
+		const { email, pass } = req.body;
 
-		const user = await User.findById(id, '-pass');
-
-		if (!user) {
-			return res.status(404).json({ msg: 'Usuário não encontrado!' });
+		if (!email) {
+			return res.status(422).json({ mensagem: 'O email é obrigatório!' });
 		}
 
-		res.status(200).json({ user });
+		if (!pass) {
+			return res.status(422).json({ mensagem: 'A senha é obrigatória!' });
+		}
+
+		const user = await User.findOne({ email: email });
+
+		if (!user) {
+			return res.status(404).json({ mensagem: 'Usuário não encontrado!' });
+		}
+
+		const checkPassword = await bcrypt.compare(pass, user.pass);
+
+		if (!checkPassword) {
+			return res.status(401).json({ mensagem: 'Senha inválida' });
+		}
+
+		try {
+			const secret = process.env.SECRET;
+
+			if (!secret) {
+				throw new Error('Variavel de ambiente indefinida ');
+			}
+
+			const expiration = this.expiratioToken();
+
+			const token: string = jwt.sign(
+				{
+					id: user._id,
+					exp: expiration.exp
+				},
+				secret
+			);
+
+			res.status(200).json({
+				mensagem: 'Autenticação realizada com sucesso!',
+				token,
+				exp: expiration.expirationDate
+			});
+		} catch (error) {
+			console.log('Erro no server', error);
+			res.status(500).json({ mensagem: 'Erro no servidor!' });
+		}
+	}
+
+	async getUserByID(req: Request, res: Response) {
+		const id = req.params.id;
+
+		try {
+			const user = await User.findById(id, '-pass');
+
+			if (!user) {
+				return res.status(404).json({ mensagem: 'Usuário não encontrado' });
+			}
+
+			this.checkToken(req, res, () => {
+				res.status(200).json({ user });
+			});
+		} catch (err) {
+			res.status(500).json({ mensagem: 'Erro no servidor' });
+		}
+	}
+
+	checkToken(req: Request, res: Response, next: NextFunction) {
+		const authHeader = req.headers['authorization'];
+
+		const token = authHeader && authHeader.split(' ')[1];
+
+		if (!token) {
+			const mensagem = 'Acesso negado! Token não fornecido';
+			return res.status(401).json({ mensagem });
+		}
+
+		try {
+			const secret = process.env.SECRET;
+
+			if (!secret) {
+				throw new Error('Variável de ambiente "SECRET" não definida');
+			}
+
+			jwt.verify(token, secret, (err, decoded: any) => {
+				console.log(err);
+				if (err) {
+					return res.status(401).json({ mensagem: 'Token inválido' });
+				}
+
+				const expirationDate = new Date(decoded.exp * 1000);
+
+				if (expirationDate <= new Date()) {
+					return res.status(401).json({ mensagem: 'Token expirado' });
+				}
+
+				next();
+			});
+		} catch (err) {
+			res.status(400).json({ mensagem: 'Token é inválido' });
+		}
 	}
 
 	private async validateForms(usr: IUser): Promise<Mensagem> {
@@ -74,5 +172,13 @@ export class Usuario {
 			return this.utilMessage(422, 'Email ja existe');
 		}
 		return this.utilMessage(0, '');
+	}
+
+	private expiratioToken() {
+		const expirationDate = new Date();
+		expirationDate.setHours(expirationDate.getHours() + 1);
+		const exp = expirationDate.getTime() / 1000;
+
+		return { exp, expirationDate };
 	}
 }

@@ -127,15 +127,13 @@ export class Usuario {
 			const secret = process.env.SECRET;
 
 			if (!secret) {
-				throw new Error('Variável de ambiente "SECRET" não definida');
+				throw new Error('Variável de ambiente  não definida');
 			}
 
 			jwt.verify(token, secret, async (err, decoded: any) => {
 				if (err) {
 					return res.status(401).json({ mensagem: 'Token inválido' });
 				}
-
-				console.log(decoded);
 
 				const expirationDate = new Date(decoded.exp * 1000);
 

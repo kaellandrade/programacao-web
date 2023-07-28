@@ -53,7 +53,7 @@ routes.post('/auth/register', new Usuario().postNewUser);
 
 routes.post('/auth/login', user.login);
 
-routes.get('/user/:id', new Usuario().getUserByID);
+routes.get('/user/', new Usuario().getUserByID);
 
 routes.get('/valores/:valor', (req, res) => {
 	let valor = req.params.valor;

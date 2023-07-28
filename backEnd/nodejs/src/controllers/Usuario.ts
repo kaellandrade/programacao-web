@@ -99,14 +99,14 @@ export class Usuario {
 		const id = req.params.id;
 
 		try {
-			const user = await User.findById(id, '-pass');
+			// const user = await User.findById(id, '-pass');
 
-			if (!user) {
-				return res.status(404).json({ mensagem: 'Usuário não encontrado' });
-			}
+			// if (!user) {
+			// 	return res.status(404).json({ mensagem: 'Usuário não encontrado' });
+			// }
 
 			this.checkToken(req, res, () => {
-				res.status(200).json({ user });
+				// res.status(200).json({ user });
 			});
 		} catch (err) {
 			res.status(500).json({ mensagem: 'Erro no servidor' });
@@ -130,16 +130,25 @@ export class Usuario {
 				throw new Error('Variável de ambiente "SECRET" não definida');
 			}
 
-			jwt.verify(token, secret, (err, decoded: any) => {
-				console.log(err);
+			jwt.verify(token, secret, async (err, decoded: any) => {
 				if (err) {
 					return res.status(401).json({ mensagem: 'Token inválido' });
 				}
+
+				console.log(decoded);
 
 				const expirationDate = new Date(decoded.exp * 1000);
 
 				if (expirationDate <= new Date()) {
 					return res.status(401).json({ mensagem: 'Token expirado' });
+				}
+
+				const user = await User.findById(decoded.id, '-pass');
+
+				if (!user) {
+					return res.status(404).json({ mensagem: 'Usuário não encontrado' });
+				} else {
+					res.status(200).json({ user });
 				}
 
 				next();

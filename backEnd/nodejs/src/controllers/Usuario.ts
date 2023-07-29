@@ -105,15 +105,20 @@ export class Usuario {
 			// 	return res.status(404).json({ mensagem: 'Usuário não encontrado' });
 			// }
 
-			this.checkToken(req, res, () => {
-				// res.status(200).json({ user });
-			});
+			this.checkToken(
+				req,
+				res,
+				() => {
+					// res.status(200).json({ user });
+				},
+				true
+			);
 		} catch (err) {
 			res.status(500).json({ mensagem: 'Erro no servidor' });
 		}
 	}
 
-	checkToken(req: Request, res: Response, next: NextFunction) {
+	checkToken(req: Request, res: Response, next: NextFunction, flag = false) {
 		const authHeader = req.headers['authorization'];
 
 		const token = authHeader && authHeader.split(' ')[1];
@@ -146,10 +151,11 @@ export class Usuario {
 				if (!user) {
 					return res.status(404).json({ mensagem: 'Usuário não encontrado' });
 				} else {
-					res.status(200).json({ user });
+					if (flag) res.status(200).json({ user });
+					else {
+						next();
+					}
 				}
-
-				next();
 			});
 		} catch (err) {
 			res.status(400).json({ mensagem: 'Token é inválido' });

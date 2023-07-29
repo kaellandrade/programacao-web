@@ -7,55 +7,63 @@ import { Usuario } from './controllers/Usuario';
 const extenso = require('extenso');
 
 const routes = Router();
+const user = new Usuario();
 
 routes.get(
 	'/evolucaoQuantidadeCirculacaoPorCategoria',
+	user.checkToken,
 	new GetNoParamsController().evolucaoQuantidadeCirculacaoPorCategoria
 );
 
 routes.get(
 	'/evolucaoQuantidadeCirculacaoPorDenominacao',
+	user.checkToken,
 	new GetNoParamsController().evolucaoQuantidadeCirculacaoPorDenominacao
 );
 
 routes.get(
 	'/quantidadeCirculacaoMesAno',
+	user.checkToken,
 	new GetNoParamsController().quantidadeCirculacaoMesAno
 );
 
 routes.get(
 	'/diferencaPercentualQuantidadeDenominacao',
+	user.checkToken,
 	new GetNoParamsController().diferencaPercentualQuantidadeDenominacao
 );
 
 routes.get(
 	'/valorCirculacaoDataEspecifica/:data/:especie',
+	user.checkToken,
 	new GetParamsController().valorCirculacaoDataEspecifica
 );
 
 routes.get(
 	'/valorCirculacaoIntervaloAnos/:anoInicio/:anoFim/:especie',
+	user.checkToken,
 	new GetParamsController().valorCirculacaoIntervaloAnos
 );
 
 routes.get(
 	'/quantidadeDenominacoesIntervaloAnos/:anoInicio/:anoFim',
+	user.checkToken,
 	new GetParamsController().quantidadeDenominacoesIntervaloAnos
 );
 
 routes.get(
 	'/quantidadeCategoriasIntervaloAnos/:anoInicio/:anoFim',
+	user.checkToken,
 	new GetParamsController().quantidadeCategoriasIntervaloAnos
 );
 
-const user = new Usuario();
 routes.post('/auth/register', new Usuario().postNewUser);
 
 routes.post('/auth/login', user.login);
 
 routes.get('/user/', new Usuario().getUserByID);
 
-routes.get('/valores/:valor', (req, res) => {
+routes.get('/valores/:valor', user.checkToken, (req, res) => {
 	let valor = req.params.valor;
 	valor = valor.replace('.', ',');
 	const valorExtenso = extenso(valor, {

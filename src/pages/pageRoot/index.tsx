@@ -12,7 +12,7 @@ function Main() {
   const location = useLocation();
   const { pathname } = location;
 
-  const userLogged = false;
+  const userLogged = true;
 
   return (
     <>

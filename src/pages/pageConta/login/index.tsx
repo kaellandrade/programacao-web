@@ -32,18 +32,17 @@ export default function Login() {
 		try {
 			const dadosAutenticacao: Auth = await realizarLogin(data);
 			context.login(dadosAutenticacao);
-			navigate('/painel');
+			navigate('/painel', { state: { data: { login: true } } });
 		} catch (error) {
+			show('error', 'Não foi possivel realizar login!');
 			navigate('/publica/entrar');
-			console.log(error);
 		}
 
-		show();
 	};
-	const show = () => {
+	const show = (tipoMensagem: string, mensagem: string) => {
 		toast.current.show({
-			severity: 'success',
-			summary: 'Fomulário enviado',
+			severity: tipoMensagem,
+			summary: mensagem,
 			detail: getValues('value')
 		});
 	};

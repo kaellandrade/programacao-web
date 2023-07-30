@@ -8,12 +8,14 @@ import Logo from '../../../../imgs/Logo.svg';
 import LoginImg from '../../../../imgs/login-img.jpg';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { registrarUsuario } from '../../../api/data';
+
 
 interface IFormInput {
 	nome: string;
 	email: string;
-	senha: string;
-	confirmarSenha: string;
+	pass: string;
+	confirmPass: string;
 }
 
 export default function Login() {
@@ -26,14 +28,26 @@ export default function Login() {
 		getValues
 	} = useForm<IFormInput>();
 
-	const onSubmit: SubmitHandler<IFormInput> = (data) => {
-		console.log(data);
-		show();
+
+	const onSubmit: SubmitHandler<IFormInput> = async (data: IFormInput) => {
+		try {
+			console.log(data)
+			const dadosAutenticacao = await registrarUsuario(data);
+			const { mensagem } = dadosAutenticacao;
+			console.log(dadosAutenticacao)
+			if (mensagem) {
+				show('success', mensagem);
+			}
+		} catch (error) {
+			show('error', 'Não foi possivel realizar login!');
+		}
+
 	};
-	const show = () => {
+
+	const show = (tipoMensagem: string, mensagem: string) => {
 		toast.current.show({
-			severity: 'success',
-			summary: 'Fomulário enviado',
+			severity: tipoMensagem,
+			summary: mensagem,
 			detail: getValues('value')
 		});
 	};
@@ -98,13 +112,13 @@ export default function Login() {
 							)}
 						/>
 						<Controller
-							name="senha"
+							name="pass"
 							control={control}
 							render={({ field, fieldState }) => (
 								<div className="input-div">
 									<span className="p-float-label">
 										<Password
-											{...register('senha', { required: true })}
+											{...register('pass', { required: true })}
 											id={field.name}
 											value={field.value}
 											className={classNames({ 'p-invalid': fieldState.error })}
@@ -115,7 +129,7 @@ export default function Login() {
 										/>
 										<label htmlFor={field.name}>Senha</label>
 									</span>
-									{errors.senha?.type === 'required' && (
+									{errors.pass?.type === 'required' && (
 										<p className="msg-form" role="alert">
 											Digite a senha
 										</p>
@@ -124,13 +138,13 @@ export default function Login() {
 							)}
 						/>
 						<Controller
-							name="confirmarSenha"
+							name="confirmPass"
 							control={control}
 							render={({ field, fieldState }) => (
 								<div className="input-div">
 									<span className="p-float-label">
 										<Password
-											{...register('confirmarSenha', { required: true })}
+											{...register('confirmPass', { required: true })}
 											id={field.name}
 											value={field.value}
 											className={classNames({ 'p-invalid': fieldState.error })}
@@ -141,7 +155,7 @@ export default function Login() {
 										/>
 										<label htmlFor={field.name}>Confirme sua senha</label>
 									</span>
-									{errors.confirmarSenha?.type === 'required' && (
+									{errors.confirmPass?.type === 'required' && (
 										<p className="msg-form" role="alert">
 											Digite a senha novamente
 										</p>

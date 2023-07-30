@@ -1,155 +1,181 @@
 import axios from 'axios';
+import { Auth, INITIAL_STATE } from '../context/auth';
 
-// TODO: corrigir a logica de uso da URL_LOCAL e URL_PRODUCAO
-// const URL_LOCAL = 'http://localhost:3000';
-const URL_LOCAL = 'https://prog-web.fisioluanamenezes.com';
-const URL_PRODUCAO = 'https://prog-web.fisioluanamenezes.com';
+export const axiosIntercep = axios.create({
+	baseURL: 'https://prog-web.fisioluanamenezes.com',
+});
 
-if(import.meta.env.MODE === 'development'){
-	axios.defaults.baseURL=URL_LOCAL;
-}else{
-	axios.defaults.baseURL=URL_PRODUCAO;
-}
+export const axiosPublic = axios.create({
+	baseURL: 'https://prog-web.fisioluanamenezes.com',
+});
+
+axiosIntercep.interceptors.request.use(
+	async (config) => {
+		const state = (await JSON.parse(sessionStorage.getItem('state')) || INITIAL_STATE);
+		if (state && state.token) {
+			config.headers['Authorization'] = `Bearer ${state.token}`;
+		}
+
+		return config;
+	},
+	(error) => {
+		return Promise.reject(error);
+	}
+);
 
 export function getValorExtenso(valor: number): Promise<string> {
 	return new Promise<string>((resolve, reject) => {
 		if (valor != undefined) {
-			axios.get(`/valores/${valor}`)
-			.then((response) => {
-				resolve(response.data.valorExtensoMaiuscula);
-			})
-			.catch((error) => {
-				console.error(error);
-				reject('Erro ao obter o valor por extenso.');
-			});
+			axiosIntercep.get(`/valores/${valor}`)
+				.then((response) => {
+					resolve(response.data.valorExtensoMaiuscula);
+				})
+				.catch((error) => {
+					console.error(error);
+					reject('Erro ao obter o valor por extenso.');
+				});
 		}
 	});
 }
 
 export function getValorCirculacaoDataEspecifica(data: string, especie: string): Promise<string> {
-	// console.log(data, especie);
 	return new Promise<string>((resolve, reject) => {
 		if (data != undefined && especie != undefined) {
-			axios.get(`/valorCirculacaoDataEspecifica/${data}/${especie}`)
-			.then((response) => {
-				// console.log(response.data[0].valor_total);	
-			  resolve(response.data[0].valor_total);
-			})
-			.catch((error) => {
-				console.error(error);
-				reject('Erro ao obter o valor por extenso.');
-			});
+			axiosIntercep.get(`/valorCirculacaoDataEspecifica/${data}/${especie}`)
+				.then((response) => {
+					resolve(response.data[0].valor_total);
+				})
+				.catch((error) => {
+					console.error(error);
+					reject('Erro ao obter o valor por extenso.');
+				});
 		}
-		else if ( data === 'undefined-undefined-' )
+		else if (data === 'undefined-undefined-')
 			console.log('data undefined');
 	});
 }
-  
+
 export function getValorCirculacaoIntervaloAnos(anoInicio: { year: number }, anoFim: { year: number }, especie: string): Promise<string> {
-	// console.log(anoInicio.year, anoFim.year, especie);
 	return new Promise<string>((resolve, reject) => {
-		if ( anoInicio.year != 0 && anoFim.year != 0) {
-			axios.get(`/valorCirculacaoIntervaloAnos/${anoInicio.year}/${anoFim.year}/${especie}`)
-			.then((response) => {
-			//   console.log(response.data[0].valor_total);	
-				resolve(response.data[0].valor_total);
-			})
-			.catch((error) => {
-				console.error(error);
-				reject('Erro ao obter o valor por extenso.');
-			});
+		if (anoInicio.year != 0 && anoFim.year != 0) {
+			axiosIntercep.get(`/valorCirculacaoIntervaloAnos/${anoInicio.year}/${anoFim.year}/${especie}`)
+				.then((response) => {
+					resolve(response.data[0].valor_total);
+				})
+				.catch((error) => {
+					console.error(error);
+					reject('Erro ao obter o valor por extenso.');
+				});
 		}
 	});
 }
 
-export function getQuantidadeDenominacoesIntervaloAnos( anoInicio: { year: number }, anoFim: { year: number } ): Promise<string> {
-	// console.log(anoInicio.year, anoFim.year);
+export function getQuantidadeDenominacoesIntervaloAnos(anoInicio: { year: number }, anoFim: { year: number }): Promise<string> {
 	return new Promise<string>((resolve, reject) => {
-		if ( anoInicio.year != 0 && anoFim.year != 0) {
-			axios.get(`/quantidadeDenominacoesIntervaloAnos/${anoInicio.year}/${anoFim.year}`)
-			.then((response) => {	
-				resolve(response.data);
-			})
-			.catch((error) => {
-				console.error(error);
-				reject('Erro ao obter o valor por extenso.');
-			});
+		if (anoInicio.year != 0 && anoFim.year != 0) {
+			axiosIntercep.get(`/quantidadeDenominacoesIntervaloAnos/${anoInicio.year}/${anoFim.year}`)
+				.then((response) => {
+					resolve(response.data);
+				})
+				.catch((error) => {
+					console.error(error);
+					reject('Erro ao obter o valor por extenso.');
+				});
 		}
 	});
 }
 
-export function getQuantidadeCategoriasIntervaloAnos( anoInicio: { year: number }, anoFim: { year: number } ): Promise<string> {
-	// console.log(anoInicio.year, anoFim.year);
+export function getQuantidadeCategoriasIntervaloAnos(anoInicio: { year: number }, anoFim: { year: number }): Promise<string> {
 	return new Promise<string>((resolve, reject) => {
-		if ( anoInicio.year != 0 && anoFim.year != 0) {
-			axios.get(`/quantidadeCategoriasIntervaloAnos/${anoInicio.year}/${anoFim.year}`)
-			.then((response) => {	
-				resolve(response.data);
-			})
-			.catch((error) => {
-				console.error(error);
-				reject('Erro ao obter o valor por extenso.');
-			});
+		if (anoInicio.year != 0 && anoFim.year != 0) {
+			axiosIntercep.get(`/quantidadeCategoriasIntervaloAnos/${anoInicio.year}/${anoFim.year}`)
+				.then((response) => {
+					resolve(response.data);
+				})
+				.catch((error) => {
+					console.error(error);
+					reject('Erro ao obter o valor por extenso.');
+				});
 		}
 	});
 }
 
 export function getQuantidadeCirculacaoMesAno(): Promise<string> {
-	// console.log(anoInicio.year, anoFim.year);
 	return new Promise<string>((resolve, reject) => {
-		axios.get('/quantidadeCirculacaoMesAno')
-		.then((response) => {
-			// console.log(typeof response.data);	
-			resolve(response.data);
-		})
-		.catch((error) => {
-			console.error(error);
-			reject('Erro ao obter o valor por extenso.');
-		});
+		axiosIntercep.get('/quantidadeCirculacaoMesAno')
+			.then((response) => {
+				// console.log(typeof response.data);	
+				resolve(response.data);
+			})
+			.catch((error) => {
+				console.error(error);
+				reject('Erro ao obter o valor por extenso.');
+			});
 	});
 }
 
 export function getDiferencaPercentualQuantidadeDenominacao(): Promise<string> {
-	// console.log(anoInicio.year, anoFim.year);
 	return new Promise<string>((resolve, reject) => {
-		axios.get('/diferencaPercentualQuantidadeDenominacao')
-		.then((response) => {
-			// console.log(typeof response.data);	
-			resolve(response.data);
-		})
-		.catch((error) => {
-			console.error(error);
-			reject('Erro ao obter o valor por extenso.');
-		});
+		axiosIntercep.get('/diferencaPercentualQuantidadeDenominacao')
+			.then((response) => {
+				// console.log(typeof response.data);	
+				resolve(response.data);
+			})
+			.catch((error) => {
+				console.error(error);
+				reject('Erro ao obter o valor por extenso.');
+			});
 	});
 }
 
 export function getEvolucaoQuantidadeCirculacaoPorCategoria(): Promise<string> {
-	// console.log(anoInicio.year, anoFim.year);
 	return new Promise<string>((resolve, reject) => {
-		axios.get('/evolucaoQuantidadeCirculacaoPorCategoria')
-		.then((response) => {
-			// console.log(typeof response.data);	
-			resolve(response.data);
-		})
-		.catch((error) => {
-			console.error(error);
-			reject('Erro ao obter o valor por extenso.');
-		});
+		axiosIntercep.get('/evolucaoQuantidadeCirculacaoPorCategoria')
+			.then((response) => {
+				// console.log(typeof response.data);	
+				resolve(response.data);
+			})
+			.catch((error) => {
+				console.error(error);
+				reject('Erro ao obter o valor por extenso.');
+			});
 	});
 }
 
 export function getEvolucaoQuantidadeCirculacaoPorDenominacao(): Promise<string> {
-	// console.log(anoInicio.year, anoFim.year);
 	return new Promise<string>((resolve, reject) => {
-		axios.get('/evolucaoQuantidadeCirculacaoPorDenominacao')
-		.then((response) => {
-			// console.log(typeof response.data);	
-			resolve(response.data);
-		})
-		.catch((error) => {
-			console.error(error);
-			reject('Erro ao obter o valor por extenso.');
-		});
+		axiosIntercep.get('/evolucaoQuantidadeCirculacaoPorDenominacao')
+			.then((response) => {
+				// console.log(typeof response.data);	
+				resolve(response.data);
+			})
+			.catch((error) => {
+				console.error(error);
+				reject('Erro ao obter o valor por extenso.');
+			});
+	});
+}
+
+export function registrarUsuario(dados): Promise<string> {
+	return new Promise<string>((resolve, reject) => {
+		axiosPublic.post('/auth/register', dados)
+			.then((response) => {
+				resolve(response.data);
+			})
+			.catch((error) => {
+				reject(error.response.data.mensagem);
+			});
+	});
+}
+
+export function realizarLogin(dados: Auth): Promise<Auth> {
+	return new Promise<Auth>((resolve, reject) => {
+		axiosPublic.post('/auth/login', dados)
+			.then((response) => {
+				resolve(response.data);
+			})
+			.catch((error) => {
+				reject(error.response.data.mensagem);
+			});
 	});
 }

@@ -2,19 +2,21 @@ import React from 'react';
 import 'primereact/resources/primereact.min.css';
 import 'primeflex/primeflex.css';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
-import router from './router/router';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import 'primereact/resources/themes/md-light-indigo/theme.css';
 import ReactGA from 'react-ga4';
 import { AuthProvider } from './context/auth';
-
+import RotasAplicacao from './router/router';
+import App from './App';
 ReactGA.initialize('G-HRSML86GPK');
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
 		<AuthProvider>
-			<RouterProvider router={router} />
+			<BrowserRouter>
+				<RotasAplicacao />
+			</BrowserRouter>
 		</AuthProvider>
 	</React.StrictMode>
 );

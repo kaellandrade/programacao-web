@@ -1,15 +1,14 @@
-import { Navigate, Outlet, redirect } from "react-router-dom";
+import { redirect } from "react-router-dom";
+import { Auth, INITIAL_STATE } from "../../context/auth";
 
-export async function AuthRequered() {
-
-	const isLogged = false;
-	if (!isLogged) {
+export async function AuthRequered(routeName?: string) {
+	const session: Auth = JSON.parse(sessionStorage.getItem('state')) || INITIAL_STATE;
+	console.log(routeName);
+	const { signed } = session
+	if (!signed && !['cadastro', 'entrar'].includes(routeName)) {
 		throw redirect('/entrar');
 	}
-	
-	// const isLogged = false;
-	// if (!isLogged) {
-	// 	return <Navigate to="/entrar" />
-	// }
-	// return <Outlet />
+	if(signed && ['cadastro', 'entrar'].includes(routeName)){
+		throw redirect('/painel');
+	}
 }

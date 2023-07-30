@@ -1,13 +1,16 @@
 import React, { createContext, useState } from 'react';
 const AuthContext = createContext<Context>({} as Context);
+export const INITIAL_STATE = {
+	token: '',
+	exp: null,
+	signed: false,
+	user: null
+} as Auth;
 
 export interface Auth {
 	signed?: boolean;
-	loginError?: string;
-	token?: string;
-	access_token: string;
-	expires_in: number | null;
-	refresh_token: string;
+	token: string;
+	exp: number | null;
 	user?: User | null;
 }
 
@@ -20,18 +23,11 @@ export interface User {
 
 export interface Context {
 	state: Auth;
-	login: (code: string) => void;
-	setLogin: (estado: Auth) => void;
+	login: (code: Auth) => void;
+	setLogin: (dadosLogin: Auth) => void;
 	logout: () => void;
 }
 
-const INITIAL_STATE = {
-	access_token: '',
-	expires_in: null,
-	refresh_token: '',
-	signed: false,
-	user: null
-} as Auth;
 
 type RoterProps = {
 	children: React.ReactNode;
@@ -40,28 +36,36 @@ type RoterProps = {
 export function AuthProvider({ children }: RoterProps) {
 	const [state, setState] = useState<Auth>(INITIAL_STATE);
 
-	const setLogin = (estado: Auth) => {
-		setState(estado);
+	const setLogin = (dadosLogin: Auth) => {
+		setState(dadosLogin);
 	};
 
-	const login = (code: string) => {
-		handdleAuth(code);
+	const login = (dadoLogin: Auth) => {
+		handdleAuth(dadoLogin);
 	};
+
 	const logout = () => {
 		setState(INITIAL_STATE);
 		sessionStorage.clear();
 	};
 
-	const handdleAuth = async (code: string) => {
+	const handdleAuth = async (dadoLogin: Auth) => {
+		const logado = {
+			signed: true,
+			token: dadoLogin.token,
+			exp: dadoLogin.exp,
+		};
 		try {
-			setLogin({
-				signed: true,
-				access_token: '',
-				expires_in: null,
-				refresh_token: ''
-			});
+			setLogin(logado);
+			if (!sessionStorage.getItem('state')) {
+				await sessionStorage.setItem(
+					'state',
+					JSON.stringify({ ...logado})
+				);
+			}
+
 		} catch (error) {
-			setLogin({ ...state, signed: false });
+			setLogin(INITIAL_STATE);
 			console.log('Error!');
 		}
 	};

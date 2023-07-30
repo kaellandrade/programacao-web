@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
@@ -8,14 +8,18 @@ import Logo from '../../../../imgs/Logo.svg';
 import LoginImg from '../../../../imgs/login-img.jpg';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import '../index.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { realizarLogin } from '../../../api/data';
+import AuthContext, { Auth } from '../../../context/auth';
 
 interface IFormInput {
 	email: string;
-	senha: string;
+	pass: string;
 }
 
 export default function Login() {
+	const context = useContext(AuthContext);
+	const navigate = useNavigate();
 	const toast = useRef(null);
 	const {
 		register,
@@ -25,8 +29,16 @@ export default function Login() {
 		getValues
 	} = useForm<IFormInput>();
 
-	const onSubmit: SubmitHandler<IFormInput> = (data) => {
-		console.log(data);
+	const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+		try {
+			const dadosAutenticacao: Auth = await realizarLogin(data);
+			context.login(dadosAutenticacao);
+			navigate('/painel');
+		} catch (error) {
+			navigate('/entrar');
+			console.log(error);
+		}
+
 		show();
 	};
 	const show = () => {
@@ -71,13 +83,13 @@ export default function Login() {
 							)}
 						/>
 						<Controller
-							name="senha"
+							name="pass"
 							control={control}
 							render={({ field, fieldState }) => (
 								<div className="input-div">
 									<span className="p-float-label">
 										<Password
-											{...register('senha', { required: true })}
+											{...register('pass', { required: true })}
 											id={field.name}
 											value={field.value}
 											className={classNames({ 'p-invalid': fieldState.error })}
@@ -88,7 +100,7 @@ export default function Login() {
 										/>
 										<label htmlFor={field.name}>Senha</label>
 									</span>
-									{errors.senha?.type === 'required' && (
+									{errors.pass?.type === 'required' && (
 										<p className="msg-form" role="alert">
 											Digite a senha
 										</p>

@@ -11,14 +11,17 @@ import Layoute from '../componentes/layteComponente/layoute';
 import Home from '../pages/pageHome';
 import Dashboard from '../componentes/dashboard';
 import { AuthRequered } from '../componentes/auth/AuthRequered';
+import LayouteAuth from '../pages/pageConta/LayouteAuth';
 const router = createBrowserRouter(createRoutesFromElements(
 	<Route>
-		<Route path='cadastro' element={<Cadastro />} loader={async () => { await AuthRequered('cadastro'); }} />
-		<Route path='entrar' element={<Login />} loader={async () => { await AuthRequered('entrar'); }} />
-		<Route path="/erro404" element={ <Error404 /> } />
 		<Route path='/' element={<Navigate to={'painel'} />} />
+		<Route path="/erro404" element={<Error404 />} />
+		<Route path='publica' element={<LayouteAuth />} loader={async () => { await AuthRequered(false); }}>
+			<Route path='entrar' element={<Login />} />
+			<Route path='cadastro' element={<Cadastro />} />
+		</Route>
 		<Route element={<Layoute />}>
-			<Route path='painel' element={<Dashboard />} loader={async () => { await AuthRequered(); }}>
+			<Route path='painel' element={<Dashboard />} loader={async () => { await AuthRequered(true); }}>
 				<Route index element={<Home />} />
 				<Route path='valores' element={<PageValores />} />
 				<Route path='evolucao' element={<PageEvoucaoTemporal />} />
@@ -26,7 +29,7 @@ const router = createBrowserRouter(createRoutesFromElements(
 				<Route path='ranking' element={<PageRanking />} />
 			</Route>
 		</Route>
-		<Route path="*" element={ <Navigate to="/erro404" replace />} />
+		<Route path="*" element={<Navigate to="/erro404" replace />} />
 	</Route>
 ))
 

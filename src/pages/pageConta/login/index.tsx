@@ -7,7 +7,6 @@ import { Password } from 'primereact/password';
 import Logo from '../../../../imgs/Logo.svg';
 import LoginImg from '../../../../imgs/login-img.jpg';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import '../index.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { realizarLogin } from '../../../api/data';
 import AuthContext, { Auth } from '../../../context/auth';
@@ -109,7 +108,7 @@ export default function Login() {
 							)}
 						/>
 						<Button className="btn btn-enviar" type="submit" label="Entrar" />
-						<Link to={'/cadastro'}>
+						<Link to={'/publica/cadastro'}>
 							<Button
 								className="btn btn-cadastro"
 								type="button"

@@ -7,7 +7,6 @@ import { Password } from 'primereact/password';
 import Logo from '../../../../imgs/Logo.svg';
 import LoginImg from '../../../../imgs/login-img.jpg';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import '../index.css';
 import { Link } from 'react-router-dom';
 
 interface IFormInput {
@@ -151,7 +150,7 @@ export default function Login() {
 							)}
 						/>
 						<Button className="btn btn-enviar" type="submit" label="Criar minha conta" />
-						<Link to={'/entrar'}>
+						<Link to={'/publica/entrar'}>
 							<Button
 								className="btn btn-cadastro"
 								type="button"

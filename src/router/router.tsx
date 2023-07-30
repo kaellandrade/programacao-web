@@ -11,18 +11,18 @@ import Cadastro from '../pages/pageConta/cadastro';
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <Navigate to="/painel/evolucao" />
+		element: <Navigate to="/painel/evolucao" />,
+		errorElement: (
+			<ProtectedRoute isPrivate={false}>
+				<Page404 />
+			</ProtectedRoute>
+		),
 	},
 	{
 		path: '/painel',
 		element: <Navigate to="/painel/evolucao" />
 	},
 	{
-		errorElement: (
-			<ProtectedRoute isPrivate={false}>
-				<Page404 />
-			</ProtectedRoute>
-		),
 		children: [
 			{
 				path: 'painel',

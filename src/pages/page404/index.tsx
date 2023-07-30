@@ -1,5 +1,8 @@
 import { useRouteError,isRouteErrorResponse } from 'react-router-dom';
 import './index.css';
+import { Button } from 'primereact/button';
+import { NavLink } from 'react-router-dom';
+
 
 export default function Pagina404() {
   const error = useRouteError();
@@ -18,11 +21,21 @@ export default function Pagina404() {
 
   return (
     <div id="error-page">
-      <h1>Pagina não encontrada 404.</h1>
-      <p>Desculpe, mas a página não foi encontrada.</p>
+      <NavLink to={'/'}>
+        <div id='erro-logo'>
+          <img id='img-erro-logo-name' src="imgs\logo_name_1.png" alt="Real Track Brasil" />
+          <img id='img-erro-logo' src="imgs\logo.svg" alt="logo" />
+        </div>
+      </NavLink>
+      <img id='img-erro-404' src="imgs\error404.png" alt="erro 404" />
+      <h1>Ops! Não encontramos essa página</h1>
+      <p>Verifique se digitou corretamente o link da página!</p>
       <p>
         <i>{errorMessage}</i>
       </p>
+      <NavLink to={'/'}>
+        <Button id='button-page-error' label="Voltar ao início" rounded />
+			</NavLink>
     </div>
   );
 }

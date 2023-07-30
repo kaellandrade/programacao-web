@@ -34,7 +34,7 @@ export default function Login() {
 			context.login(dadosAutenticacao);
 			navigate('/painel');
 		} catch (error) {
-			navigate('/entrar');
+			navigate('/publica/entrar');
 			console.log(error);
 		}
 

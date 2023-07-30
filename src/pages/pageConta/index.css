@@ -1,56 +1,63 @@
 @import "../../variaveis.css";
-.box-login{
-    background-color: yellow;
 
-}
-.titulo{
+.titulo {
     color: var(--green-medium--);
 }
-.input-div{
+
+.input-div {
     margin-top: 1rem;
 }
-.input-div .p-component{
+
+.input-div .p-component {
     width: 100%;
     border-color: #3e445173;
     border-radius: 15px;
 
 }
 
-.p-inputtext:enabled:focus{
+.p-inputtext:enabled:focus {
     border-color: var(--green-medium--) !important;
-    box-shadow: 0 0 0 0.02rem transparent!important;
+    box-shadow: 0 0 0 0.02rem transparent !important;
 }
 
 
-.p-inputtext:hover{
-    box-shadow: 0 0 0 0.02rem transparent!important;
+.p-inputtext:hover {
+    box-shadow: 0 0 0 0.02rem transparent !important;
 }
-.btn{
+
+.btn {
     border-radius: 15px !important;
     padding: 1.5rem !important;
     margin-top: 1rem;
     width: 100% !important;
 }
-.btn-enviar{
+
+.btn-enviar {
     background-color: var(--green-medium--) !important;
 }
-.btn-cadastro{
+
+.btn-cadastro {
     background-color: var(--black-light--) !important;
 
 }
 
-.msg-form{
+.msg-form {
     margin-top: 3px;
     margin-left: 10px;
     color: var(--black-light--_);
 }
-.img-login{
+
+.img-login {
     border-radius: 15px;
     opacity: 0.9;
 }
 
-@media(min-height:600px){
-    .container-login{
+.p-inputtext {
+    padding: 1rem;
+}
+
+@media(min-height:600px) {
+    .container-login {
         height: 100vh;
         width: 90%;
         margin: auto;

@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
@@ -19,6 +19,7 @@ interface IFormInput {
 export default function Login() {
 	const context = useContext(AuthContext);
 	const [loading, setLoading] = useState(false);
+	const [formIsvalid, setFormIsvalid] = useState(false);
 	const navigate = useNavigate();
 	const toast = useRef(null);
 	const {
@@ -26,8 +27,25 @@ export default function Login() {
 		formState: { errors },
 		control,
 		handleSubmit,
-		getValues
+		getValues,
+		watch
 	} = useForm<IFormInput>();
+
+	useEffect(() => {
+		const subscription = watch((value) => {
+			return validadeForm(value);
+		}
+		)
+		return () => subscription.unsubscribe()
+	}, [watch])
+
+	const validadeForm = (value: IFormInput) => {
+		if (value.email && value.pass) {
+			setFormIsvalid(true);
+		} else {
+			setFormIsvalid(false);
+		}
+	}
 
 	const onSubmit: SubmitHandler<IFormInput> = async (data) => {
 		try {
@@ -109,7 +127,7 @@ export default function Login() {
 								</div>
 							)}
 						/>
-						<Button className="btn btn-enviar" type="submit" label={loading ? "" : 'Entrar'} loading={loading} />
+						<Button className="btn btn-enviar" type="submit" label={loading ? "" : 'Entrar'} loading={loading} disabled={!formIsvalid} />
 						<Link to={'/publica/cadastro'}>
 							<Button
 								className="btn btn-cadastro"

@@ -9,7 +9,9 @@ header{
   color: var(--green-medium--);
   padding: 10px;
 }
-
+.logo-header{
+  width: 3rem;
+}
 .nav{
   display: flex;
   justify-content: center;

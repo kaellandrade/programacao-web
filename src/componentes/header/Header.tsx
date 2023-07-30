@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { Sidebar } from 'primereact/sidebar';
 import Aside from '../aside/Aside';
 import AuthContext from '../../context/auth';
-
+import Logo from '../../../imgs/LogoCash.svg';
 function Header() {
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
@@ -43,8 +43,11 @@ function Header() {
 
   return (
     <header>
-      <NavLink to={''}>
-        <h1>Circulação de dinheiro no Brasil</h1>
+      <NavLink to={'/painel'}>
+        <div className='flex align-items-center'>
+          <img src={Logo} alt="Logo" className='logo-header' />
+          <h4>Circulação de dinheiro no Brasil</h4>
+        </div>
       </NavLink>
 
       <nav className="nav">

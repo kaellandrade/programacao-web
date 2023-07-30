@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
@@ -19,18 +19,34 @@ interface IFormInput {
 }
 
 export default function Login() {
-	const navigate = useNavigate();
-	const toast = useRef(null);
-	const [loading, setLoading] = useState(false);
 	const {
 		register,
 		formState: { errors },
 		control,
 		handleSubmit,
 		getValues,
-		reset
+		reset,
+		watch
 	} = useForm<IFormInput>();
+	const navigate = useNavigate();
+	const toast = useRef(null);
+	const [formIsvalid, setFormIsvalid] = useState(false);
+	const [loading, setLoading] = useState(false);
 
+	useEffect(() => {
+		const subscription = watch((value) =>
+			validadeForm(value)
+		)
+		return () => subscription.unsubscribe()
+	}, [watch])
+
+	const validadeForm = (value: any) => {
+		if (value.nome && value.email && value.pass && value.confirmPass && value.pass === value.confirmPass) {
+			setFormIsvalid(true);
+		} else {
+			setFormIsvalid(false);
+		}
+	}
 
 	const onSubmit: SubmitHandler<IFormInput> = async (data: IFormInput) => {
 		try {
@@ -168,7 +184,7 @@ export default function Login() {
 								</div>
 							)}
 						/>
-						<Button className="btn btn-enviar" type="submit" label={loading ? '' : 'Criar minha conta'} loading={loading} />
+						<Button className="btn btn-enviar" type="submit" label={loading ? '' : 'Criar minha conta'} loading={loading} disabled={!formIsvalid} />
 						<Link to={'/publica/entrar'}>
 							<Button
 								className="btn btn-cadastro"

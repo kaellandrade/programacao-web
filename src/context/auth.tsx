@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 const AuthContext = createContext<Context>({} as Context);
 export const INITIAL_STATE = {
 	token: '',
@@ -60,7 +61,7 @@ export function AuthProvider({ children }: RoterProps) {
 			if (!sessionStorage.getItem('state')) {
 				await sessionStorage.setItem(
 					'state',
-					JSON.stringify({ ...logado})
+					JSON.stringify({ ...logado })
 				);
 			}
 

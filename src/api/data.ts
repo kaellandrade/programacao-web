@@ -163,8 +163,7 @@ export function registrarUsuario(dados): Promise<string> {
 				resolve(response.data);
 			})
 			.catch((error) => {
-				console.error(error);
-				reject('Erro ao registrar o usuário.');
+				reject(error.response.data.mensagem);
 			});
 	});
 }
@@ -176,8 +175,7 @@ export function realizarLogin(dados: Auth): Promise<Auth> {
 				resolve(response.data);
 			})
 			.catch((error) => {
-				console.error(error);
-				reject('Erro ao reslizar o login.');
+				reject(error.response.data.mensagem);
 			});
 	});
 }

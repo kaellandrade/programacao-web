@@ -1,4 +1,4 @@
-import { useContext, useRef } from 'react';
+import { useContext, useRef, useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
@@ -18,6 +18,7 @@ interface IFormInput {
 
 export default function Login() {
 	const context = useContext(AuthContext);
+	const [loading, setLoading] = useState(false);
 	const navigate = useNavigate();
 	const toast = useRef(null);
 	const {
@@ -30,12 +31,14 @@ export default function Login() {
 
 	const onSubmit: SubmitHandler<IFormInput> = async (data) => {
 		try {
+			setLoading(true);
 			const dadosAutenticacao: Auth = await realizarLogin(data);
 			context.login(dadosAutenticacao);
-			navigate('/painel', { state: { data: { login: true } } });
+			navigate('/painel');
 		} catch (error) {
-			show('error', 'Não foi possivel realizar login!');
-			navigate('/publica/entrar');
+			show('error', error);
+		} finally {
+			setLoading(false);
 		}
 
 	};
@@ -106,7 +109,7 @@ export default function Login() {
 								</div>
 							)}
 						/>
-						<Button className="btn btn-enviar" type="submit" label="Entrar" />
+						<Button className="btn btn-enviar" type="submit" label={loading ? "" : 'Entrar'} loading={loading} />
 						<Link to={'/publica/cadastro'}>
 							<Button
 								className="btn btn-cadastro"

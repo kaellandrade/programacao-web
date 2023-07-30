@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
@@ -7,7 +7,7 @@ import { Password } from 'primereact/password';
 import Logo from '../../../../imgs/Logo.svg';
 import LoginImg from '../../../../imgs/login-img.jpg';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { registrarUsuario } from '../../../api/data';
 
 
@@ -19,27 +19,32 @@ interface IFormInput {
 }
 
 export default function Login() {
+	const navigate = useNavigate();
 	const toast = useRef(null);
+	const [loading, setLoading] = useState(false);
 	const {
 		register,
 		formState: { errors },
 		control,
 		handleSubmit,
-		getValues
+		getValues,
+		reset
 	} = useForm<IFormInput>();
 
 
 	const onSubmit: SubmitHandler<IFormInput> = async (data: IFormInput) => {
 		try {
-			console.log(data)
+			setLoading(true);
 			const dadosAutenticacao = await registrarUsuario(data);
-			const { mensagem } = dadosAutenticacao;
-			console.log(dadosAutenticacao)
-			if (mensagem) {
-				show('success', mensagem);
-			}
+			show('success', dadosAutenticacao.mensagem);
+			reset();
+			setTimeout(function () {
+				navigate('/publica/entrar')
+			}, 1000);
 		} catch (error) {
-			show('error', 'Não foi possivel realizar login!');
+			show('error', error);
+		} finally {
+			setLoading(false);
 		}
 
 	};
@@ -163,7 +168,7 @@ export default function Login() {
 								</div>
 							)}
 						/>
-						<Button className="btn btn-enviar" type="submit" label="Criar minha conta" />
+						<Button className="btn btn-enviar" type="submit" label={loading ? '' : 'Criar minha conta'} loading={loading} />
 						<Link to={'/publica/entrar'}>
 							<Button
 								className="btn btn-cadastro"

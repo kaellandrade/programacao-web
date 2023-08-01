@@ -4,6 +4,7 @@ import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
 import { classNames } from 'primereact/utils';
 import { Password } from 'primereact/password';
+import LogoName from '../../../../imgs/logo_name_1.png';
 import Logo from '../../../../imgs/Logo.svg';
 import LoginImg from '../../../../imgs/login-img.jpg';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
@@ -79,6 +80,8 @@ export default function Login() {
 				<div className="col-12 md:col-5">
 					<div className="text-center">
 						<img className="mb-5" src={Logo} alt="Dinheiro em circulação" />
+						<br />
+						<img id='logo-name-login' className="mb-5" src={LogoName} alt="Dinheiro em circulação" />
 						<h2 className="titulo mb-5">Cadastre sua conta</h2>
 						<p className="text-left">
 							Explore o dinheiro em circulação no Brasil gratuitamente!
@@ -184,9 +187,10 @@ export default function Login() {
 								</div>
 							)}
 						/>
-						<Button className="btn btn-enviar" type="submit" label={loading ? '' : 'Criar minha conta'} loading={loading} disabled={!formIsvalid} />
+						<Button id='btn-login-entrar' className="btn btn-enviar" type="submit" label={loading ? '' : 'Criar minha conta'} loading={loading} disabled={!formIsvalid} />
 						<Link to={'/publica/entrar'}>
 							<Button
+								id='btn-login-cadastrar'
 								className="btn btn-cadastro"
 								type="button"
 								label="Já tenho cadastro"

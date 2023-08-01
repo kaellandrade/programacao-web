@@ -12,6 +12,10 @@ header{
 .logo-header{
   width: 3rem;
 }
+.logo-name-header{
+  width: 16rem;
+  margin-left: 10px;
+}
 .nav{
   display: flex;
   justify-content: center;
@@ -39,6 +43,42 @@ a{
 
 span#menu-show-aside{
   display: none;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.container-login .p-float-label label{
+  border-radius: 5px;
+  background: white !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.container-login #btn-login-entrar:hover{
+  background-color: var(--green-dark--) !important;
+}
+
+.container-login #btn-login-cadastrar:hover{
+  background-color: #151922 !important;
+}
+
+header .p-splitbutton.p-button-text > .p-button {
+  /* color: rgb(94, 94, 94) !important; */
+  color: var(--green-medium--) !important;
+  font-weight: 500 !important;
+}
+
+.p-splitbutton.p-button-text > .p-button:enabled{
+  background-color: white !important;
+}
+
+.p-button.p-component.p-splitbutton-menubutton.p-button-icon-only{
+  width: 12px !important;
+  padding: 0 !important;
+  transition: 0.3s !important;
+}
+
+.p-button.p-component.p-splitbutton-menubutton.p-button-icon-only:hover{
+  transform: scale(1.2) !important;
 }
 
 @media (max-width: 1024px  ){
@@ -53,6 +93,22 @@ span#menu-show-aside{
     transition: 0.3s;
   }
   
+}
+
+@media (max-width: 500px){
+  .logo-header{
+    width: 2rem;
+  }
+  .logo-name-header{
+    width: 12rem;
+  }
+  header .p-splitbutton.p-button-text > .p-button {
+    font-size: 14px;
+    padding-right: 0 !important;
+  }
+  header .p-button-icon{
+    margin-right: 0 !important;
+  }
 }
 
 @media (max-width: 425px){
@@ -73,3 +129,30 @@ span#menu-show-aside{
   
 }
 
+@media (max-width: 400px){
+  .logo-header{
+    width: 2rem;
+  }
+  .logo-name-header{
+    width: 10rem;
+    margin-right: 10px;
+  }
+  header .p-splitbutton.p-button-text > .p-button {
+    font-size: 14px;
+  }
+  
+}
+
+@media (max-width: 370px){
+  .logo-header{
+    width: 1.5rem;
+  }
+  .logo-name-header{
+    width: 9rem;
+    margin-right: 15px;
+  }
+  header .p-splitbutton.p-button-text > .p-button {
+    font-size: 12px;
+  }
+  
+}

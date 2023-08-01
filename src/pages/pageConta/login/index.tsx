@@ -4,6 +4,7 @@ import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
 import { classNames } from 'primereact/utils';
 import { Password } from 'primereact/password';
+import LogoName from '../../../../imgs/logo_name_1.png';
 import Logo from '../../../../imgs/Logo.svg';
 import LoginImg from '../../../../imgs/login-img.jpg';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
@@ -35,9 +36,9 @@ export default function Login() {
 		const subscription = watch((value) => {
 			return validadeForm(value);
 		}
-		)
-		return () => subscription.unsubscribe()
-	}, [watch])
+		);
+		return () => subscription.unsubscribe();
+	}, [watch]);
 
 	const validadeForm = (value: IFormInput) => {
 		if (value.email && value.pass) {
@@ -45,7 +46,7 @@ export default function Login() {
 		} else {
 			setFormIsvalid(false);
 		}
-	}
+	};
 
 	const onSubmit: SubmitHandler<IFormInput> = async (data) => {
 		try {
@@ -72,8 +73,10 @@ export default function Login() {
 		<div className="container-login flex justify-content-center">
 			<div className="grid flex align-items-center justify-content-center">
 				<div className="col-12 md:col-5">
-					<div className="text-center">
+					<div className="text-center">		
 						<img className="mb-5" src={Logo} alt="Dinheiro em circulação" />
+						<br />
+						<img id='logo-name-login' className="mb-5" src={LogoName} alt="Dinheiro em circulação" />
 						<h2 className="titulo mb-5">Entrar</h2>
 					</div>
 					<form onSubmit={handleSubmit(onSubmit)}>
@@ -116,6 +119,7 @@ export default function Login() {
 											placeholder="Senha"
 											required
 											toggleMask
+											feedback={false}
 										/>
 										<label htmlFor={field.name}>Senha</label>
 									</span>
@@ -127,9 +131,10 @@ export default function Login() {
 								</div>
 							)}
 						/>
-						<Button className="btn btn-enviar" type="submit" label={loading ? "" : 'Entrar'} loading={loading} disabled={!formIsvalid} />
+						<Button id='btn-login-entrar' className="btn btn-enviar" type="submit" label={loading ? '' : 'Entrar'} loading={loading} disabled={!formIsvalid} />
 						<Link to={'/publica/cadastro'}>
 							<Button
+								id='btn-login-cadastrar'
 								className="btn btn-cadastro"
 								type="button"
 								label="Realizar cadastro"

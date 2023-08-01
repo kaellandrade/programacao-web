@@ -4,7 +4,7 @@ function Main() {
 
   return (
     <>
-      <h2>Home</h2>
+      <h2>Sobre</h2>
       <div className="container valores">
         <div className="column valores descricao-projeto">
           <p>
@@ -14,9 +14,12 @@ function Main() {
             e denominação do Real (símbolos : R$, BRL). <br /><br /> 
             Os registros contemplam dados entre <strong> 03 de outubro de 1994 e 07 de 
             junho de 2023.</strong> <br /><br />
-            Dados extraídos do
-            <a href="https://dadosabertos.bcb.gov.br/dataset/dinheiro-em-circulao" target='_blank' > Portal do Banco Central do Brasil.</a>
-            
+            Dados extraídos do&nbsp;
+            <strong>
+              <a href="https://dadosabertos.bcb.gov.br/dataset/dinheiro-em-circulao" target='_blank' > 
+                Portal do Banco Central do Brasil.
+              </a>
+              </strong>   
           </p>
         </div>
       </div>

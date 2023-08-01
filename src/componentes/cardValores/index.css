@@ -34,3 +34,8 @@
   transform: scale(0.8);
   transform-origin: top left;
 }
+
+.p-calendar-w-btn:not(.p-disabled).p-inputwrapper-focus{
+  border-color: var(--green-medium--) !important;
+  box-shadow: inset 0 0 0 1px var(--green-medium--) !important;
+}

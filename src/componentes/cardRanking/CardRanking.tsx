@@ -121,7 +121,7 @@ function Card_Ranking(props: {pergunta: string, colunas: any, isDenominacao: boo
           <Dropdown value={selectedYearEnd} onChange={(e) => setSelectedYearEnd(e.value)} options={yearsEnd} optionLabel="year" 
             placeholder="Ano fim" className="dropdown years" required />
         </div>
-        <Button id='button-aplicar' label="Aplicar" icon="pi pi-check" loading={loading} disabled={buttonDisabled} rounded />
+        <Button id='button-aplicar' label="Aplicar" loading={loading} disabled={buttonDisabled} rounded />
 
       </form>
       <DataTable ref={dt} size="small" value={dadosFormatados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }}>

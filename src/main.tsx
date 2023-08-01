@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import 'primereact/resources/themes/md-light-indigo/theme.css';
 import ReactGA from 'react-ga4';
+import 'primeicons/primeicons.css';
 import { AuthProvider } from './context/auth';
 import RotasAplicacao from './router/router';
 ReactGA.initialize('G-HRSML86GPK');

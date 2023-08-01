@@ -137,7 +137,7 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
             :
             <Calendar calendarioId={props.calendarioId} enviarDataAtual={receberDataAtual} />
         }
-        <Button id='button-aplicar' label="Aplicar" icon="pi pi-check" loading={loading} disabled={buttonDisabled} rounded />
+        <Button id='button-aplicar' label="Aplicar" loading={loading} disabled={buttonDisabled} rounded />
       </form>
       {
         valor === 0 ?

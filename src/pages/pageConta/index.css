@@ -52,8 +52,12 @@
     opacity: 0.9;
 }
 
-.p-inputtext {
+.container-login .p-inputtext {
     padding: 1rem;
+}
+
+#logo-name-login{
+    width: 250px;
 }
 
 @media(min-height:600px) {

@@ -16,3 +16,11 @@ footer p{
   text-align: center;
 }
 
+
+@media (max-width: 768px){
+  footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+}

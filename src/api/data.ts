@@ -23,6 +23,19 @@ axiosIntercep.interceptors.request.use(
 	}
 );
 
+export function getDadosUsuario(): Promise<string> {
+	return new Promise<string>((resolve, reject) => {
+		axiosIntercep.get('/user')
+			.then((response) => {
+				resolve(response.data.user);
+			})
+			.catch((error) => {
+				console.error(error);
+				reject('Erro ao obter o nome do usuario!');
+			});
+	});
+}
+
 export function getValorExtenso(valor: number): Promise<string> {
 	return new Promise<string>((resolve, reject) => {
 		if (valor != undefined) {

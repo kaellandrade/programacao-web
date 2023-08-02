@@ -51,6 +51,7 @@ function Header() {
 
   const getDados = async () => {
     const dados = await getDadosUsuario();
+    console.log(dados.nome.trim().split(' ')[0]);
     if (dados != null)
       setInfoUser(dados);
     else{
@@ -91,7 +92,12 @@ function Header() {
       <nav className="nav">
         <ul className="nav-list">
           <li>
-            <SplitButton id='btn-user-options' label={infoUser.nome} icon="pi pi-user" model={items} text />
+            <SplitButton 
+            id='btn-user-options' 
+            label={typeof infoUser.nome === 'string' ? infoUser.nome.trim().split(' ')[0] : ''} 
+            icon="pi pi-user" 
+            model={items} 
+            text />
           </li>
         </ul>
       </nav>

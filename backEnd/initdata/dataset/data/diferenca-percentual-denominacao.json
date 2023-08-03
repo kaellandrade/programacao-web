@@ -1,0 +1,2096 @@
+[
+  {
+    "ano": 1994,
+    "denominacao": 0.01,
+    "quantidade_total": 47891372353,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 1995,
+    "denominacao": 0.01,
+    "quantidade_total": 253444839027,
+    "diferenca_percentual": 429.21
+  },
+  {
+    "ano": 1996,
+    "denominacao": 0.01,
+    "quantidade_total": 311556138325,
+    "diferenca_percentual": 22.93
+  },
+  {
+    "ano": 1997,
+    "denominacao": 0.01,
+    "quantidade_total": 387887962184,
+    "diferenca_percentual": 24.5
+  },
+  {
+    "ano": 1998,
+    "denominacao": 0.01,
+    "quantidade_total": 468775983781,
+    "diferenca_percentual": 20.85
+  },
+  {
+    "ano": 1999,
+    "denominacao": 0.01,
+    "quantidade_total": 543867182137,
+    "diferenca_percentual": 16.02
+  },
+  {
+    "ano": 2000,
+    "denominacao": 0.01,
+    "quantidade_total": 580752383378,
+    "diferenca_percentual": 6.78
+  },
+  {
+    "ano": 2001,
+    "denominacao": 0.01,
+    "quantidade_total": 609657621338,
+    "diferenca_percentual": 4.98
+  },
+  {
+    "ano": 2002,
+    "denominacao": 0.01,
+    "quantidade_total": 673654311318,
+    "diferenca_percentual": 10.5
+  },
+  {
+    "ano": 2003,
+    "denominacao": 0.01,
+    "quantidade_total": 719578745836,
+    "diferenca_percentual": 6.82
+  },
+  {
+    "ano": 2004,
+    "denominacao": 0.01,
+    "quantidade_total": 765395923100,
+    "diferenca_percentual": 6.37
+  },
+  {
+    "ano": 2005,
+    "denominacao": 0.01,
+    "quantidade_total": 793215702185,
+    "diferenca_percentual": 3.63
+  },
+  {
+    "ano": 2006,
+    "denominacao": 0.01,
+    "quantidade_total": 793436761254,
+    "diferenca_percentual": 0.03
+  },
+  {
+    "ano": 2007,
+    "denominacao": 0.01,
+    "quantidade_total": 797525959572,
+    "diferenca_percentual": 0.52
+  },
+  {
+    "ano": 2008,
+    "denominacao": 0.01,
+    "quantidade_total": 810380995933,
+    "diferenca_percentual": 1.61
+  },
+  {
+    "ano": 2009,
+    "denominacao": 0.01,
+    "quantidade_total": 797669803921,
+    "diferenca_percentual": -1.57
+  },
+  {
+    "ano": 2010,
+    "denominacao": 0.01,
+    "quantidade_total": 800886193808,
+    "diferenca_percentual": 0.4
+  },
+  {
+    "ano": 2011,
+    "denominacao": 0.01,
+    "quantidade_total": 800896050729,
+    "diferenca_percentual": 0
+  },
+  {
+    "ano": 2012,
+    "denominacao": 0.01,
+    "quantidade_total": 800910392317,
+    "diferenca_percentual": 0
+  },
+  {
+    "ano": 2013,
+    "denominacao": 0.01,
+    "quantidade_total": 807315554066,
+    "diferenca_percentual": 0.8
+  },
+  {
+    "ano": 2014,
+    "denominacao": 0.01,
+    "quantidade_total": 807318288125,
+    "diferenca_percentual": 0
+  },
+  {
+    "ano": 2015,
+    "denominacao": 0.01,
+    "quantidade_total": 797751365927,
+    "diferenca_percentual": -1.19
+  },
+  {
+    "ano": 2016,
+    "denominacao": 0.01,
+    "quantidade_total": 800950464220,
+    "diferenca_percentual": 0.4
+  },
+  {
+    "ano": 2017,
+    "denominacao": 0.01,
+    "quantidade_total": 794584795650,
+    "diferenca_percentual": -0.79
+  },
+  {
+    "ano": 2018,
+    "denominacao": 0.01,
+    "quantidade_total": 797796006600,
+    "diferenca_percentual": 0.4
+  },
+  {
+    "ano": 2019,
+    "denominacao": 0.01,
+    "quantidade_total": 807369114354,
+    "diferenca_percentual": 1.2
+  },
+  {
+    "ano": 2020,
+    "denominacao": 0.01,
+    "quantidade_total": 800986070334,
+    "diferenca_percentual": -0.79
+  },
+  {
+    "ano": 2021,
+    "denominacao": 0.01,
+    "quantidade_total": 800982721118,
+    "diferenca_percentual": 0
+  },
+  {
+    "ano": 2022,
+    "denominacao": 0.01,
+    "quantidade_total": 800963284121,
+    "diferenca_percentual": 0
+  },
+  {
+    "ano": 2023,
+    "denominacao": 0.01,
+    "quantidade_total": 344630049752,
+    "diferenca_percentual": -56.97
+  },
+  {
+    "ano": 1994,
+    "denominacao": 0.05,
+    "quantidade_total": 34699395947,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 1995,
+    "denominacao": 0.05,
+    "quantidade_total": 198918021850,
+    "diferenca_percentual": 473.26
+  },
+  {
+    "ano": 1996,
+    "denominacao": 0.05,
+    "quantidade_total": 238038465148,
+    "diferenca_percentual": 19.67
+  },
+  {
+    "ano": 1997,
+    "denominacao": 0.05,
+    "quantidade_total": 273491025501,
+    "diferenca_percentual": 14.89
+  },
+  {
+    "ano": 1998,
+    "denominacao": 0.05,
+    "quantidade_total": 301367571859,
+    "diferenca_percentual": 10.19
+  },
+  {
+    "ano": 1999,
+    "denominacao": 0.05,
+    "quantidade_total": 332061586267,
+    "diferenca_percentual": 10.18
+  },
+  {
+    "ano": 2000,
+    "denominacao": 0.05,
+    "quantidade_total": 361667867341,
+    "diferenca_percentual": 8.92
+  },
+  {
+    "ano": 2001,
+    "denominacao": 0.05,
+    "quantidade_total": 378400081901,
+    "diferenca_percentual": 4.63
+  },
+  {
+    "ano": 2002,
+    "denominacao": 0.05,
+    "quantidade_total": 430916588510,
+    "diferenca_percentual": 13.88
+  },
+  {
+    "ano": 2003,
+    "denominacao": 0.05,
+    "quantidade_total": 474136871870,
+    "diferenca_percentual": 10.03
+  },
+  {
+    "ano": 2004,
+    "denominacao": 0.05,
+    "quantidade_total": 530445402201,
+    "diferenca_percentual": 11.88
+  },
+  {
+    "ano": 2005,
+    "denominacao": 0.05,
+    "quantidade_total": 593079737551,
+    "diferenca_percentual": 11.81
+  },
+  {
+    "ano": 2006,
+    "denominacao": 0.05,
+    "quantidade_total": 654198705333,
+    "diferenca_percentual": 10.31
+  },
+  {
+    "ano": 2007,
+    "denominacao": 0.05,
+    "quantidade_total": 721302119263,
+    "diferenca_percentual": 10.26
+  },
+  {
+    "ano": 2008,
+    "denominacao": 0.05,
+    "quantidade_total": 795083102652,
+    "diferenca_percentual": 10.23
+  },
+  {
+    "ano": 2009,
+    "denominacao": 0.05,
+    "quantidade_total": 843840225539,
+    "diferenca_percentual": 6.13
+  },
+  {
+    "ano": 2010,
+    "denominacao": 0.05,
+    "quantidade_total": 947703337115,
+    "diferenca_percentual": 12.31
+  },
+  {
+    "ano": 2011,
+    "denominacao": 0.05,
+    "quantidade_total": 1063011576539,
+    "diferenca_percentual": 12.17
+  },
+  {
+    "ano": 2012,
+    "denominacao": 0.05,
+    "quantidade_total": 1186955115551,
+    "diferenca_percentual": 11.66
+  },
+  {
+    "ano": 2013,
+    "denominacao": 0.05,
+    "quantidade_total": 1303539871329,
+    "diferenca_percentual": 9.82
+  },
+  {
+    "ano": 2014,
+    "denominacao": 0.05,
+    "quantidade_total": 1409641375146,
+    "diferenca_percentual": 8.14
+  },
+  {
+    "ano": 2015,
+    "denominacao": 0.05,
+    "quantidade_total": 1449527519493,
+    "diferenca_percentual": 2.83
+  },
+  {
+    "ano": 2016,
+    "denominacao": 0.05,
+    "quantidade_total": 1499927561984,
+    "diferenca_percentual": 3.48
+  },
+  {
+    "ano": 2017,
+    "denominacao": 0.05,
+    "quantidade_total": 1566176223069,
+    "diferenca_percentual": 4.42
+  },
+  {
+    "ano": 2018,
+    "denominacao": 0.05,
+    "quantidade_total": 1624442619139,
+    "diferenca_percentual": 3.72
+  },
+  {
+    "ano": 2019,
+    "denominacao": 0.05,
+    "quantidade_total": 1692066901174,
+    "diferenca_percentual": 4.16
+  },
+  {
+    "ano": 2020,
+    "denominacao": 0.05,
+    "quantidade_total": 1743733398190,
+    "diferenca_percentual": 3.05
+  },
+  {
+    "ano": 2021,
+    "denominacao": 0.05,
+    "quantidade_total": 1809280323515,
+    "diferenca_percentual": 3.76
+  },
+  {
+    "ano": 2022,
+    "denominacao": 0.05,
+    "quantidade_total": 1864809270600,
+    "diferenca_percentual": 3.07
+  },
+  {
+    "ano": 2023,
+    "denominacao": 0.05,
+    "quantidade_total": 820185116984,
+    "diferenca_percentual": -56.02
+  },
+  {
+    "ano": 1994,
+    "denominacao": 0.1,
+    "quantidade_total": 31157703274,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 1995,
+    "denominacao": 0.1,
+    "quantidade_total": 183996681025,
+    "diferenca_percentual": 490.53
+  },
+  {
+    "ano": 1996,
+    "denominacao": 0.1,
+    "quantidade_total": 230367978534,
+    "diferenca_percentual": 25.2
+  },
+  {
+    "ano": 1997,
+    "denominacao": 0.1,
+    "quantidade_total": 281698030360,
+    "diferenca_percentual": 22.28
+  },
+  {
+    "ano": 1998,
+    "denominacao": 0.1,
+    "quantidade_total": 313111565798,
+    "diferenca_percentual": 11.15
+  },
+  {
+    "ano": 1999,
+    "denominacao": 0.1,
+    "quantidade_total": 344287203361,
+    "diferenca_percentual": 9.96
+  },
+  {
+    "ano": 2000,
+    "denominacao": 0.1,
+    "quantidade_total": 386233676200,
+    "diferenca_percentual": 12.18
+  },
+  {
+    "ano": 2001,
+    "denominacao": 0.1,
+    "quantidade_total": 403437781671,
+    "diferenca_percentual": 4.45
+  },
+  {
+    "ano": 2002,
+    "denominacao": 0.1,
+    "quantidade_total": 446365375210,
+    "diferenca_percentual": 10.64
+  },
+  {
+    "ano": 2003,
+    "denominacao": 0.1,
+    "quantidade_total": 492766705155,
+    "diferenca_percentual": 10.4
+  },
+  {
+    "ano": 2004,
+    "denominacao": 0.1,
+    "quantidade_total": 559073461094,
+    "diferenca_percentual": 13.46
+  },
+  {
+    "ano": 2005,
+    "denominacao": 0.1,
+    "quantidade_total": 630582443251,
+    "diferenca_percentual": 12.79
+  },
+  {
+    "ano": 2006,
+    "denominacao": 0.1,
+    "quantidade_total": 706277510778,
+    "diferenca_percentual": 12
+  },
+  {
+    "ano": 2007,
+    "denominacao": 0.1,
+    "quantidade_total": 790361025631,
+    "diferenca_percentual": 11.91
+  },
+  {
+    "ano": 2008,
+    "denominacao": 0.1,
+    "quantidade_total": 885411785914,
+    "diferenca_percentual": 12.03
+  },
+  {
+    "ano": 2009,
+    "denominacao": 0.1,
+    "quantidade_total": 949674889359,
+    "diferenca_percentual": 7.26
+  },
+  {
+    "ano": 2010,
+    "denominacao": 0.1,
+    "quantidade_total": 1059993359286,
+    "diferenca_percentual": 11.62
+  },
+  {
+    "ano": 2011,
+    "denominacao": 0.1,
+    "quantidade_total": 1175820197446,
+    "diferenca_percentual": 10.93
+  },
+  {
+    "ano": 2012,
+    "denominacao": 0.1,
+    "quantidade_total": 1299776044800,
+    "diferenca_percentual": 10.54
+  },
+  {
+    "ano": 2013,
+    "denominacao": 0.1,
+    "quantidade_total": 1434501042025,
+    "diferenca_percentual": 10.37
+  },
+  {
+    "ano": 2014,
+    "denominacao": 0.1,
+    "quantidade_total": 1537003333820,
+    "diferenca_percentual": 7.15
+  },
+  {
+    "ano": 2015,
+    "denominacao": 0.1,
+    "quantidade_total": 1569702751058,
+    "diferenca_percentual": 2.13
+  },
+  {
+    "ano": 2016,
+    "denominacao": 0.1,
+    "quantidade_total": 1613257495310,
+    "diferenca_percentual": 2.77
+  },
+  {
+    "ano": 2017,
+    "denominacao": 0.1,
+    "quantidade_total": 1653829961608,
+    "diferenca_percentual": 2.51
+  },
+  {
+    "ano": 2018,
+    "denominacao": 0.1,
+    "quantidade_total": 1709073056741,
+    "diferenca_percentual": 3.34
+  },
+  {
+    "ano": 2019,
+    "denominacao": 0.1,
+    "quantidade_total": 1783682448710,
+    "diferenca_percentual": 4.37
+  },
+  {
+    "ano": 2020,
+    "denominacao": 0.1,
+    "quantidade_total": 1813940164868,
+    "diferenca_percentual": 1.7
+  },
+  {
+    "ano": 2021,
+    "denominacao": 0.1,
+    "quantidade_total": 1867896834674,
+    "diferenca_percentual": 2.97
+  },
+  {
+    "ano": 2022,
+    "denominacao": 0.1,
+    "quantidade_total": 1920444991686,
+    "diferenca_percentual": 2.81
+  },
+  {
+    "ano": 2023,
+    "denominacao": 0.1,
+    "quantidade_total": 843246634754,
+    "diferenca_percentual": -56.09
+  },
+  {
+    "ano": 1994,
+    "denominacao": 0.25,
+    "quantidade_total": 4912530400,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 1995,
+    "denominacao": 0.25,
+    "quantidade_total": 58803673429,
+    "diferenca_percentual": 1097.01
+  },
+  {
+    "ano": 1996,
+    "denominacao": 0.25,
+    "quantidade_total": 73951562286,
+    "diferenca_percentual": 25.76
+  },
+  {
+    "ano": 1997,
+    "denominacao": 0.25,
+    "quantidade_total": 86490263327,
+    "diferenca_percentual": 16.96
+  },
+  {
+    "ano": 1998,
+    "denominacao": 0.25,
+    "quantidade_total": 98943149947,
+    "diferenca_percentual": 14.4
+  },
+  {
+    "ano": 1999,
+    "denominacao": 0.25,
+    "quantidade_total": 115643541902,
+    "diferenca_percentual": 16.88
+  },
+  {
+    "ano": 2000,
+    "denominacao": 0.25,
+    "quantidade_total": 128145013644,
+    "diferenca_percentual": 10.81
+  },
+  {
+    "ano": 2001,
+    "denominacao": 0.25,
+    "quantidade_total": 137700888775,
+    "diferenca_percentual": 7.46
+  },
+  {
+    "ano": 2002,
+    "denominacao": 0.25,
+    "quantidade_total": 166582464395,
+    "diferenca_percentual": 20.97
+  },
+  {
+    "ano": 2003,
+    "denominacao": 0.25,
+    "quantidade_total": 189471235473,
+    "diferenca_percentual": 13.74
+  },
+  {
+    "ano": 2004,
+    "denominacao": 0.25,
+    "quantidade_total": 221767001969,
+    "diferenca_percentual": 17.05
+  },
+  {
+    "ano": 2005,
+    "denominacao": 0.25,
+    "quantidade_total": 250967677835,
+    "diferenca_percentual": 13.17
+  },
+  {
+    "ano": 2006,
+    "denominacao": 0.25,
+    "quantidade_total": 282018313645,
+    "diferenca_percentual": 12.37
+  },
+  {
+    "ano": 2007,
+    "denominacao": 0.25,
+    "quantidade_total": 315157103311,
+    "diferenca_percentual": 11.75
+  },
+  {
+    "ano": 2008,
+    "denominacao": 0.25,
+    "quantidade_total": 357258258468,
+    "diferenca_percentual": 13.36
+  },
+  {
+    "ano": 2009,
+    "denominacao": 0.25,
+    "quantidade_total": 392260026964,
+    "diferenca_percentual": 9.8
+  },
+  {
+    "ano": 2010,
+    "denominacao": 0.25,
+    "quantidade_total": 447396580992,
+    "diferenca_percentual": 14.06
+  },
+  {
+    "ano": 2011,
+    "denominacao": 0.25,
+    "quantidade_total": 497818965697,
+    "diferenca_percentual": 11.27
+  },
+  {
+    "ano": 2012,
+    "denominacao": 0.25,
+    "quantidade_total": 552793575648,
+    "diferenca_percentual": 11.04
+  },
+  {
+    "ano": 2013,
+    "denominacao": 0.25,
+    "quantidade_total": 609701054446,
+    "diferenca_percentual": 10.29
+  },
+  {
+    "ano": 2014,
+    "denominacao": 0.25,
+    "quantidade_total": 668572999229,
+    "diferenca_percentual": 9.66
+  },
+  {
+    "ano": 2015,
+    "denominacao": 0.25,
+    "quantidade_total": 683392751998,
+    "diferenca_percentual": 2.22
+  },
+  {
+    "ano": 2016,
+    "denominacao": 0.25,
+    "quantidade_total": 706760250256,
+    "diferenca_percentual": 3.42
+  },
+  {
+    "ano": 2017,
+    "denominacao": 0.25,
+    "quantidade_total": 720714107961,
+    "diferenca_percentual": 1.97
+  },
+  {
+    "ano": 2018,
+    "denominacao": 0.25,
+    "quantidade_total": 749198098505,
+    "diferenca_percentual": 3.95
+  },
+  {
+    "ano": 2019,
+    "denominacao": 0.25,
+    "quantidade_total": 779047087011,
+    "diferenca_percentual": 3.98
+  },
+  {
+    "ano": 2020,
+    "denominacao": 0.25,
+    "quantidade_total": 793630032360,
+    "diferenca_percentual": 1.87
+  },
+  {
+    "ano": 2021,
+    "denominacao": 0.25,
+    "quantidade_total": 818595192129,
+    "diferenca_percentual": 3.15
+  },
+  {
+    "ano": 2022,
+    "denominacao": 0.25,
+    "quantidade_total": 845502867051,
+    "diferenca_percentual": 3.29
+  },
+  {
+    "ano": 2023,
+    "denominacao": 0.25,
+    "quantidade_total": 375598496375,
+    "diferenca_percentual": -55.58
+  },
+  {
+    "ano": 1994,
+    "denominacao": 0.5,
+    "quantidade_total": 19122563736,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 1995,
+    "denominacao": 0.5,
+    "quantidade_total": 98022251082,
+    "diferenca_percentual": 412.6
+  },
+  {
+    "ano": 1996,
+    "denominacao": 0.5,
+    "quantidade_total": 109265898339,
+    "diferenca_percentual": 11.47
+  },
+  {
+    "ano": 1997,
+    "denominacao": 0.5,
+    "quantidade_total": 103977942165,
+    "diferenca_percentual": -4.84
+  },
+  {
+    "ano": 1998,
+    "denominacao": 0.5,
+    "quantidade_total": 108540268251,
+    "diferenca_percentual": 4.39
+  },
+  {
+    "ano": 1999,
+    "denominacao": 0.5,
+    "quantidade_total": 118172110836,
+    "diferenca_percentual": 8.87
+  },
+  {
+    "ano": 2000,
+    "denominacao": 0.5,
+    "quantidade_total": 126809835092,
+    "diferenca_percentual": 7.31
+  },
+  {
+    "ano": 2001,
+    "denominacao": 0.5,
+    "quantidade_total": 132263881894,
+    "diferenca_percentual": 4.3
+  },
+  {
+    "ano": 2002,
+    "denominacao": 0.5,
+    "quantidade_total": 140659270076,
+    "diferenca_percentual": 6.35
+  },
+  {
+    "ano": 2003,
+    "denominacao": 0.5,
+    "quantidade_total": 170145351590,
+    "diferenca_percentual": 20.96
+  },
+  {
+    "ano": 2004,
+    "denominacao": 0.5,
+    "quantidade_total": 196110006903,
+    "diferenca_percentual": 15.26
+  },
+  {
+    "ano": 2005,
+    "denominacao": 0.5,
+    "quantidade_total": 216514862465,
+    "diferenca_percentual": 10.4
+  },
+  {
+    "ano": 2006,
+    "denominacao": 0.5,
+    "quantidade_total": 240160097637,
+    "diferenca_percentual": 10.92
+  },
+  {
+    "ano": 2007,
+    "denominacao": 0.5,
+    "quantidade_total": 267923970336,
+    "diferenca_percentual": 11.56
+  },
+  {
+    "ano": 2008,
+    "denominacao": 0.5,
+    "quantidade_total": 305434961422,
+    "diferenca_percentual": 14
+  },
+  {
+    "ano": 2009,
+    "denominacao": 0.5,
+    "quantidade_total": 351567858946,
+    "diferenca_percentual": 15.1
+  },
+  {
+    "ano": 2010,
+    "denominacao": 0.5,
+    "quantidade_total": 408206356858,
+    "diferenca_percentual": 16.11
+  },
+  {
+    "ano": 2011,
+    "denominacao": 0.5,
+    "quantidade_total": 454949925795,
+    "diferenca_percentual": 11.45
+  },
+  {
+    "ano": 2012,
+    "denominacao": 0.5,
+    "quantidade_total": 509677708674,
+    "diferenca_percentual": 12.03
+  },
+  {
+    "ano": 2013,
+    "denominacao": 0.5,
+    "quantidade_total": 559647314062,
+    "diferenca_percentual": 9.8
+  },
+  {
+    "ano": 2014,
+    "denominacao": 0.5,
+    "quantidade_total": 618091873419,
+    "diferenca_percentual": 10.44
+  },
+  {
+    "ano": 2015,
+    "denominacao": 0.5,
+    "quantidade_total": 637799644578,
+    "diferenca_percentual": 3.19
+  },
+  {
+    "ano": 2016,
+    "denominacao": 0.5,
+    "quantidade_total": 657324655815,
+    "diferenca_percentual": 3.06
+  },
+  {
+    "ano": 2017,
+    "denominacao": 0.5,
+    "quantidade_total": 689989075613,
+    "diferenca_percentual": 4.97
+  },
+  {
+    "ano": 2018,
+    "denominacao": 0.5,
+    "quantidade_total": 724795854830,
+    "diferenca_percentual": 5.04
+  },
+  {
+    "ano": 2019,
+    "denominacao": 0.5,
+    "quantidade_total": 765443588799,
+    "diferenca_percentual": 5.61
+  },
+  {
+    "ano": 2020,
+    "denominacao": 0.5,
+    "quantidade_total": 793078844184,
+    "diferenca_percentual": 3.61
+  },
+  {
+    "ano": 2021,
+    "denominacao": 0.5,
+    "quantidade_total": 827611224758,
+    "diferenca_percentual": 4.35
+  },
+  {
+    "ano": 2022,
+    "denominacao": 0.5,
+    "quantidade_total": 857450836137,
+    "diferenca_percentual": 3.61
+  },
+  {
+    "ano": 2023,
+    "denominacao": 0.5,
+    "quantidade_total": 380719425229,
+    "diferenca_percentual": -55.6
+  },
+  {
+    "ano": 1994,
+    "denominacao": 1,
+    "quantidade_total": 27593642339,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 1995,
+    "denominacao": 1,
+    "quantidade_total": 115343760860,
+    "diferenca_percentual": 318.01
+  },
+  {
+    "ano": 1996,
+    "denominacao": 1,
+    "quantidade_total": 137343912550,
+    "diferenca_percentual": 19.07
+  },
+  {
+    "ano": 1997,
+    "denominacao": 1,
+    "quantidade_total": 160627721728,
+    "diferenca_percentual": 16.95
+  },
+  {
+    "ano": 1998,
+    "denominacao": 1,
+    "quantidade_total": 171853049877,
+    "diferenca_percentual": 6.99
+  },
+  {
+    "ano": 1999,
+    "denominacao": 1,
+    "quantidade_total": 188669240130,
+    "diferenca_percentual": 9.79
+  },
+  {
+    "ano": 2000,
+    "denominacao": 1,
+    "quantidade_total": 220585284945,
+    "diferenca_percentual": 16.92
+  },
+  {
+    "ano": 2001,
+    "denominacao": 1,
+    "quantidade_total": 239275429243,
+    "diferenca_percentual": 8.47
+  },
+  {
+    "ano": 2002,
+    "denominacao": 1,
+    "quantidade_total": 273604799042,
+    "diferenca_percentual": 14.35
+  },
+  {
+    "ano": 2003,
+    "denominacao": 1,
+    "quantidade_total": 260354225872,
+    "diferenca_percentual": -4.84
+  },
+  {
+    "ano": 2004,
+    "denominacao": 1,
+    "quantidade_total": 237909707890,
+    "diferenca_percentual": -8.62
+  },
+  {
+    "ano": 2005,
+    "denominacao": 1,
+    "quantidade_total": 247493711728,
+    "diferenca_percentual": 4.03
+  },
+  {
+    "ano": 2006,
+    "denominacao": 1,
+    "quantidade_total": 257734329573,
+    "diferenca_percentual": 4.14
+  },
+  {
+    "ano": 2007,
+    "denominacao": 1,
+    "quantidade_total": 278431466629,
+    "diferenca_percentual": 8.03
+  },
+  {
+    "ano": 2008,
+    "denominacao": 1,
+    "quantidade_total": 328277856698,
+    "diferenca_percentual": 17.9
+  },
+  {
+    "ano": 2009,
+    "denominacao": 1,
+    "quantidade_total": 395163193070,
+    "diferenca_percentual": 20.37
+  },
+  {
+    "ano": 2010,
+    "denominacao": 1,
+    "quantidade_total": 466262259081,
+    "diferenca_percentual": 17.99
+  },
+  {
+    "ano": 2011,
+    "denominacao": 1,
+    "quantidade_total": 528632431230,
+    "diferenca_percentual": 13.38
+  },
+  {
+    "ano": 2012,
+    "denominacao": 1,
+    "quantidade_total": 597845176768,
+    "diferenca_percentual": 13.09
+  },
+  {
+    "ano": 2013,
+    "denominacao": 1,
+    "quantidade_total": 661232986172,
+    "diferenca_percentual": 10.6
+  },
+  {
+    "ano": 2014,
+    "denominacao": 1,
+    "quantidade_total": 729961989841,
+    "diferenca_percentual": 10.39
+  },
+  {
+    "ano": 2015,
+    "denominacao": 1,
+    "quantidade_total": 762586912125,
+    "diferenca_percentual": 4.47
+  },
+  {
+    "ano": 2016,
+    "denominacao": 1,
+    "quantidade_total": 809686379208,
+    "diferenca_percentual": 6.18
+  },
+  {
+    "ano": 2017,
+    "denominacao": 1,
+    "quantidade_total": 835017438883,
+    "diferenca_percentual": 3.13
+  },
+  {
+    "ano": 2018,
+    "denominacao": 1,
+    "quantidade_total": 880732303187,
+    "diferenca_percentual": 5.47
+  },
+  {
+    "ano": 2019,
+    "denominacao": 1,
+    "quantidade_total": 932182888564,
+    "diferenca_percentual": 5.84
+  },
+  {
+    "ano": 2020,
+    "denominacao": 1,
+    "quantidade_total": 964989781784,
+    "diferenca_percentual": 3.52
+  },
+  {
+    "ano": 2021,
+    "denominacao": 1,
+    "quantidade_total": 1002372207488,
+    "diferenca_percentual": 3.87
+  },
+  {
+    "ano": 2022,
+    "denominacao": 1,
+    "quantidade_total": 1033476614474,
+    "diferenca_percentual": 3.1
+  },
+  {
+    "ano": 2023,
+    "denominacao": 1,
+    "quantidade_total": 455915007785,
+    "diferenca_percentual": -55.89
+  },
+  {
+    "ano": 2001,
+    "denominacao": 2,
+    "quantidade_total": 135933450,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 2002,
+    "denominacao": 2,
+    "quantidade_total": 18796311128,
+    "diferenca_percentual": 13727.58
+  },
+  {
+    "ano": 2003,
+    "denominacao": 2,
+    "quantidade_total": 40715153534,
+    "diferenca_percentual": 116.61
+  },
+  {
+    "ano": 2004,
+    "denominacao": 2,
+    "quantidade_total": 60483608622,
+    "diferenca_percentual": 48.55
+  },
+  {
+    "ano": 2005,
+    "denominacao": 2,
+    "quantidade_total": 78986458271,
+    "diferenca_percentual": 30.59
+  },
+  {
+    "ano": 2006,
+    "denominacao": 2,
+    "quantidade_total": 95861676026,
+    "diferenca_percentual": 21.36
+  },
+  {
+    "ano": 2007,
+    "denominacao": 2,
+    "quantidade_total": 124517105750,
+    "diferenca_percentual": 29.89
+  },
+  {
+    "ano": 2008,
+    "denominacao": 2,
+    "quantidade_total": 155511890795,
+    "diferenca_percentual": 24.89
+  },
+  {
+    "ano": 2009,
+    "denominacao": 2,
+    "quantidade_total": 163652561293,
+    "diferenca_percentual": 5.23
+  },
+  {
+    "ano": 2010,
+    "denominacao": 2,
+    "quantidade_total": 179336893887,
+    "diferenca_percentual": 9.58
+  },
+  {
+    "ano": 2011,
+    "denominacao": 2,
+    "quantidade_total": 189679078204,
+    "diferenca_percentual": 5.77
+  },
+  {
+    "ano": 2012,
+    "denominacao": 2,
+    "quantidade_total": 207276924731,
+    "diferenca_percentual": 9.28
+  },
+  {
+    "ano": 2013,
+    "denominacao": 2,
+    "quantidade_total": 235306836195,
+    "diferenca_percentual": 13.52
+  },
+  {
+    "ano": 2014,
+    "denominacao": 2,
+    "quantidade_total": 263256926813,
+    "diferenca_percentual": 11.88
+  },
+  {
+    "ano": 2015,
+    "denominacao": 2,
+    "quantidade_total": 268894368725,
+    "diferenca_percentual": 2.14
+  },
+  {
+    "ano": 2016,
+    "denominacao": 2,
+    "quantidade_total": 275489205648,
+    "diferenca_percentual": 2.45
+  },
+  {
+    "ano": 2017,
+    "denominacao": 2,
+    "quantidade_total": 303414175945,
+    "diferenca_percentual": 10.14
+  },
+  {
+    "ano": 2018,
+    "denominacao": 2,
+    "quantidade_total": 316628869301,
+    "diferenca_percentual": 4.36
+  },
+  {
+    "ano": 2019,
+    "denominacao": 2,
+    "quantidade_total": 334275290699,
+    "diferenca_percentual": 5.57
+  },
+  {
+    "ano": 2020,
+    "denominacao": 2,
+    "quantidade_total": 363510324299,
+    "diferenca_percentual": 8.75
+  },
+  {
+    "ano": 2021,
+    "denominacao": 2,
+    "quantidade_total": 377809342745,
+    "diferenca_percentual": 3.93
+  },
+  {
+    "ano": 2022,
+    "denominacao": 2,
+    "quantidade_total": 380167870369,
+    "diferenca_percentual": 0.62
+  },
+  {
+    "ano": 2023,
+    "denominacao": 2,
+    "quantidade_total": 168915327503,
+    "diferenca_percentual": -55.57
+  },
+  {
+    "ano": 1994,
+    "denominacao": 5,
+    "quantidade_total": 14951615992,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 1995,
+    "denominacao": 5,
+    "quantidade_total": 40060783196,
+    "diferenca_percentual": 167.94
+  },
+  {
+    "ano": 1996,
+    "denominacao": 5,
+    "quantidade_total": 36077674156,
+    "diferenca_percentual": -9.94
+  },
+  {
+    "ano": 1997,
+    "denominacao": 5,
+    "quantidade_total": 38508436345,
+    "diferenca_percentual": 6.74
+  },
+  {
+    "ano": 1998,
+    "denominacao": 5,
+    "quantidade_total": 37974328138,
+    "diferenca_percentual": -1.39
+  },
+  {
+    "ano": 1999,
+    "denominacao": 5,
+    "quantidade_total": 40576375662,
+    "diferenca_percentual": 6.85
+  },
+  {
+    "ano": 2000,
+    "denominacao": 5,
+    "quantidade_total": 43740250972,
+    "diferenca_percentual": 7.8
+  },
+  {
+    "ano": 2001,
+    "denominacao": 5,
+    "quantidade_total": 48328055814,
+    "diferenca_percentual": 10.49
+  },
+  {
+    "ano": 2002,
+    "denominacao": 5,
+    "quantidade_total": 52646893295,
+    "diferenca_percentual": 8.94
+  },
+  {
+    "ano": 2003,
+    "denominacao": 5,
+    "quantidade_total": 51318172006,
+    "diferenca_percentual": -2.52
+  },
+  {
+    "ano": 2004,
+    "denominacao": 5,
+    "quantidade_total": 56536991832,
+    "diferenca_percentual": 10.17
+  },
+  {
+    "ano": 2005,
+    "denominacao": 5,
+    "quantidade_total": 61674864323,
+    "diferenca_percentual": 9.09
+  },
+  {
+    "ano": 2006,
+    "denominacao": 5,
+    "quantidade_total": 71862276323,
+    "diferenca_percentual": 16.52
+  },
+  {
+    "ano": 2007,
+    "denominacao": 5,
+    "quantidade_total": 78533031176,
+    "diferenca_percentual": 9.28
+  },
+  {
+    "ano": 2008,
+    "denominacao": 5,
+    "quantidade_total": 88478855716,
+    "diferenca_percentual": 12.66
+  },
+  {
+    "ano": 2009,
+    "denominacao": 5,
+    "quantidade_total": 92978658401,
+    "diferenca_percentual": 5.09
+  },
+  {
+    "ano": 2010,
+    "denominacao": 5,
+    "quantidade_total": 99263524211,
+    "diferenca_percentual": 6.76
+  },
+  {
+    "ano": 2011,
+    "denominacao": 5,
+    "quantidade_total": 102606993032,
+    "diferenca_percentual": 3.37
+  },
+  {
+    "ano": 2012,
+    "denominacao": 5,
+    "quantidade_total": 108306551150,
+    "diferenca_percentual": 5.55
+  },
+  {
+    "ano": 2013,
+    "denominacao": 5,
+    "quantidade_total": 119575989302,
+    "diferenca_percentual": 10.41
+  },
+  {
+    "ano": 2014,
+    "denominacao": 5,
+    "quantidade_total": 139182134709,
+    "diferenca_percentual": 16.4
+  },
+  {
+    "ano": 2015,
+    "denominacao": 5,
+    "quantidade_total": 135913683546,
+    "diferenca_percentual": -2.35
+  },
+  {
+    "ano": 2016,
+    "denominacao": 5,
+    "quantidade_total": 124917609682,
+    "diferenca_percentual": -8.09
+  },
+  {
+    "ano": 2017,
+    "denominacao": 5,
+    "quantidade_total": 133381281013,
+    "diferenca_percentual": 6.78
+  },
+  {
+    "ano": 2018,
+    "denominacao": 5,
+    "quantidade_total": 139268745090,
+    "diferenca_percentual": 4.41
+  },
+  {
+    "ano": 2019,
+    "denominacao": 5,
+    "quantidade_total": 143840205307,
+    "diferenca_percentual": 3.28
+  },
+  {
+    "ano": 2020,
+    "denominacao": 5,
+    "quantidade_total": 160493763279,
+    "diferenca_percentual": 11.58
+  },
+  {
+    "ano": 2021,
+    "denominacao": 5,
+    "quantidade_total": 164859416851,
+    "diferenca_percentual": 2.72
+  },
+  {
+    "ano": 2022,
+    "denominacao": 5,
+    "quantidade_total": 162054354180,
+    "diferenca_percentual": -1.7
+  },
+  {
+    "ano": 2023,
+    "denominacao": 5,
+    "quantidade_total": 72425305245,
+    "diferenca_percentual": -55.31
+  },
+  {
+    "ano": 1994,
+    "denominacao": 10,
+    "quantidade_total": 19142152665,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 1995,
+    "denominacao": 10,
+    "quantidade_total": 80203196513,
+    "diferenca_percentual": 318.99
+  },
+  {
+    "ano": 1996,
+    "denominacao": 10,
+    "quantidade_total": 89269247552,
+    "diferenca_percentual": 11.3
+  },
+  {
+    "ano": 1997,
+    "denominacao": 10,
+    "quantidade_total": 95976072531,
+    "diferenca_percentual": 7.51
+  },
+  {
+    "ano": 1998,
+    "denominacao": 10,
+    "quantidade_total": 102046328929,
+    "diferenca_percentual": 6.32
+  },
+  {
+    "ano": 1999,
+    "denominacao": 10,
+    "quantidade_total": 111390762244,
+    "diferenca_percentual": 9.16
+  },
+  {
+    "ano": 2000,
+    "denominacao": 10,
+    "quantidade_total": 123722033900,
+    "diferenca_percentual": 11.07
+  },
+  {
+    "ano": 2001,
+    "denominacao": 10,
+    "quantidade_total": 143287397864,
+    "diferenca_percentual": 15.81
+  },
+  {
+    "ano": 2002,
+    "denominacao": 10,
+    "quantidade_total": 168316879851,
+    "diferenca_percentual": 17.47
+  },
+  {
+    "ano": 2003,
+    "denominacao": 10,
+    "quantidade_total": 165691682888,
+    "diferenca_percentual": -1.56
+  },
+  {
+    "ano": 2004,
+    "denominacao": 10,
+    "quantidade_total": 175196632731,
+    "diferenca_percentual": 5.74
+  },
+  {
+    "ano": 2005,
+    "denominacao": 10,
+    "quantidade_total": 180316565810,
+    "diferenca_percentual": 2.92
+  },
+  {
+    "ano": 2006,
+    "denominacao": 10,
+    "quantidade_total": 189754421834,
+    "diferenca_percentual": 5.23
+  },
+  {
+    "ano": 2007,
+    "denominacao": 10,
+    "quantidade_total": 185485478814,
+    "diferenca_percentual": -2.25
+  },
+  {
+    "ano": 2008,
+    "denominacao": 10,
+    "quantidade_total": 172571976576,
+    "diferenca_percentual": -6.96
+  },
+  {
+    "ano": 2009,
+    "denominacao": 10,
+    "quantidade_total": 153550283747,
+    "diferenca_percentual": -11.02
+  },
+  {
+    "ano": 2010,
+    "denominacao": 10,
+    "quantidade_total": 159069564072,
+    "diferenca_percentual": 3.59
+  },
+  {
+    "ano": 2011,
+    "denominacao": 10,
+    "quantidade_total": 157690788561,
+    "diferenca_percentual": -0.87
+  },
+  {
+    "ano": 2012,
+    "denominacao": 10,
+    "quantidade_total": 159043451348,
+    "diferenca_percentual": 0.86
+  },
+  {
+    "ano": 2013,
+    "denominacao": 10,
+    "quantidade_total": 164538685164,
+    "diferenca_percentual": 3.46
+  },
+  {
+    "ano": 2014,
+    "denominacao": 10,
+    "quantidade_total": 165988440457,
+    "diferenca_percentual": 0.88
+  },
+  {
+    "ano": 2015,
+    "denominacao": 10,
+    "quantidade_total": 160254330025,
+    "diferenca_percentual": -3.45
+  },
+  {
+    "ano": 2016,
+    "denominacao": 10,
+    "quantidade_total": 152494949809,
+    "diferenca_percentual": -4.84
+  },
+  {
+    "ano": 2017,
+    "denominacao": 10,
+    "quantidade_total": 149263389873,
+    "diferenca_percentual": -2.12
+  },
+  {
+    "ano": 2018,
+    "denominacao": 10,
+    "quantidade_total": 145813175330,
+    "diferenca_percentual": -2.31
+  },
+  {
+    "ano": 2019,
+    "denominacao": 10,
+    "quantidade_total": 142929361643,
+    "diferenca_percentual": -1.98
+  },
+  {
+    "ano": 2020,
+    "denominacao": 10,
+    "quantidade_total": 166243034263,
+    "diferenca_percentual": 16.31
+  },
+  {
+    "ano": 2021,
+    "denominacao": 10,
+    "quantidade_total": 153160635627,
+    "diferenca_percentual": -7.87
+  },
+  {
+    "ano": 2022,
+    "denominacao": 10,
+    "quantidade_total": 146222729355,
+    "diferenca_percentual": -4.53
+  },
+  {
+    "ano": 2023,
+    "denominacao": 10,
+    "quantidade_total": 66065005964,
+    "diferenca_percentual": -54.82
+  },
+  {
+    "ano": 2002,
+    "denominacao": 20,
+    "quantidade_total": 3742541838,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 2003,
+    "denominacao": 20,
+    "quantidade_total": 21105427649,
+    "diferenca_percentual": 463.93
+  },
+  {
+    "ano": 2004,
+    "denominacao": 20,
+    "quantidade_total": 37116510898,
+    "diferenca_percentual": 75.86
+  },
+  {
+    "ano": 2005,
+    "denominacao": 20,
+    "quantidade_total": 49949386056,
+    "diferenca_percentual": 34.57
+  },
+  {
+    "ano": 2006,
+    "denominacao": 20,
+    "quantidade_total": 66023851026,
+    "diferenca_percentual": 32.18
+  },
+  {
+    "ano": 2007,
+    "denominacao": 20,
+    "quantidade_total": 95395925704,
+    "diferenca_percentual": 44.49
+  },
+  {
+    "ano": 2008,
+    "denominacao": 20,
+    "quantidade_total": 117523119955,
+    "diferenca_percentual": 23.2
+  },
+  {
+    "ano": 2009,
+    "denominacao": 20,
+    "quantidade_total": 125010767506,
+    "diferenca_percentual": 6.37
+  },
+  {
+    "ano": 2010,
+    "denominacao": 20,
+    "quantidade_total": 144546909192,
+    "diferenca_percentual": 15.63
+  },
+  {
+    "ano": 2011,
+    "denominacao": 20,
+    "quantidade_total": 158292284412,
+    "diferenca_percentual": 9.51
+  },
+  {
+    "ano": 2012,
+    "denominacao": 20,
+    "quantidade_total": 173846376690,
+    "diferenca_percentual": 9.83
+  },
+  {
+    "ano": 2013,
+    "denominacao": 20,
+    "quantidade_total": 185801912770,
+    "diferenca_percentual": 6.88
+  },
+  {
+    "ano": 2014,
+    "denominacao": 20,
+    "quantidade_total": 179983454306,
+    "diferenca_percentual": -3.13
+  },
+  {
+    "ano": 2015,
+    "denominacao": 20,
+    "quantidade_total": 169485377947,
+    "diferenca_percentual": -5.83
+  },
+  {
+    "ano": 2016,
+    "denominacao": 20,
+    "quantidade_total": 166171415150,
+    "diferenca_percentual": -1.96
+  },
+  {
+    "ano": 2017,
+    "denominacao": 20,
+    "quantidade_total": 161975397319,
+    "diferenca_percentual": -2.53
+  },
+  {
+    "ano": 2018,
+    "denominacao": 20,
+    "quantidade_total": 158327232654,
+    "diferenca_percentual": -2.25
+  },
+  {
+    "ano": 2019,
+    "denominacao": 20,
+    "quantidade_total": 164376319932,
+    "diferenca_percentual": 3.82
+  },
+  {
+    "ano": 2020,
+    "denominacao": 20,
+    "quantidade_total": 218297987065,
+    "diferenca_percentual": 32.8
+  },
+  {
+    "ano": 2021,
+    "denominacao": 20,
+    "quantidade_total": 199767487730,
+    "diferenca_percentual": -8.49
+  },
+  {
+    "ano": 2022,
+    "denominacao": 20,
+    "quantidade_total": 182848078820,
+    "diferenca_percentual": -8.47
+  },
+  {
+    "ano": 2023,
+    "denominacao": 20,
+    "quantidade_total": 78787338441,
+    "diferenca_percentual": -56.91
+  },
+  {
+    "ano": 1994,
+    "denominacao": 50,
+    "quantidade_total": 2584760795,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 1995,
+    "denominacao": 50,
+    "quantidade_total": 18079476643,
+    "diferenca_percentual": 599.46
+  },
+  {
+    "ano": 1996,
+    "denominacao": 50,
+    "quantidade_total": 33580551125,
+    "diferenca_percentual": 85.74
+  },
+  {
+    "ano": 1997,
+    "denominacao": 50,
+    "quantidade_total": 48774225042,
+    "diferenca_percentual": 45.25
+  },
+  {
+    "ano": 1998,
+    "denominacao": 50,
+    "quantidade_total": 58768392317,
+    "diferenca_percentual": 20.49
+  },
+  {
+    "ano": 1999,
+    "denominacao": 50,
+    "quantidade_total": 70733327624,
+    "diferenca_percentual": 20.36
+  },
+  {
+    "ano": 2000,
+    "denominacao": 50,
+    "quantidade_total": 83203965360,
+    "diferenca_percentual": 17.63
+  },
+  {
+    "ano": 2001,
+    "denominacao": 50,
+    "quantidade_total": 98943347333,
+    "diferenca_percentual": 18.92
+  },
+  {
+    "ano": 2002,
+    "denominacao": 50,
+    "quantidade_total": 127138916779,
+    "diferenca_percentual": 28.5
+  },
+  {
+    "ano": 2003,
+    "denominacao": 50,
+    "quantidade_total": 146355048697,
+    "diferenca_percentual": 15.11
+  },
+  {
+    "ano": 2004,
+    "denominacao": 50,
+    "quantidade_total": 173674713671,
+    "diferenca_percentual": 18.67
+  },
+  {
+    "ano": 2005,
+    "denominacao": 50,
+    "quantidade_total": 203215197930,
+    "diferenca_percentual": 17.01
+  },
+  {
+    "ano": 2006,
+    "denominacao": 50,
+    "quantidade_total": 239296454078,
+    "diferenca_percentual": 17.76
+  },
+  {
+    "ano": 2007,
+    "denominacao": 50,
+    "quantidade_total": 280534274202,
+    "diferenca_percentual": 17.23
+  },
+  {
+    "ano": 2008,
+    "denominacao": 50,
+    "quantidade_total": 309969946748,
+    "diferenca_percentual": 10.49
+  },
+  {
+    "ano": 2009,
+    "denominacao": 50,
+    "quantidade_total": 319419096433,
+    "diferenca_percentual": 3.05
+  },
+  {
+    "ano": 2010,
+    "denominacao": 50,
+    "quantidade_total": 352754585229,
+    "diferenca_percentual": 10.44
+  },
+  {
+    "ano": 2011,
+    "denominacao": 50,
+    "quantidade_total": 368015823321,
+    "diferenca_percentual": 4.33
+  },
+  {
+    "ano": 2012,
+    "denominacao": 50,
+    "quantidade_total": 389058720573,
+    "diferenca_percentual": 5.72
+  },
+  {
+    "ano": 2013,
+    "denominacao": 50,
+    "quantidade_total": 424900802773,
+    "diferenca_percentual": 9.21
+  },
+  {
+    "ano": 2014,
+    "denominacao": 50,
+    "quantidade_total": 464893893743,
+    "diferenca_percentual": 9.41
+  },
+  {
+    "ano": 2015,
+    "denominacao": 50,
+    "quantidade_total": 477052681678,
+    "diferenca_percentual": 2.62
+  },
+  {
+    "ano": 2016,
+    "denominacao": 50,
+    "quantidade_total": 491791919568,
+    "diferenca_percentual": 3.09
+  },
+  {
+    "ano": 2017,
+    "denominacao": 50,
+    "quantidade_total": 496365654574,
+    "diferenca_percentual": 0.93
+  },
+  {
+    "ano": 2018,
+    "denominacao": 50,
+    "quantidade_total": 485730467658,
+    "diferenca_percentual": -2.14
+  },
+  {
+    "ano": 2019,
+    "denominacao": 50,
+    "quantidade_total": 482899126937,
+    "diferenca_percentual": -0.58
+  },
+  {
+    "ano": 2020,
+    "denominacao": 50,
+    "quantidade_total": 598063303925,
+    "diferenca_percentual": 23.85
+  },
+  {
+    "ano": 2021,
+    "denominacao": 50,
+    "quantidade_total": 565258427208,
+    "diferenca_percentual": -5.49
+  },
+  {
+    "ano": 2022,
+    "denominacao": 50,
+    "quantidade_total": 481067985302,
+    "diferenca_percentual": -14.89
+  },
+  {
+    "ano": 2023,
+    "denominacao": 50,
+    "quantidade_total": 200624903589,
+    "diferenca_percentual": -58.3
+  },
+  {
+    "ano": 1994,
+    "denominacao": 100,
+    "quantidade_total": 303623949,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 1995,
+    "denominacao": 100,
+    "quantidade_total": 1541071720,
+    "diferenca_percentual": 407.56
+  },
+  {
+    "ano": 1996,
+    "denominacao": 100,
+    "quantidade_total": 2173434700,
+    "diferenca_percentual": 41.03
+  },
+  {
+    "ano": 1997,
+    "denominacao": 100,
+    "quantidade_total": 2262894596,
+    "diferenca_percentual": 4.12
+  },
+  {
+    "ano": 1998,
+    "denominacao": 100,
+    "quantidade_total": 2151335398,
+    "diferenca_percentual": -4.93
+  },
+  {
+    "ano": 1999,
+    "denominacao": 100,
+    "quantidade_total": 2503409332,
+    "diferenca_percentual": 16.37
+  },
+  {
+    "ano": 2000,
+    "denominacao": 100,
+    "quantidade_total": 2567120408,
+    "diferenca_percentual": 2.54
+  },
+  {
+    "ano": 2001,
+    "denominacao": 100,
+    "quantidade_total": 3042493881,
+    "diferenca_percentual": 18.52
+  },
+  {
+    "ano": 2002,
+    "denominacao": 100,
+    "quantidade_total": 3646206888,
+    "diferenca_percentual": 19.84
+  },
+  {
+    "ano": 2003,
+    "denominacao": 100,
+    "quantidade_total": 4420491569,
+    "diferenca_percentual": 21.24
+  },
+  {
+    "ano": 2004,
+    "denominacao": 100,
+    "quantidade_total": 4576263729,
+    "diferenca_percentual": 3.52
+  },
+  {
+    "ano": 2005,
+    "denominacao": 100,
+    "quantidade_total": 4843253414,
+    "diferenca_percentual": 5.83
+  },
+  {
+    "ano": 2006,
+    "denominacao": 100,
+    "quantidade_total": 5551663754,
+    "diferenca_percentual": 14.63
+  },
+  {
+    "ano": 2007,
+    "denominacao": 100,
+    "quantidade_total": 12747674438,
+    "diferenca_percentual": 129.62
+  },
+  {
+    "ano": 2008,
+    "denominacao": 100,
+    "quantidade_total": 33561377083,
+    "diferenca_percentual": 163.27
+  },
+  {
+    "ano": 2009,
+    "denominacao": 100,
+    "quantidade_total": 53951494372,
+    "diferenca_percentual": 60.75
+  },
+  {
+    "ano": 2010,
+    "denominacao": 100,
+    "quantidade_total": 78914073872,
+    "diferenca_percentual": 46.27
+  },
+  {
+    "ano": 2011,
+    "denominacao": 100,
+    "quantidade_total": 101452518634,
+    "diferenca_percentual": 28.56
+  },
+  {
+    "ano": 2012,
+    "denominacao": 100,
+    "quantidade_total": 124491210489,
+    "diferenca_percentual": 22.71
+  },
+  {
+    "ano": 2013,
+    "denominacao": 100,
+    "quantidade_total": 147701599568,
+    "diferenca_percentual": 18.64
+  },
+  {
+    "ano": 2014,
+    "denominacao": 100,
+    "quantidade_total": 169106600644,
+    "diferenca_percentual": 14.49
+  },
+  {
+    "ano": 2015,
+    "denominacao": 100,
+    "quantidade_total": 188280819449,
+    "diferenca_percentual": 11.34
+  },
+  {
+    "ano": 2016,
+    "denominacao": 100,
+    "quantidade_total": 202104093891,
+    "diferenca_percentual": 7.34
+  },
+  {
+    "ano": 2017,
+    "denominacao": 100,
+    "quantidade_total": 218885933373,
+    "diferenca_percentual": 8.3
+  },
+  {
+    "ano": 2018,
+    "denominacao": 100,
+    "quantidade_total": 259947226674,
+    "diferenca_percentual": 18.76
+  },
+  {
+    "ano": 2019,
+    "denominacao": 100,
+    "quantidade_total": 295020455084,
+    "diferenca_percentual": 13.49
+  },
+  {
+    "ano": 2020,
+    "denominacao": 100,
+    "quantidade_total": 402940002477,
+    "diferenca_percentual": 36.58
+  },
+  {
+    "ano": 2021,
+    "denominacao": 100,
+    "quantidade_total": 452030207724,
+    "diferenca_percentual": 12.18
+  },
+  {
+    "ano": 2022,
+    "denominacao": 100,
+    "quantidade_total": 441131288987,
+    "diferenca_percentual": -2.41
+  },
+  {
+    "ano": 2023,
+    "denominacao": 100,
+    "quantidade_total": 195722537631,
+    "diferenca_percentual": -55.63
+  },
+  {
+    "ano": 2020,
+    "denominacao": 200,
+    "quantidade_total": 2183055091,
+    "diferenca_percentual": "NULL"
+  },
+  {
+    "ano": 2021,
+    "denominacao": 200,
+    "quantidade_total": 18270638353,
+    "diferenca_percentual": 736.93
+  },
+  {
+    "ano": 2022,
+    "denominacao": 200,
+    "quantidade_total": 26145870980,
+    "diferenca_percentual": 43.1
+  },
+  {
+    "ano": 2023,
+    "denominacao": 200,
+    "quantidade_total": 13427685246,
+    "diferenca_percentual": -48.64
+  }
+]

@@ -1,0 +1,66 @@
+.p-button{
+  background: var(--green-medium--);
+  height: 22px;
+  width: 100px;
+}
+
+.p-button:enabled:hover{
+  background: var(--green-dark--);
+}
+
+#button-aplicar span.p-button-label.p-c{
+  font-size: 14px;
+  color: var(--white-medium--);
+  padding-right: 6px;
+}
+
+.p-button:enabled:focus{
+  background: var(--green-medium--);
+}
+
+.ranking .p-datatable.p-component.p-datatable-scrollable.p-datatable-responsive-scroll.p-datatable-sm{
+  width: 100%;
+  height: 75%;    
+  font-size: 14px;
+}
+
+.dropdown.years{
+  height: 20px;
+  margin-right: 15px;
+}
+
+.dropdown.years .p-dropdown-label{
+  font-size: 14px;
+  padding: 0;
+  padding-left: 10px;
+  color: var(--black-light--)
+}
+
+ul li{
+  font-size: 14px;
+}
+
+@media (max-width: 382px){
+
+  .dropdown.years{
+    margin-right: 5px;
+    width: 85px;
+  }
+
+  .p-dropdown .p-dropdown-trigger{
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+  }
+
+  .dropdown.years .p-dropdown-label{
+    padding-left: 0;
+  }
+
+  .p-button{
+    /* height: 12px; */
+    width: 90px;
+  }
+
+
+}

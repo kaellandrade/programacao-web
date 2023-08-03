@@ -1,0 +1,14 @@
+@import "../../variaveis.css";
+
+.column.valores.descricao-projeto{
+  width: 80%;
+  text-align: justify;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px){
+  .column.valores.descricao-projeto{
+    width: 90%;
+    height: 80vh;
+  }
+}

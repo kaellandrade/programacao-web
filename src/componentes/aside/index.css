@@ -1,0 +1,90 @@
+@import "../../variaveis.css";
+
+aside {
+  background-color: white;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 5px;
+}
+
+aside h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  color: var(--green-medium--);
+}
+
+hr {
+  width: 100%;
+  border: 1px solid rgb(240, 240, 240);
+  margin-bottom: 10px;
+}
+
+aside a {
+  width: 100%;
+}
+
+aside a {
+  background-color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  color: var(--black-light--);
+  text-align: start;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+aside a .material-symbols-outlined {
+  margin-right: 10px;
+}
+
+aside a:hover {
+  background-color: var(--green-medium--);
+  color: var(--white-medium--);
+}
+
+aside .active {
+  background-color: var(--green-medium--);
+  color: var(--white-medium--);
+}
+
+@media (max-width: 1024px){
+
+  aside{
+    width: 100%;
+  }
+
+  aside#sidebar-desktop{
+    display: none;
+  }
+
+  .p-sidebar-mask.p-component-overlay{
+    width: auto;
+  }
+
+}
+
+@media (max-width: 425px){
+
+  aside{
+    width: 100%;
+  }
+
+  aside#sidebar-desktop{
+    display: none;
+  }
+
+  .p-sidebar-mask.p-component-overlay{
+    width: 54%;
+  }
+
+}

@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { Auth, INITIAL_STATE } from '../context/auth';
+import APIBrowser from '../util/APIBrowser';
+import CHAVES_COOKIES from '../util/keysConst';
 
 export const axiosIntercep = axios.create({
 	baseURL: 'https://prog-web.fisioluanamenezes.com',
@@ -11,7 +13,8 @@ export const axiosPublic = axios.create({
 
 axiosIntercep.interceptors.request.use(
 	async (config) => {
-		const state = (await JSON.parse(sessionStorage.getItem('state')) || INITIAL_STATE);
+		const cookieSessaoJSON = APIBrowser.getCookie(CHAVES_COOKIES.LOGIN) || '{}';
+		const state: Auth = await JSON.parse(cookieSessaoJSON) || INITIAL_STATE;
 		if (state && state.token) {
 			config.headers['Authorization'] = `Bearer ${state.token}`;
 		}

@@ -1,9 +1,11 @@
 import React, { createContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import APIBrowser from '../util/APIBrowser';
+import CHAVES_COOKIES from '../util/keysConst';
+import CookieData from '../@types/keysCookie';
 const AuthContext = createContext<Context>({} as Context);
 export const INITIAL_STATE = {
 	token: '',
-	exp: null,
+	exp: '',
 	signed: false,
 	user: null
 } as Auth;
@@ -11,7 +13,7 @@ export const INITIAL_STATE = {
 export interface Auth {
 	signed?: boolean;
 	token: string;
-	exp: number | null;
+	exp: string;
 	user?: User | null;
 }
 
@@ -47,42 +49,46 @@ export function AuthProvider({ children }: RoterProps) {
 
 	const logout = () => {
 		setState(INITIAL_STATE);
-		sessionStorage.clear();
+		const cookieSessao = { chaveCookie: CHAVES_COOKIES.LOGIN, pathCookie: '/' } as CookieData;
+		APIBrowser.removerCookie(cookieSessao);
 	};
 
-	const handdleAuth = async (dadoLogin: Auth) => {
-		const logado = {
-			signed: true,
-			token: dadoLogin.token,
-			exp: dadoLogin.exp,
-		};
-		try {
-			setLogin(logado);
-			if (!sessionStorage.getItem('state')) {
-				await sessionStorage.setItem(
-					'state',
-					JSON.stringify({ ...logado })
-				);
-			}
-
-		} catch (error) {
-			setLogin(INITIAL_STATE);
-			console.log('Error!');
+const handdleAuth = async (dadoLogin: Auth) => {
+	const logado = {
+		signed: true,
+		token: dadoLogin.token,
+		exp: dadoLogin.exp,
+	};
+	try {
+		setLogin(logado);
+		if (!APIBrowser.getCookie(CHAVES_COOKIES.LOGIN)) {
+			const cookieSessao = {
+				chaveCookie: CHAVES_COOKIES.LOGIN,
+				valorCookie: JSON.stringify({ ...logado }),
+				dataExpiracao: new Date(dadoLogin.exp),
+				pathCookie: '/'
+			} as CookieData;
+			APIBrowser.setCookie(cookieSessao);
 		}
-	};
 
-	return (
-		<AuthContext.Provider
-			value={{
-				state,
-				login,
-				setLogin,
-				logout
-			}}
-		>
-			{children}
-		</AuthContext.Provider>
-	);
+	} catch (error) {
+		setLogin(INITIAL_STATE);
+		console.log('Error!');
+	}
+};
+
+return (
+	<AuthContext.Provider
+		value={{
+			state,
+			login,
+			setLogin,
+			logout
+		}}
+	>
+		{children}
+	</AuthContext.Provider>
+);
 }
 
 export default AuthContext;

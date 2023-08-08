@@ -1,4 +1,4 @@
-import { Navigate, Route, RouterProvider, Routes, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import { Navigate, Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import '../pages/pageRoot/index.css';
 import PageQuantidade from '../pages/pageQuantidade';
 import PageRanking from '../pages/pageRanking';

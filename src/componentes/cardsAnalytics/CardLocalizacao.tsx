@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Popup, Marker, Circle } from 'react-leaflet';
+import { MapContainer, TileLayer, Circle } from 'react-leaflet';
+import { getCoodernadasCidade } from '../../api/data.ts';
 
 function CardLocalizacao() {
 
@@ -31,24 +32,23 @@ function CardLocalizacao() {
 
   useEffect(() => {
     setDados(dadoSimulacao);
+    getCoodernadasCidade('aracaju');
   }, []);
 
   return (
     <div className="content">
       <h4>Localização</h4>
-      <MapContainer style={{ height: '100vh', width: '100wh' }} center={[-10.9095, -37.0748]} zoom={3} scrollWheelZoom={true}>
+      <MapContainer style={{ height: '100%', width: '100%' }} center={[-10.9095, -37.0748]} zoom={3} scrollWheelZoom={true}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {/* <Marker position={[-10.9095, -37.0748]}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker> */}
       <Circle
-        center={[-10.9095, -37.0748]}
-        
+        center={[-5.1904332, -37.3443872]}  //Mossoro
+        radius={10000}
+      />
+      <Circle
+        center={[-10.9095, -37.0748]}  //Aracaju
         radius={10000}
       />
     </MapContainer>

@@ -195,3 +195,17 @@ export function realizarLogin(dados: Auth): Promise<Auth> {
 			});
 	});
 }
+
+export function getCoodernadasCidade(city: string): Promise<string> {
+	return new Promise<string>((resolve, reject) => {
+		axios.get(`https://nominatim.openstreetmap.org/search?city=${city}&format=json`)
+			.then((response) => {
+				console.log(response.data[0]);	
+				resolve(response.data[0]);
+			})
+			.catch((error) => {
+				console.error(error);
+				reject('Erro');
+			});
+	});
+}

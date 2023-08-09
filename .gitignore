@@ -150,3 +150,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Credenciais do Google Analytics
+credenciaisDoGoogleAPI.json

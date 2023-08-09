@@ -30,6 +30,13 @@ function Header() {
       }
     },
     {
+      label: 'Analytics',
+      icon: 'pi pi-chart-bar',
+      command: () => {
+        navigate('/painel/analytics');;
+      }
+    },
+    {
       label: 'Configurações',
       icon: 'pi pi-cog',
       command: () => {

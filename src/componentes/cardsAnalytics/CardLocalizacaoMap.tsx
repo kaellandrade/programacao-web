@@ -34,6 +34,16 @@ function CardLocalizacao() {
         'cidade': '(not set)',
         'estado': 'State of Minas Gerais',
         'quantidade_usuarios': '1'
+    },
+    {
+      'cidade': '(not set)',
+      'estado': 'State of Espirito Santo',
+      'quantidade_usuarios': '1'
+    },
+    {
+        'cidade': 'Sao Mateus do Sul',
+        'estado': 'State of Parana',
+        'quantidade_usuarios': '1'
     }
   ];
 

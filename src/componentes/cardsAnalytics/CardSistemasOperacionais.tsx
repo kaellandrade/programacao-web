@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
+import { ProgressSpinner } from 'primereact/progressspinner';
 
 
 function CardSistemasOperacionais() {
 
-    const [dados, setDados] = useState({});
     const [chartData, setChartData] = useState({});
     const [chartOptions, setChartOptions] = useState({});
+    const [render, setRender] = useState(0);
 
 	const dadoSimulacao = [
         {
@@ -104,6 +105,10 @@ function CardSistemasOperacionais() {
     };
 
     useEffect(() => {
+        setRender(1);
+    }, [chartData, chartOptions]);
+
+    useEffect(() => {
         const dataAndOptions = setarDadosChart();
         setChartData(dataAndOptions.data);
         setChartOptions(dataAndOptions.options);
@@ -112,7 +117,11 @@ function CardSistemasOperacionais() {
 	return (
 		<div className="content page-analytics">
 			<h4>Sistemas Operacionais</h4>
-			<Chart type="bar" data={chartData} options={chartOptions} />
+            {render ? (
+                <Chart type="bar" data={chartData} options={chartOptions} />
+            ) : (
+                <ProgressSpinner strokeWidth="4" />
+            )}
 		</div>
 	);
 }

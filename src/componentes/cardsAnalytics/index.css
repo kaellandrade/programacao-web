@@ -6,6 +6,19 @@
     background-color: white !important;
 }
 
+.page-analytics.table{
+    justify-content: flex-start !important;
+    height: 100% !important;
+}
+
+.content.page-analytics.dispositivos-navegadores{
+    padding: 0 !important;
+}
+
 .leaflet-container{
     margin-top: 5px;
 }
+
+.content.page-analytics .p-datatable.p-component.p-datatable-responsive-scroll{
+    max-height: 10rem !important;
+  }

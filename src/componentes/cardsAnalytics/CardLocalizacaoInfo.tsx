@@ -6,7 +6,7 @@ function CardLocalizacao() {
 
   const [dados, setDados] = useState([]);
 
-  const dadoSimulacao = [
+  const dadoSimulacao: DadoSimulacaoItem[] = [
     {
         'cidade': 'Aracaju',
         'estado': 'State of Sergipe',
@@ -20,6 +20,16 @@ function CardLocalizacao() {
 		{
         'cidade': '(not set)',
         'estado': 'State of Minas Gerais',
+        'quantidade_usuarios': '1'
+    },
+    {
+      'cidade': '(not set)',
+      'estado': 'State of Espirito Santo',
+      'quantidade_usuarios': '1'
+    },
+    {
+        'cidade': 'Sao Mateus do Sul',
+        'estado': 'State of Parana',
         'quantidade_usuarios': '1'
     }
   ];
@@ -44,9 +54,9 @@ function CardLocalizacao() {
   }, []);
 
   return (
-    <div className="content page-analytics">
+    <div className="content page-analytics table">
       <h4>Localização - Info</h4>
-      <DataTable size="small" value={dados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }} id='tableQuantidade' >
+      <DataTable size="small" value={dados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '10rem' }} id='tableQuantidade' >
         {colunas.map((col: any) => (
             <Column key={col.field} field={col.field} header={col.header} align="center" sortable style={{ width: '10%' }} />
         ))}

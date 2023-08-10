@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
+import { ProgressSpinner } from 'primereact/progressspinner';
 
 
 function CardDispositivos() {
 
-    const [dados, setDados] = useState({});
     const [chartData, setChartData] = useState({});
     const [chartOptions, setChartOptions] = useState({});
+    const [render, setRender] = useState(0);
 
     interface DadoSimulacaoItem {
         dispositivo: string;
@@ -62,15 +63,23 @@ function CardDispositivos() {
     };
 
     useEffect(() => {
+        setRender(1);
+    }, [chartData, chartOptions]);
+
+    useEffect(() => {
         const dataAndOptions = setarDadosChart();
         setChartData(dataAndOptions.data);
         setChartOptions(dataAndOptions.options);
     }, []);
 
 	return (
-		<div className="content page-analytics">
+		<div className="content page-analytics dispositivos-navegadores">
 			<h4>Tipos de Dispositivos</h4>
-			<Chart type="doughnut" data={chartData} options={chartOptions} className="w-full md:w-12rem" />
+			{render ? (
+                <Chart type="doughnut" data={chartData} options={chartOptions} className="w-full md:w-12rem" />
+            ) : (
+                <ProgressSpinner strokeWidth="4" />
+            )}
 		</div>
 	);
 }

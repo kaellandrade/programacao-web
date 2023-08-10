@@ -4,6 +4,7 @@
 
 .page-analytics{
     background-color: white !important;
+    justify-content: flex-start !important;
 }
 
 .page-analytics.table{
@@ -13,12 +14,34 @@
 
 .content.page-analytics.dispositivos-navegadores{
     padding: 0 !important;
+    justify-content: center;
 }
 
 .leaflet-container{
     margin-top: 5px;
+    align-self: center;
 }
 
 .content.page-analytics .p-datatable.p-component.p-datatable-responsive-scroll{
     max-height: 10rem !important;
-  }
+}
+
+.browser-dispositivos .p-chart{
+    align-self: center;
+}
+
+
+@media (max-width: 768px){
+    .browser-dispositivos .p-chart.w-full{
+        width: auto !important;
+    }
+    
+}
+
+@media (max-width: 460px){
+    .browser-dispositivos{
+        flex-direction: column !important;
+    }
+
+    
+}

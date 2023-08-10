@@ -76,7 +76,7 @@ function CardDispositivos() {
 		<div className="content page-analytics dispositivos-navegadores">
 			<h4>Tipos de Dispositivos</h4>
 			{render ? (
-                <Chart type="doughnut" data={chartData} options={chartOptions} className="w-full md:w-12rem" />
+                <Chart type="doughnut" data={chartData} options={chartOptions} className="w-full md:w-11rem" />
             ) : (
                 <ProgressSpinner strokeWidth="4" />
             )}

@@ -77,7 +77,7 @@ function CardLocalizacao() {
   return (
     <div className="content page-analytics">
       <h4>Localização - Mapa</h4>
-      <MapContainer style={{ height: '24rem', width: '30rem' }} center={[-10.9095, -37.0748]} zoom={3} scrollWheelZoom={true}>
+      <MapContainer style={{ height: '24rem', width: '100%' }} center={[-10.9095, -37.0748]} zoom={3} scrollWheelZoom={true}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -10,6 +10,7 @@ import Cadastro from '../pages/pageConta/cadastro';
 import Layoute from '../componentes/layteComponente/layoute';
 import Home from '../pages/pageHome';
 import Dashboard from '../componentes/dashboard';
+import PageAnalytics from '../pages/pageAnalytics';
 import { AuthRequered } from '../componentes/auth/AuthRequered';
 import LayouteAuth from '../pages/pageConta/LayouteAuth';
 const router = createBrowserRouter(createRoutesFromElements(
@@ -27,6 +28,7 @@ const router = createBrowserRouter(createRoutesFromElements(
 				<Route path='evolucao' element={<PageEvoucaoTemporal />} />
 				<Route path='quantidade' element={<PageQuantidade />} />
 				<Route path='ranking' element={<PageRanking />} />
+				<Route path='analytics' element={<PageAnalytics />} />
 			</Route>
 		</Route>
 		<Route path="*" element={<Navigate to="/erro404" replace />} />

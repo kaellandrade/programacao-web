@@ -30,6 +30,13 @@ function Header() {
       }
     },
     {
+      label: 'Analytics',
+      icon: 'pi pi-chart-bar',
+      command: () => {
+        navigate('/painel/analytics');;
+      }
+    },
+    {
       label: 'Configurações',
       icon: 'pi pi-cog',
       command: () => {
@@ -51,7 +58,6 @@ function Header() {
 
   const getDados = async () => {
     const dados = await getDadosUsuario();
-    console.log(dados.nome.trim().split(' ')[0]);
     if (dados != null)
       setInfoUser(dados);
     else{

@@ -195,3 +195,21 @@ export function realizarLogin(dados: Auth): Promise<Auth> {
 			});
 	});
 }
+
+export function getCoodernadas(regiao: string, local: string, ): Promise<object> {
+	return new Promise<object>((resolve, reject) => {
+		axios.get(`https://nominatim.openstreetmap.org/search?${regiao}=${local}&format=json`)
+			.then((response) => {
+				// console.log(response.data[0].lat, response.data[0].lon);	
+				const coodernadas = {
+					latitude: parseFloat(response.data[0].lat),
+					longitude: parseFloat(response.data[0].lon)
+				};
+				resolve(coodernadas);
+			})
+			.catch((error) => {
+				console.error(error);
+				reject('Erro');
+			});
+	});
+}

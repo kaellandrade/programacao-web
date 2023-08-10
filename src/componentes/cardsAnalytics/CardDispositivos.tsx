@@ -68,9 +68,9 @@ function CardDispositivos() {
     }, []);
 
 	return (
-		<div className="content">
+		<div className="content page-analytics">
 			<h4>Tipos de Dispositivos</h4>
-			<Chart type="doughnut" data={chartData} options={chartOptions} className="w-full md:w-15rem" />
+			<Chart type="doughnut" data={chartData} options={chartOptions} className="w-full md:w-12rem" />
 		</div>
 	);
 }

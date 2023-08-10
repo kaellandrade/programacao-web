@@ -1,6 +1,7 @@
 import './index.css';
-import CardAnalyticsLocalizacao from '../../componentes/cardsAnalytics/CardLocalizacao';
-import CardDispositivos from '../../componentes/cardsAnalytics/CardDispositivos';
+import CardAnalyticsLocalizacao from '../../componentes/cardsAnalytics/CardLocalizacaoMap';
+import CardLocalizacaoInfo from '../../componentes/cardsAnalytics/CardLocalizacaoInfo';
+import CardDispositivosNavegadores from '../../componentes/cardsAnalytics/CardDispositivosNavegadores';
 import CardSistemasOperacionais from '../../componentes/cardsAnalytics/CardSistemasOperacionais';
 import CardNavegadores from '../../componentes/cardsAnalytics/CardNavegadores';
 
@@ -10,16 +11,15 @@ function Main() {
     <>
       <h2>Dados dos usuários fornecidos pelo Google Analytics</h2>
       <div className="container valores">
-        <div className="column valores">
+        <div className="column valores page-analytics">
             <CardAnalyticsLocalizacao />
-            <CardDispositivos />
+            <CardLocalizacaoInfo />
         </div>
-        <div className="column valores">
+        <div className="column valores page-analytics">
             <CardSistemasOperacionais />
-            <CardNavegadores />
+            <CardDispositivosNavegadores />
         </div>
-
-
+        
       </div>
     </>
   );

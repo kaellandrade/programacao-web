@@ -1,0 +1,11 @@
+.browser-dispositivos{
+    flex-direction: row !important;
+}
+
+.page-analytics{
+    background-color: white !important;
+}
+
+.leaflet-container{
+    margin-top: 5px;
+}

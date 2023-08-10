@@ -68,7 +68,7 @@ function CardSistemasOperacionais() {
         const options = {
             indexAxis: 'y',
             maintainAspectRatio: false,
-            aspectRatio: 0.8,
+            aspectRatio: 0.9,
             plugins: {
                 legend: {
                     labels: {
@@ -110,7 +110,7 @@ function CardSistemasOperacionais() {
     }, []);
 
 	return (
-		<div className="content">
+		<div className="content page-analytics">
 			<h4>Sistemas Operacionais</h4>
 			<Chart type="bar" data={chartData} options={chartOptions} />
 		</div>

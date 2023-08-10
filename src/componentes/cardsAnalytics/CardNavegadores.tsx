@@ -8,7 +8,12 @@ function CardNavegadores() {
     const [chartData, setChartData] = useState({});
     const [chartOptions, setChartOptions] = useState({});
 
-	const dadoSimulacao = [
+    interface DadoSimulacaoItem {
+        browser: string;
+        quantidade_usuarios: string;
+    }
+
+	const dadoSimulacao: DadoSimulacaoItem[] = [
         {
             'browser': 'Chrome',
             'quantidade_usuarios': '22'
@@ -32,53 +37,27 @@ function CardNavegadores() {
         ));
 
         const documentStyle = getComputedStyle(document.documentElement);
-        const textColor = documentStyle.getPropertyValue('--text-color');
-        const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
-        const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
         const data = {
+
             labels: browsers,
             datasets: [
                 {
-                    label: 'Quantidade de usuários',
-                    backgroundColor: documentStyle.getPropertyValue('--green-medium--'),
-                    borderColor: documentStyle.getPropertyValue('--green-medium--'),
-                    data: quantidades_usuarios
+                    data: quantidades_usuarios,
+                    backgroundColor: [
+                        documentStyle.getPropertyValue('--green-medium--'), 
+                        documentStyle.getPropertyValue('--green-dark2--'),
+                        documentStyle.getPropertyValue('--green-light--')
+                    ],
+                    hoverBackgroundColor: [
+                        documentStyle.getPropertyValue('--black-light--'), 
+                        documentStyle.getPropertyValue('--black-light--'), 
+                        documentStyle.getPropertyValue('--black-light--')
+                    ]
                 }
             ]
         };
         const options = {
-            maintainAspectRatio: false,
-            aspectRatio: 0.8,
-            plugins: {
-                legend: {
-                    labels: {
-                        fontColor: textColor
-                    }
-                }
-            },
-            scales: {
-                x: {
-                    ticks: {
-                        color: textColorSecondary,
-                        font: {
-                            weight: 500
-                        }
-                    },
-                    grid: {
-                        display: false,
-                        drawBorder: false
-                    }
-                },
-                y: {
-                    ticks: {
-                        color: textColorSecondary
-                    },
-                    grid: {
-                        color: surfaceBorder,
-                        drawBorder: false
-                    }
-                }
-            }
+            cutout: '60%'
         };
         return {data, options};
     };
@@ -90,9 +69,9 @@ function CardNavegadores() {
     }, []);
 
 	return (
-		<div className="content">
+		<div className="content page-analytics">
 			<h4>Navegadores</h4>
-			<Chart type="bar" data={chartData} options={chartOptions} className="w-full md:h-10rem" />
+			<Chart type="doughnut" data={chartData} options={chartOptions} className="w-full md:w-12rem" />
 		</div>
 	);
 }

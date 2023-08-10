@@ -30,13 +30,22 @@ function CardLocalizacao() {
     {field: 'quantidade_usuarios', header: 'Quantidade de usuários'}
   ];
 
+  const formatarDados = dadoSimulacao.map(item => {
+    return {
+        ...item,
+        cidade: item.cidade === '(not set)'? item.cidade = 'Não especificada' : item.cidade,
+        estado: item.estado.replace('State of ', '')
+    };
+  });
+
   useEffect(() => {
-    setDados(dadoSimulacao);
+    const dadosFormatados = formatarDados;
+    setDados(dadosFormatados);
   }, []);
 
   return (
-    <div className="content">
-      <h4>Localização</h4>
+    <div className="content page-analytics">
+      <h4>Localização - Info</h4>
       <DataTable size="small" value={dados} scrollable scrollHeight="100%" sortMode="multiple" tableStyle={{ minWidth: '20rem' }} id='tableQuantidade' >
         {colunas.map((col: any) => (
             <Column key={col.field} field={col.field} header={col.header} align="center" sortable style={{ width: '10%' }} />
@@ -48,3 +57,5 @@ function CardLocalizacao() {
 }
 
 export default CardLocalizacao;
+
+

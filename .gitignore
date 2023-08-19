@@ -152,4 +152,4 @@ dist-ssr
 *.sw?
 
 # Credenciais do Google Analytics
-credenciaisDoGoogleAPI.json
+backend/nodejs/credenciaisDoGoogleAPI.json

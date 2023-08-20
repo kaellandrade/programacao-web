@@ -45,9 +45,7 @@ O **RealTrack Brasil** surgiu como um projeto da disciplina Programação para W
 
 # Linguagens e Ferramentas utilizadas no projeto :desktop_computer:
 
-<code>
-<img height="30" src="https://www.svgrepo.com/download/374144/typescript.svg" title="TypeScript">
-</code>
+<code><img height="30" src="https://www.svgrepo.com/download/374144/typescript.svg" title="TypeScript"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" title="HTML"></code>
 <code><img height="30" src="https://th.bing.com/th/id/R.6b2018f5c6532f6c29806ef06ffb158d?rik=iz3jaCtzRF18EQ&pid=ImgRaw&r=0" title="CSS"></code>
 <code><img height="30" src="https://www.postgresql.org/media/img/about/press/elephant.png" title="postgreSQL"></code>

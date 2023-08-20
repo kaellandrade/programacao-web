@@ -20,7 +20,7 @@ Repositório para disciplina de Programação WEB - UFS
 
 # [RealTrack Brasil :moneybag:](https://realtrackbrasil.netlify.app/publica/entrar)
 
-**RealTrack Brasil** é uma SPA *(Single Page Applications)* que organiza e apresenta de forma intuitiva registros diários das quantidades de cédulas e moedas em circulação em todo Brasil *(não estão incluídas as moedas comemorativas)* . Os dados são coletados diariamente pelo [Banco Central Do Brasil](https://dadosabertos.bcb.gov.br/dataset/dinheiro-em-circulao) e disponibilizados de forma gratuita.
+[RealTrack Brasil](https://realtrackbrasil.netlify.app/publica/entrar) é uma SPA *(Single Page Applications)* que organiza e apresenta de forma intuitiva registros diários das quantidades de cédulas e moedas em circulação em todo Brasil *(não estão incluídas as moedas comemorativas)* . Os dados são coletados diariamente pelo [Banco Central Do Brasil](https://dadosabertos.bcb.gov.br/dataset/dinheiro-em-circulao) e disponibilizados de forma gratuita.
 
 O **RealTrack Brasil** surgiu como um projeto da disciplina Programação para WEB, ofertada pelo [departamento de computação](https://www.sigaa.ufs.br/sigaa/public/departamento/portal.jsf?id=83) da [Universisdade Federal de Sergipe](https://www.ufs.br/) (UFS). Sendo assim, os recursos utilizados para tornar a aplicação disponível está inteiramente ligado à instituição por meio do [AWS Academy](https://aws.amazon.com/pt/training/awsacademy/). Ou seja, ao finalizarmos a disciplina o projeto pode não está mais disponível *(no ar)*.
 

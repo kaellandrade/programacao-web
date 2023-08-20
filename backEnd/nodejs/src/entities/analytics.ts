@@ -22,27 +22,15 @@ export async function runReport() {
 				name: 'browser'
 			},
 			{
-				name: 'country'
-			},
-			{
 				name: 'deviceCategory'
 			},
 			{
 				name: 'operatingSystemWithVersion'
-			},
-			{
-				name: 'screenResolution'
 			}
 		],
 		metrics: [
 			{
 				name: 'activeUsers'
-			},
-			{
-				name: 'averageSessionDuration'
-			},
-			{
-				name: 'sessionsPerUser'
 			}
 		]
 	});

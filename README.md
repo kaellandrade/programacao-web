@@ -24,7 +24,7 @@ Repositório para disciplina de Programação WEB - UFS
 
 O **RealTrack Brasil** surgiu como um projeto da disciplina Programação para WEB, ofertada pelo [departamento de computação](https://www.sigaa.ufs.br/sigaa/public/departamento/portal.jsf?id=83) da [Universisdade Federal de Sergipe](https://www.ufs.br/) (UFS). Sendo assim, os recursos utilizados para tornar a aplicação disponível está inteiramente ligado à instituição por meio do [AWS Academy](https://aws.amazon.com/pt/training/awsacademy/). Ou seja, ao finalizarmos a disciplina o projeto pode não está mais disponível *(no ar)*.
 
-# Telas :framed_picture
+# Telas :framed_picture:
 
 <figure>
   <img style="border-radius:20px;" src="./imgs/screenshots/01_login.png" alt="Tela de login" />

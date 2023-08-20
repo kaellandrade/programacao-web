@@ -3,6 +3,7 @@ import { Router } from 'express';
 import { GetNoParamsController } from './controllers/GetNoParamsController';
 import { GetParamsController } from './controllers/GetParamsController';
 import { Usuario } from './controllers/Usuario';
+import { GetAnalytics } from './controllers/Analytics';
 
 const extenso = require('extenso');
 
@@ -75,4 +76,5 @@ routes.get('/valores/:valor', user.checkToken, (req, res) => {
 	res.json({ valorExtensoMaiuscula });
 });
 
+routes.get('/analytics', user.checkToken, new GetAnalytics().reportAnalytics);
 export default routes;

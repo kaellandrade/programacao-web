@@ -16,7 +16,7 @@ Repositório para disciplina de Programação WEB - UFS
 1. [Sobre o projeto :moneybag:](#realtrack-brasil-moneybag)
 2. [Telas :framed_picture:](#telas-framed_picture)
 3. [Tecnoloagias utilizadas :desktop_computer:](#linguagens-e-ferramentas-utilizadas-no-projeto-desktop_computer)
-4. [Referências e agradecimentos :fist_right: :fist_left:](#colaboradores-fist_right-fist_left)
+4. [Referências e agradecimentos :fist_right: :fist_left:](#referências-e-agradecimentos-fist_right-fist_left)
 
 # [RealTrack Brasil :moneybag:](https://realtrackbrasil.netlify.app/publica/entrar)
 

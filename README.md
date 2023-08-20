@@ -16,7 +16,7 @@ Repositório para disciplina de Programação WEB - UFS
 1. [Sobre o projeto :moneybag:](#realtrack-brasil-moneybag)
 2. [Telas :framed_picture:](#telas-framed_picture)
 3. [Tecnoloagias utilizadas :desktop_computer:](#linguagens-e-ferramentas-utilizadas-no-projeto-desktop_computer)
-4. [Colaboradores do projeto :fist_right: :fist_left:](#colaboradores-fist_right-fist_left)
+4. [Referências e agradecimentos :fist_right: :fist_left:](#colaboradores-fist_right-fist_left)
 
 # [RealTrack Brasil :moneybag:](https://realtrackbrasil.netlify.app/publica/entrar)
 
@@ -62,9 +62,9 @@ O **RealTrack Brasil** surgiu como um projeto da disciplina Programação para W
 <code><img height="30" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/google_analytics_logo_icon_169085.png" title="Google Analytics"></code>
 <code><img height="30" src="https://jwt.io/img/pic_logo.svg" title="JSON Web Tokens"></code>
 
-# Colaboradores :fist_right: :fist_left:
+# Referências e agradecimentos :fist_right: :fist_left:
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+Agradecemos às seguintes pessoas e instituições que contribuíram para este projeto:
 
 <table>
   <tr>
@@ -92,13 +92,18 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         </sub>
       </a>
     </td>
+     <td align="center">
+      <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=760F40180C4CAB2DE0BDAD3625E66A33.buscatextual_0">
+        <img src="./imgs/readme/ProfGlaucoCarneiro.jpeg" width="100px;" alt="Foto do Gabriel"/><br>
+        <sub>
+          <b>Glauco (Professor)</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
 
-
-## :closed_book: Referências
-
-### Base 
 - [Banco central](https://dadosabertos.bcb.gov.br/dataset/dinheiro-em-circulao)
-
+- [Universidade Federal de Sergipe](https://www.ufs.br/)
+---
 [⬆ Voltar ao topo](#dinheiro-em-circulação)<br>

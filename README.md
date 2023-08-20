@@ -6,10 +6,20 @@ Repositório para disciplina de Programação WEB - UFS
   <img width='30%' src="./imgs/Logo.png" alt="PetIndica">
 </p>
 
-# [Dinheiro em Circulação](#)
 
-Projeto para matéria de Programação WEB.
-> Para facilitar o deploy o front-end e o back-end estão em repositórios separados
+# Sumário
+1. [Sobre o projeto :moneybag:](#realtrack-brasil-moneybag)
+2. [Telas :framed_picture:](#)
+3. [Tecnoloagias utilizadas :desktop_computer:](#)
+4. [Colaboradores do projeto :fist_right: :fist_left:](#)
+
+# [RealTrack Brasil :moneybag:](#)
+
+**RealTrack Brasil** é uma SPA *(Single Page Applications)* que organiza e apresenta de forma intuitiva registros diários das quantidades de cédulas e moedas em circulação em todo Brasil *(não estão incluídas as moedas comemorativas)* . Os dados são coletados diariamente pelo [Banco Central Do Brasil](https://dadosabertos.bcb.gov.br/dataset/dinheiro-em-circulao) e disponibilizados de forma gratuita.
+
+O **RealTrack Brasil** surgiu como um projeto da disciplina Programação para WEB, ofertada pelo [departamento de computação](https://www.sigaa.ufs.br/sigaa/public/departamento/portal.jsf?id=83) da [Universisdade Federal de Sergipe](https://www.ufs.br/) (UFS). Sendo assim, os recursos utilizados para tornar a aplicação disponível está inteiramente ligado à instituição por meio do [AWS Academy](https://aws.amazon.com/pt/training/awsacademy/). Ou seja, ao finalizarmos a disciplina o projeto pode não está mais disponível *(no ar)*.
+
+
 
 -  [Front-end](https://github.com/kaellandrade/programacao-web-frontEnd)
 -  [Back-End](#)

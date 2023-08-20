@@ -19,6 +19,7 @@
 		"start": "node dist/index.js"
 	},
 	"dependencies": {
+		"@google-analytics/data": "^4.0.0",
 		"@types/jsonwebtoken": "^9.0.2",
 		"bcrypt": "^5.1.0",
 		"cors": "^2.8.5",

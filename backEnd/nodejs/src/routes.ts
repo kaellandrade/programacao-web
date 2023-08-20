@@ -76,5 +76,5 @@ routes.get('/valores/:valor', user.checkToken, (req, res) => {
 	res.json({ valorExtensoMaiuscula });
 });
 
-routes.get('/analytics', new GetAnalytics().reportAnalytics);
+routes.get('/analytics', user.checkToken, new GetAnalytics().reportAnalytics);
 export default routes;

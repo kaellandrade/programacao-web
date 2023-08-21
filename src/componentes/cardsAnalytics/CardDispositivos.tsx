@@ -2,37 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
 import { ProgressSpinner } from 'primereact/progressspinner';
 
+interface DadoSimulacaoItem {
+    dispositivo: string;
+    quantidade_usuarios: string;
+}
 
-function CardDispositivos() {
+function CardDispositivos(props: { dados: DadoSimulacaoItem[] }) {
 
     const [chartData, setChartData] = useState({});
     const [chartOptions, setChartOptions] = useState({});
     const [render, setRender] = useState(0);
 
-    interface DadoSimulacaoItem {
-        dispositivo: string;
-        quantidade_usuarios: string;
-    }
-
-	const dadoSimulacao: DadoSimulacaoItem[] = [
-		{
-			dispositivo: 'mobile',
-			quantidade_usuarios: '22'
-		},
-		{
-			dispositivo: 'desktop',
-			quantidade_usuarios: '12'
-		},
-		{
-			dispositivo: 'tablet',
-			quantidade_usuarios: '13'
-		}
-	];
-
     const setarDadosChart = () => {
 
-        const quantidades_usuarios = dadoSimulacao.map(item => parseInt(item.quantidade_usuarios));
-        const dispositivos = dadoSimulacao.map(item => (
+        const quantidades_usuarios = props.dados.map(item => parseInt(item.quantidade_usuarios));
+        const dispositivos = props.dados.map(item => (
             item.dispositivo.charAt(0).toUpperCase() + item.dispositivo.slice(1)
         ));
 

@@ -1,40 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
 import { ProgressSpinner } from 'primereact/progressspinner';
 
+interface DadoSimulacaoItem {
+    browser: string;
+    quantidade_usuarios: string;
+}
 
-function CardNavegadores() {
+function CardNavegadores(props: { dados: DadoSimulacaoItem[] }) {
 
     const [chartData, setChartData] = useState({});
     const [chartOptions, setChartOptions] = useState({});
     const [render, setRender] = useState(0);
 
-
-    interface DadoSimulacaoItem {
-        browser: string;
-        quantidade_usuarios: string;
-    }
-
-	const dadoSimulacao: DadoSimulacaoItem[] = [
-        {
-            'browser': 'Chrome',
-            'quantidade_usuarios': '22'
-        },
-        {
-            'browser': 'Safari',
-            'quantidade_usuarios': '12'
-        },
-            {
-            'browser': 'Edge',
-            'quantidade_usuarios': '1'
-        }
-    ];
-    
-
     const setarDadosChart = () => {
 
-        const quantidades_usuarios = dadoSimulacao.map(item => parseInt(item.quantidade_usuarios));
-        const browsers = dadoSimulacao.map(item => (
+        const quantidades_usuarios = props.dados.map(item => parseInt(item.quantidade_usuarios));
+        const browsers = props.dados.map(item => (
             item.browser.charAt(0).toUpperCase() + item.browser.slice(1)
         ));
 

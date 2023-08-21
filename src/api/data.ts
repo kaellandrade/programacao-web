@@ -213,3 +213,17 @@ export function getCoodernadas(regiao: string, local: string, ): Promise<object>
 			});
 	});
 }
+
+export function getDataAnalytics(): Promise<string> {
+	return new Promise<string>((resolve, reject) => {
+		axiosIntercep.get('/analytics')
+			.then((response) => {
+				// console.log(response.data.data.regiao);	
+				resolve(response.data);
+			})
+			.catch((error) => {
+				console.error(error);
+				reject('Erro');
+			});
+	});
+}

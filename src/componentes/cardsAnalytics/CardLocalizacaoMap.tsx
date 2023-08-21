@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Circle } from 'react-leaflet';
 import { getCoodernadas } from '../../api/data.ts';
 
-function CardLocalizacao() {
-  
-  interface DadoSimulacaoItem {
-    cidade: string;
-    estado: string;
-    quantidade_usuarios: string;
-  }
+interface DadoSimulacaoItem {
+  cidade: string;
+  estado: string;
+  quantidade_usuarios: string;
+}
 
+function CardLocalizacao(props: { dados: DadoSimulacaoItem[] }){
+  
   interface Coordenada {
     latitude: number;
     longitude: number;
@@ -18,40 +18,11 @@ function CardLocalizacao() {
   const [dados, setDados] = useState<DadoSimulacaoItem[]>([]);
   const [coordenadas, setCoodernadas] = useState<Coordenada[]>([]);
   
-
-  const dadoSimulacao: DadoSimulacaoItem[] = [
-    {
-        'cidade': 'Aracaju',
-        'estado': 'State of Sergipe',
-        'quantidade_usuarios': '22'
-    },
-    {
-        'cidade': 'Mossoro',
-        'estado': 'State of Rio Grande do Norte',
-        'quantidade_usuarios': '1'
-    },
-		{
-        'cidade': '(not set)',
-        'estado': 'State of Minas Gerais',
-        'quantidade_usuarios': '1'
-    },
-    {
-      'cidade': '(not set)',
-      'estado': 'State of Espirito Santo',
-      'quantidade_usuarios': '1'
-    },
-    {
-        'cidade': 'Sao Mateus do Sul',
-        'estado': 'State of Parana',
-        'quantidade_usuarios': '1'
-    }
-  ];
-
   const mapearCidades = async () => {
     const coordenadasAux: Coordenada[] = [];
 
     const promises = dados.map(async item => {
-      if (item.cidade === '(not set)'){
+      if (item.cidade === 'Não especificada'){
         const response = await getCoodernadas('state', item.estado.replace('State of ', ''));
         coordenadasAux.push(response);
       }
@@ -71,7 +42,7 @@ function CardLocalizacao() {
   }, [dados]); 
 
   useEffect(() => {
-    setDados(dadoSimulacao);
+    setDados(props.dados);
   }, []); 
 
   return (

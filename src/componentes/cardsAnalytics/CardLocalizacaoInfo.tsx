@@ -1,38 +1,11 @@
 import { useState, useEffect } from 'react';
 import { DataTable } from 'primereact/datatable';
+import { getDataAnalytics } from '../../api/data';
 import { Column } from 'primereact/column';
 
-function CardLocalizacao() {
+function CardLocalizacao(props: {dados: []}) {
 
   const [dados, setDados] = useState([]);
-
-  const dadoSimulacao: DadoSimulacaoItem[] = [
-    {
-        'cidade': 'Aracaju',
-        'estado': 'State of Sergipe',
-        'quantidade_usuarios': '22'
-    },
-    {
-        'cidade': 'Mossoro',
-        'estado': 'State of Rio Grande do Norte',
-        'quantidade_usuarios': '1'
-    },
-		{
-        'cidade': '(not set)',
-        'estado': 'State of Minas Gerais',
-        'quantidade_usuarios': '1'
-    },
-    {
-      'cidade': '(not set)',
-      'estado': 'State of Espirito Santo',
-      'quantidade_usuarios': '1'
-    },
-    {
-        'cidade': 'Sao Mateus do Sul',
-        'estado': 'State of Parana',
-        'quantidade_usuarios': '1'
-    }
-  ];
 
   const colunas = [
     {field: 'cidade', header: 'Cidade'},
@@ -40,7 +13,7 @@ function CardLocalizacao() {
     {field: 'quantidade_usuarios', header: 'Quantidade de usuários'}
   ];
 
-  const formatarDados = dadoSimulacao.map(item => {
+  const formatarDados = props.dados.map(item => {
     return {
         ...item,
         cidade: item.cidade === '(not set)'? item.cidade = 'Não especificada' : item.cidade,

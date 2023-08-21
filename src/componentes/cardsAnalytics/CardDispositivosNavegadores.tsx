@@ -2,12 +2,12 @@ import CardDispositivos from './CardDispositivos';
 import CardNavegadores from './CardNavegadores';
 import './index.css';
 
-function CardDispositivosNavegadores() {
+function CardDispositivosNavegadores(props: { browsers: [], dispositivos: [] }) {
 
 	return (
 		<div className="content page-analytics browser-dispositivos ">
-			<CardDispositivos />
-            <CardNavegadores />
+			<CardDispositivos dados={props.dispositivos} />
+            <CardNavegadores dados={props.browsers} />
 		</div>
 	);
 }

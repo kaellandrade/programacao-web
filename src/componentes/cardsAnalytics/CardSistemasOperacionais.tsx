@@ -1,53 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
 import { ProgressSpinner } from 'primereact/progressspinner';
 
-
-function CardSistemasOperacionais() {
+function CardSistemasOperacionais(props: { dados: [] }) {
 
     const [chartData, setChartData] = useState({});
     const [chartOptions, setChartOptions] = useState({});
     const [render, setRender] = useState(0);
 
-	const dadoSimulacao = [
-        {
-            'sistema_operacional': 'Linux 5.19.0',
-            'quantidade_usuarios': '22'
-        },
-        {
-            'sistema_operacional': 'Android 13',
-            'quantidade_usuarios': '12'
-        },
-            {
-            'sistema_operacional': 'Android 6.0',
-            'quantidade_usuarios': '2'
-        },
-            {
-            'sistema_operacional': 'Linux ',
-            'quantidade_usuarios': '5'
-        },
-            {
-            'sistema_operacional': 'Windows 11',
-            'quantidade_usuarios': '1'
-        },
-            {
-            'sistema_operacional': 'iOS 13.2.3',
-            'quantidade_usuarios': '6'
-        },
-            {
-            'sistema_operacional': 'iOS 16.1.1',
-            'quantidade_usuarios': '3'
-        },
-            {
-            'sistema_operacional': 'Android 13.0.0',
-            'quantidade_usuarios': '2'
-        }
-    ];
-
     const setarDadosChart = () => {
 
-        const quantidades_usuarios = dadoSimulacao.map(item => parseInt(item.quantidade_usuarios));
-        const sistemasOperacionais = dadoSimulacao.map(item => (
+        const quantidades_usuarios = props.dados.map(item => parseInt(item.quantidade_usuarios));
+        const sistemasOperacionais = props.dados.map(item => (
             item.sistema_operacional.charAt(0).toUpperCase() + item.sistema_operacional.slice(1)
         ));
 

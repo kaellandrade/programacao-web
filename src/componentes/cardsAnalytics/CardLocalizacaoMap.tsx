@@ -1,48 +1,40 @@
 import { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Circle } from 'react-leaflet';
+import { MapContainer, TileLayer, Circle, Popup } from 'react-leaflet';
 import { getCoodernadas } from '../../api/data.ts';
 
 interface DadoSimulacaoItem {
   cidade: string;
   estado: string;
   quantidade_usuarios: string;
+  latitude: number;
+  longitude: number;
 }
 
 function CardLocalizacao(props: { dados: DadoSimulacaoItem[] }){
   
-  interface Coordenada {
-    latitude: number;
-    longitude: number;
-  }
-  
   const [dados, setDados] = useState<DadoSimulacaoItem[]>([]);
-  const [coordenadas, setCoodernadas] = useState<Coordenada[]>([]);
   
   const mapearCidades = async () => {
-    const coordenadasAux: Coordenada[] = [];
-
-    const promises = dados.map(async item => {
+    
+    const promises = props.dados.map(async item => {
+      let response;
       if (item.cidade === 'Não especificada'){
-        const response = await getCoodernadas('state', item.estado.replace('State of ', ''));
-        coordenadasAux.push(response);
+        response = await getCoodernadas('state', item.estado.replace('State of ', ''));
       }
       else{
-        const response = await getCoodernadas('city', item.cidade);
-        coordenadasAux.push(response);
+        response = await getCoodernadas('city', item.cidade);
       }
+      item.latitude = response.latitude;
+      item.longitude = response.longitude;
     });
 
     await Promise.all(promises);
-    
-    setCoodernadas(coordenadasAux);
+    console.log(props.dados);
+    setDados(props.dados);
   };
 
   useEffect(() => {
     mapearCidades();
-  }, [dados]); 
-
-  useEffect(() => {
-    setDados(props.dados);
   }, []); 
 
   return (
@@ -53,13 +45,16 @@ function CardLocalizacao(props: { dados: DadoSimulacaoItem[] }){
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       /> 
-      {coordenadas.map((coord, index) => ( 
-        <Circle
-          key={index}
-          center={[coord.latitude, coord.longitude]}
-          radius={10000}
-          weight={10}
-        /> 
+      {dados.map((regiao, index) => ( 
+        <Circle key={index} center={[regiao.latitude, regiao.longitude]} radius={10000} weight={10} > 
+          <Popup>
+          {regiao.quantidade_usuarios != '1' ? (
+            <p>{regiao.quantidade_usuarios} usuários</p>
+          ) : (
+            <p>{regiao.quantidade_usuarios} usuário</p>
+          )}
+          </Popup>
+        </Circle>  
       ))}
     </MapContainer>
     </div>

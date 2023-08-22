@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Calendar } from 'primereact/calendar';
 import { addLocale } from 'primereact/api';
 
@@ -7,14 +7,35 @@ export default function Calendario(props: { calendarioId: string, enviarDataAtua
     const [date, setDate] = useState<string | Date | Date[] | null>(null);
 
     const minDate = new Date();
-    minDate.setDate(3);
-    minDate.setMonth(9);
+    minDate.setDate(3); // SetDate pode variar entre 1 e 31.
+    minDate.setMonth(9); // SetMonth retorna valores indexados em zero, onde 0 representa janeiro e 11 representa dezembro. 
     minDate.setFullYear(1994);
 
     const maxDate = new Date();
-    maxDate.setDate(7);
-    maxDate.setMonth(5);
-    maxDate.setFullYear(2023);
+    const setarDataMaxima = () => {
+
+        const diaAtual = maxDate.getDate();
+        const mesAtual = maxDate.getMonth();
+        const anoAtual = maxDate.getFullYear();
+
+        if (diaAtual == 1){
+            if (mesAtual == 0){  // Se a data atual for 1º de janeiro
+                maxDate.setDate(31);
+                maxDate.setMonth(11); 
+                maxDate.setFullYear(anoAtual - 1);
+            }else{
+                const diaAnterior = new Date(anoAtual, mesAtual, 0).getDate();
+                maxDate.setDate(diaAnterior);
+                maxDate.setMonth(mesAtual - 1); 
+                maxDate.setFullYear(anoAtual);
+            }
+        }else{
+            maxDate.setDate(diaAtual - 1);  
+            maxDate.setMonth(mesAtual);
+            maxDate.setFullYear(anoAtual);
+        }
+    };
+    setarDataMaxima();
 
     addLocale('pt-br', {
         firstDayOfWeek: 1,

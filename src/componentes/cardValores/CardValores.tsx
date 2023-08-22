@@ -141,8 +141,8 @@ function Card_Valores(props: { pergunta: string, isMoeda: boolean, possuiInterva
       </form>
       {
         valor === 0 ?
-          <span style={{ fontSize: '14px' }} ><strong>Desculpe, nosso banco de dados não possui informações sobre a data escolhida. <br />
-            Tente novamente com outra data. 
+          <span style={{ fontSize: '14px' }} ><strong>O dia escolhido não é um dia útil. Tente novamente com outra data. <br />
+        
           </strong></span>
           : valor === -1 ?
             <span id='valor'></span>

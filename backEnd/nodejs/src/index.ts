@@ -4,6 +4,9 @@ import routes from './routes';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
+import schedule from 'node-schedule';
+import { BackgroundDb } from './controllers/Background';
+
 AppDataSource.initialize().then(() => {
 	const app = express();
 
@@ -17,7 +20,7 @@ AppDataSource.initialize().then(() => {
 		return res.json('ok');
 	});
 
-	console.log('conectado ao banco');
+	console.log('conectado ao banco', process.env.DB_HOST);
 
 	console.log('rodando na porta:', process.env.PORT);
 
@@ -34,3 +37,9 @@ mongoose
 		console.log('conectou ao mongo');
 	})
 	.catch((err) => console.log(err));
+
+const job = schedule.scheduleJob('0 0 * * *', () => {
+	const cron = new BackgroundDb();
+	cron.getCron();
+	console.log('Banco de dados atualizado às 00:00 da manhã');
+});

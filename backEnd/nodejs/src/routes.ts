@@ -79,5 +79,5 @@ routes.get('/valores/:valor', user.checkToken, (req, res) => {
 
 routes.get('/analytics', user.checkToken, new GetAnalytics().reportAnalytics);
 
-routes.get('/datas', new BackgroundDb().getData);
+// routes.get('/datas', new BackgroundDb().getData);
 export default routes;
